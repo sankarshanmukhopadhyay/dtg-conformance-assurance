@@ -1,1 +1,252 @@
-
+{
+  "$id": "https://example.org/dtg/dcas-conformance-schema-v0.1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DCAS v0.1 Conformance Schema",
+  "type": "object",
+  "required": [
+    "dtg_conformance_schema_version",
+    "assurance_levels",
+    "control_objectives",
+    "evidence_types",
+    "tests",
+    "conformance_profiles"
+  ],
+  "properties": {
+    "dtg_conformance_schema_version": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "assurance_levels": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/assurance_level"
+      }
+    },
+    "control_objectives": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/control_objective"
+      }
+    },
+    "evidence_types": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence_type"
+      }
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/test_definition"
+      }
+    },
+    "conformance_profiles": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/conformance_profile"
+      }
+    }
+  },
+  "$defs": {
+    "assurance_level": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "definition",
+        "evidence_depth"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^AL[0-3]$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "definition": {
+          "type": "string"
+        },
+        "evidence_depth": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "control_objective": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^CO[1-6]\\.\\d+$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "related_standards": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence_type": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "actor_class",
+        "description",
+        "format",
+        "frequency"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^EV[0-9]+$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "actor_class": {
+          "type": "string",
+          "enum": [
+            "Issuer",
+            "Verifier",
+            "HolderAgent",
+            "TrustRegistryOperator",
+            "NetworkManager",
+            "GovernanceAuthority",
+            "AssuranceProvider"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string",
+          "enum": [
+            "per_action",
+            "hourly",
+            "daily",
+            "weekly",
+            "monthly",
+            "on_change"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "test_definition": {
+      "type": "object",
+      "required": [
+        "id",
+        "actor_class",
+        "control_objective",
+        "description",
+        "test_type"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^T[0-9]+$"
+        },
+        "actor_class": {
+          "type": "string",
+          "enum": [
+            "Issuer",
+            "Verifier",
+            "HolderAgent",
+            "TrustRegistryOperator",
+            "NetworkManager",
+            "GovernanceAuthority"
+          ]
+        },
+        "control_objective": {
+          "type": "string",
+          "pattern": "^CO[1-6]\\.\\d+$"
+        },
+        "description": {
+          "type": "string"
+        },
+        "test_type": {
+          "type": "string",
+          "enum": [
+            "sample_audit",
+            "log_analysis",
+            "behavioural_test",
+            "integrity_scan",
+            "other"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "conformance_profile": {
+      "type": "object",
+      "required": [
+        "id",
+        "actor_class",
+        "name",
+        "required_assurance_level",
+        "required_control_objectives"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^CP-[0-9]+$"
+        },
+        "actor_class": {
+          "type": "string",
+          "enum": [
+            "Issuer",
+            "Verifier",
+            "HolderAgent",
+            "TrustRegistryOperator",
+            "NetworkManager",
+            "GovernanceAuthority"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "required_assurance_level": {
+          "type": "string",
+          "pattern": "^AL[0-3]$"
+        },
+        "required_control_objectives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^CO[1-6]\\.\\d+$"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
