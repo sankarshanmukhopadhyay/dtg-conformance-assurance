@@ -1,0 +1,197 @@
+{
+  "$id": "https://example.org/dtg/dcas-assurance-claim-v0.1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DCAS v0.1 Assurance Claim",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dcas_version",
+    "claim_id",
+    "issued_at",
+    "subject",
+    "profile",
+    "assurance_level",
+    "coverage_window",
+    "scope"
+  ],
+  "properties": {
+    "dcas_version": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "claim_id": {
+      "type": "string",
+      "description": "Unique identifier for this assurance claim."
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["actor_id", "actor_class"],
+      "properties": {
+        "actor_id": { "type": "string" },
+        "actor_class": {
+          "type": "string",
+          "enum": [
+            "Issuer",
+            "Verifier",
+            "HolderAgent",
+            "TrustRegistryOperator",
+            "NetworkManager",
+            "GovernanceAuthority",
+            "AssuranceProvider"
+          ]
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["profile_id"],
+      "properties": {
+        "profile_id": {
+          "type": "string",
+          "pattern": "^CP-[0-9]+$"
+        },
+        "profile_version": { "type": "string" }
+      }
+    },
+    "assurance_level": {
+      "type": "string",
+      "pattern": "^AL[0-3]$"
+    },
+    "coverage_window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to"],
+      "properties": {
+        "from": { "type": "string", "format": "date-time" },
+        "to": { "type": "string", "format": "date-time" }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["control_objectives"],
+      "properties": {
+        "control_objectives": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^CO[1-9][0-9]*\\.[0-9]+$"
+          }
+        },
+        "limitations": {
+          "type": "string",
+          "description": "Optional statement describing exclusions/limitations of the assessment."
+        }
+      }
+    },
+    "evidence_references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["evidence_id", "ref"],
+        "properties": {
+          "evidence_id": { "type": "string" },
+          "ref": { "type": "string" },
+          "hash": { "type": "string" },
+          "content_type": { "type": "string" }
+        }
+      }
+    },
+    "test_references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["test_id", "ref", "result"],
+        "properties": {
+          "test_id": { "type": "string" },
+          "ref": { "type": "string" },
+          "result": { "type": "string", "enum": ["pass", "fail", "partial", "not_applicable"] },
+          "hash": { "type": "string" }
+        }
+      }
+    },
+    "assessor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assessor_id", "independence_model"],
+      "properties": {
+        "assessor_id": { "type": "string" },
+        "organization": { "type": "string" },
+        "independence_model": {
+          "type": "string",
+          "enum": ["organizational", "contractual", "structural", "other"]
+        },
+        "conflict_disclosure": { "type": "string" }
+      },
+      "description": "Required for AL2 and AL3 claims."
+    },
+    "monitoring": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "critical_controls": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^CO[1-9][0-9]*\\.[0-9]+$" }
+        },
+        "monitoring_type": {
+          "type": "string",
+          "enum": ["continuous", "near_real_time", "periodic"]
+        },
+        "telemetry_ref": { "type": "string" },
+        "integrity_anchor": { "type": "string" }
+      },
+      "description": "Recommended for AL3 claims; may be provided for AL2."
+    },
+    "outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": { "type": "string", "enum": ["conformant", "non_conformant", "conditional"] },
+        "findings_summary": { "type": "string" },
+        "remediation_required_by": { "type": "string", "format": "date-time" }
+      }
+    },
+    "signatures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["signer_id", "signature"],
+        "properties": {
+          "signer_id": { "type": "string" },
+          "signature": { "type": "string" },
+          "algorithm": { "type": "string" }
+        }
+      }
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Namespaced extension fields."
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "assurance_level": { "enum": ["AL2", "AL3"] } } },
+      "then": { "required": ["assessor"] }
+    },
+    {
+      "if": { "properties": { "assurance_level": { "enum": ["AL3"] } } },
+      "then": {
+        "properties": {
+          "monitoring": { "type": "object" }
+        }
+      }
+    }
+  ]
+}
