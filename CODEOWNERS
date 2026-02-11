@@ -1,0 +1,15 @@
+
+# Default
+* @dtg-wg-maintainers
+
+# Risk artefacts
+/01_risk/ @dtg-wg-risk-owners
+
+# Controls
+/02_controls/ @dtg-wg-controls-owners
+
+# Conformance & assurance
+/03_conformance/ @dtg-wg-conformance-owners
+
+# Specification & schemas
+/04_spec/ @dtg-wg-spec-owners
