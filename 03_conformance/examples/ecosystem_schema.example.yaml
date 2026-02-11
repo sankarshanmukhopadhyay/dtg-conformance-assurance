@@ -1,1 +1,32 @@
-
+dtg_conformance_schema_version: "0.1.0"
+meta:
+  ecosystem: "DTG-Reference"
+  publisher: "DTG-Governance-Authority"
+assurance_levels:
+  - id: "AL2"
+    name: "Third-Party Audited"
+    definition: "Independent review of governance and controls."
+    evidence_depth: "high"
+control_objectives:
+  - id: "CO3.2"
+    name: "Credential Quality & Binding"
+    description: "Prevent misissuance and misbinding."
+evidence_types:
+  - id: "EV1"
+    name: "Signed Issuance Log"
+    actor_class: "Issuer"
+    description: "Signed log of issuance events."
+    format: "jsonld"
+    frequency: "daily"
+tests:
+  - id: "T1"
+    actor_class: "Issuer"
+    control_objective: "CO3.2"
+    description: "Sample issued credentials and validate."
+    test_type: "sample_audit"
+conformance_profiles:
+  - id: "CP-1"
+    actor_class: "Issuer"
+    name: "Credential Issuer Profile"
+    required_assurance_level: "AL2"
+    required_control_objectives: ["CO3.2"]

@@ -1,0 +1,8 @@
+actor_conformance_claim:
+  actor_id: "did:example:issuer:bank-001"
+  actor_class: "Issuer"
+  profile_id: "CP-1"
+  claimed_assurance_level: "AL2"
+  implemented_controls:
+    - control_objective: "CO3.2"
+      implementation_ref: "https://issuer.example/docs/issuance-standard"
