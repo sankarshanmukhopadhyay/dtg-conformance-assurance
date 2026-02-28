@@ -1,1 +1,0 @@
-# DTG WG scope (placeholder)
