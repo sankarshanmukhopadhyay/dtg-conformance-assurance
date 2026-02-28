@@ -5,7 +5,7 @@ No. DCAS provides **structures and artifacts** that ecosystems can use for risk-
 Certification, procurement, or regulation is out of scope for this repository.
 
 ## What is an Assurance Level (AL)?
-AL0–AL3 describe increasing rigor for evidence and testing. See `03_conformance/assurance_levels.md`.
+AL1–AL4 describe increasing rigor for evidence and testing. See `03_conformance/assurance_levels.md`.
 
 ## What should I publish to be “DCAS-aligned”?
 At minimum:

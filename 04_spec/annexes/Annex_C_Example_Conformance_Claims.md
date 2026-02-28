@@ -10,7 +10,7 @@ Examples of how ecosystems and actors may express DCAS conformance claims.
 **Actor:** did:example:issuer:bank-001  
 **Actor class:** Issuer  
 **Profile:** CP-1 (Credential Issuer Profile)  
-**Assurance level:** AL2  
+**Assurance level:** AL3  
 **Controls:** CO3.1, CO3.2, CO3.3  
 **Evidence:** Signed issuance logs; assessor attestation  
 **Tests:** Sample audit of issued credentials
@@ -20,7 +20,7 @@ Examples of how ecosystems and actors may express DCAS conformance claims.
 **Actor:** did:example:verifier:org-001  
 **Actor class:** Verifier  
 **Profile:** CP-2 (Verifier Profile)  
-**Assurance level:** AL1  
+**Assurance level:** AL2  
 **Controls:** CO3.4  
 **Evidence:** Verification logs; policy config snapshots  
 **Tests:** Log analysis and spot checks

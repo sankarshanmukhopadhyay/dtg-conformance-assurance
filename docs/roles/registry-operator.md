@@ -12,7 +12,7 @@ Operate trust registries/lists as **critical infrastructure**: integrity, proven
 ## Where this shows up in DCAS
 - Conformance profile: `03_conformance/profiles/CP-5_RegistryOperator.md`
 - Mandatory control objectives: CO2.1–CO2.3 (CO2.4 strongly recommended)
-- Typical minimum AL: AL3
+- Typical minimum AL: AL4
 
 ## Outputs you should be able to produce
 - Registry publication bundle (signed data + metadata)

@@ -12,4 +12,4 @@ Keep ecosystem operations stable: monitoring, incident response, escalation, and
 ## Where this shows up in DCAS
 - Conformance profile: `03_conformance/profiles/CP-4_NetworkManager.md`
 - Mandatory control objectives: CO4.2, CO3.3
-- Typical minimum AL: AL2
+- Typical minimum AL: AL3

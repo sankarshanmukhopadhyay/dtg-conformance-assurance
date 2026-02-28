@@ -22,10 +22,10 @@ Confidence reflects the quality of evaluation:
 
 ## How AL influences expectations
 
-- **AL0** favors *declarations* and basic documentation.
-- **AL1** expects consistent evidence and basic test checks.
-- **AL2** expects audit trails, versioning, and repeatability.
-- **AL3** expects stronger independence, immutability, and higher assurance on critical controls.
+- **AL1** favors *declarations* and basic documentation.
+- **AL2** expects consistent evidence and basic test checks.
+- **AL3** expects audit trails, versioning, and repeatability.
+- **AL4** expects stronger independence, immutability, and higher assurance on critical controls.
 
 ## Reporting
 

@@ -12,4 +12,4 @@ Protect end-user agency: consent, delegation boundaries, and safe defaults.
 ## Where this shows up in DCAS
 - Conformance profile: `03_conformance/profiles/CP-3_HolderAgent.md`
 - Mandatory control objectives: CO4.1, CO4.2, CO4.4
-- Typical minimum AL: AL0/AL1
+- Typical minimum AL: AL1/AL2

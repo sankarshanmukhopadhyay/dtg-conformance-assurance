@@ -12,7 +12,7 @@ Set the **operating system** for the ecosystem: policies, roles, decision rights
 ## Where this shows up in DCAS
 - Conformance profile: `03_conformance/profiles/CP-6_GovernanceAuthority.md`
 - Mandatory control objectives: CO1.1–CO1.4
-- Typical minimum AL: AL2
+- Typical minimum AL: AL3
 
 ## Outputs you should be able to produce
 - Governance evidence bundle (EV-001/2/3/4)

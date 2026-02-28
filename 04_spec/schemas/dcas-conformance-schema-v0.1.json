@@ -63,7 +63,14 @@
       "properties": {
         "id": {
           "type": "string",
-          "pattern": "^AL[0-3]$"
+          "pattern": "^AL[1-4]$",
+          "description": "Assurance level identifier. Uses the ecosystem-wide AL1–AL4 range aligned to the canonical model published in the schemas repository.",
+          "examples": [
+            "AL1",
+            "AL2",
+            "AL3",
+            "AL4"
+          ]
         },
         "name": {
           "type": "string"
@@ -236,7 +243,7 @@
         },
         "required_assurance_level": {
           "type": "string",
-          "pattern": "^AL[0-3]$"
+          "pattern": "^AL[1-4]$"
         },
         "required_control_objectives": {
           "type": "array",

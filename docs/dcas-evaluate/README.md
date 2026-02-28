@@ -26,7 +26,7 @@ It packages DCAS into a **doable workflow**:
 ## Minimal workflow
 
 1. Identify actor class (e.g., Issuer) and select the profile.
-2. Choose target AL (AL0–AL3).
+2. Choose target AL (AL1–AL4).
 3. List mandatory COs for the profile.
 4. For each CO, pull required controls from `control_catalog.csv`.
 5. Collect evidence (EV-###) and execute tests (TS-###).

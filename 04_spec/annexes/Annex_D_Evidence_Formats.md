@@ -43,7 +43,7 @@ Evidence SHOULD be:
   "attestation_id": "att-2026-02-11-0007",
   "attester_id": "did:example:assessor:firm-01",
   "subject_id": "did:example:issuer:bank-001",
-  "claim": "Conforms to CP-1 at AL2 for period 2026-Q1",
+  "claim": "Conforms to CP-1 at AL3 for period 2026-Q1",
   "scope": ["CO3.1", "CO3.2", "CO3.3"],
   "validity_period": { "from": "2026-01-01", "to": "2026-03-31" },
   "signature": "base64url(signature)"

@@ -16,7 +16,7 @@ DCAS is a practical, implementation-neutral way to move from **implicit trust** 
 
 - **DCAS Positioning Note:** `04_spec/DCAS_Positioning.md`
 - **DCAS v0.1 Draft Specification:** `04_spec/DCAS_v0.1.md`
-- **Assurance levels (AL0–AL3):** `03_conformance/assurance_levels.md`
+- **Assurance levels (AL1–AL4):** `03_conformance/assurance_levels.md` (aligned to canonical model in the `schemas` repository)
 
 ---
 

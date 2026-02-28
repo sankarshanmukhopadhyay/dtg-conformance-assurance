@@ -3,7 +3,7 @@ meta:
   ecosystem: "DTG-Reference"
   publisher: "DTG-Governance-Authority"
 assurance_levels:
-  - id: "AL2"
+  - id: "AL3"
     name: "Third-Party Audited"
     definition: "Independent review of governance and controls."
     evidence_depth: "high"
@@ -28,5 +28,5 @@ conformance_profiles:
   - id: "CP-1"
     actor_class: "Issuer"
     name: "Credential Issuer Profile"
-    required_assurance_level: "AL2"
+    required_assurance_level: "AL3"
     required_control_objectives: ["CO3.2"]

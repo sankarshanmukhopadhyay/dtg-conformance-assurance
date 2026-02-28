@@ -6,7 +6,7 @@ DCAS is not a certification scheme. It is a **shared, testable vocabulary** for:
 - expressing ecosystem risks,
 - defining control objectives and controls,
 - producing evidence,
-- running assurance checks (AL0–AL3),
+- running assurance checks (AL1–AL4),
 - publishing conformance claims.
 
 ## Quick paths (choose your role)

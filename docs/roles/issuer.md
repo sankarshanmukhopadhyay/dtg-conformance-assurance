@@ -12,4 +12,4 @@ Issue credentials/claims that are **authorized**, **policy-compliant**, and **au
 ## Where this shows up in DCAS
 - Conformance profile: `03_conformance/profiles/CP-1_Issuer.md`
 - Mandatory control objectives: CO3.1, CO3.2, CO3.3
-- Typical minimum AL: AL2
+- Typical minimum AL: AL3

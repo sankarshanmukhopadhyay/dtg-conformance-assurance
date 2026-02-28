@@ -12,4 +12,4 @@ Make reliable accept/reject decisions based on authorization, schema conformance
 ## Where this shows up in DCAS
 - Conformance profile: `03_conformance/profiles/CP-2_Verifier.md`
 - Mandatory control objectives: CO3.4
-- Typical minimum AL: AL1
+- Typical minimum AL: AL2
