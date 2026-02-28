@@ -1,88 +1,70 @@
-# DTG Conformance & Assurance
+# DTG Conformance & Assurance (DCAS)
 
-DTG Conformance & Assurance provides the **risk, control, conformance, and assurance foundations**
-for Decentralized Trust Graph (DTG) ecosystems.
+This repository publishes **DCAS (Decentralized Conformance and Assurance Standard)** artifacts for Decentralized Trust Graph (DTG) ecosystems.
 
-This repository consolidates artefacts and specifications that enable **explicit, reviewable,
-and risk-proportionate trust claims** across decentralized systems.
+DCAS is a practical, implementation-neutral way to move from **implicit trust** to **explicit, reviewable, risk-proportionate trust claims**.
 
 ---
 
-## Start here
+## Start here (new to the repo)
 
-If you are new to this repository, begin with:
+- **Adoption guide (role-based):** `docs/start-here.md`
+- **Repository map:** `docs/repo-map.md`
+- **FAQ:** `docs/FAQ.md`
 
-- 📄 **[DCAS Positioning Note](04_spec/DCAS_Positioning.md)**  
-  A one-page overview explaining *why* DCAS exists, what problems it addresses, and what it does
-  (and does not) attempt to standardize.
+## Read the DCAS documents
 
-- 📘 **[DCAS v0.1 Draft Specification](04_spec/DCAS_v0.1.md)**  
-  The working-group draft defining the conceptual model, terminology, and structure for
-  risk-based conformance and assurance in DTG ecosystems.
-
----
-
-## What this repository contains
-
-This repository brings together the artefacts required to move from **implicit governance**
-to **operational, auditable assurance**:
-
-- **Risk assessment**
-  - Risk taxonomy and risk assessment worksheets
-  - Structured risk → control mappings
-
-- **Control objectives**
-  - Outcome-focused control objectives derived from risk
-  - Alignment across governance, technical, and operational layers
-
-- **Conformance profiles**
-  - Role-specific groupings of control objectives
-  - Minimum assurance expectations per actor class
-
-- **Assurance**
-  - Assurance levels that scale rigor with risk
-  - Evidence and testing expectations
-
-- **Specification and schemas**
-  - DCAS draft specification and annexes
-  - Machine-readable schemas for conformance declarations
-
-- **Governance**
-  - Decision logs, release checklists, and review cadence
-  - GitHub-native workflows for review and change control
+- **DCAS Positioning Note:** `04_spec/DCAS_Positioning.md`
+- **DCAS v0.1 Draft Specification:** `04_spec/DCAS_v0.1.md`
+- **Assurance levels (AL0–AL3):** `03_conformance/assurance_levels.md`
 
 ---
 
-## Repository structure (high level)
+## How to use this repo (end-to-end)
 
-- `01_risk/` — risk assessment source artefacts, mappings, and exports  
-- `02_controls/` — control objectives, evidence catalogues, and test definitions  
-- `03_conformance/` — conformance profiles and assurance levels  
-- `04_spec/` — DCAS draft specification, positioning note, annexes, and schemas  
-- `05_governance/` — decision log, release checklist, and review cadence  
-- `tools/` — helper scripts for export, validation, and CI integration  
+DCAS is organized as a traceability chain:
 
----
+**Risks → Control Objectives → Controls → Evidence → Tests → Assurance output**
 
-## Working conventions
-
-- **XLSX is the canonical authoring format** for structured artefacts  
-- **CSV is the GitHub review surface** for diffs and pull requests  
-- All changes land via **pull requests to `main`**  
-- Decisions that change meaning or requirements are **explicitly recorded**
+1. Start with the risk register export: `01_risk/exports/risk_assessment.csv`
+2. Map risks to control objectives (COs): `01_risk/mapping/risk_to_control_objectives.csv`
+3. Use catalogs to enumerate what to implement and prove:
+   - control objectives: `02_controls/control_objectives.md`
+   - controls: `02_controls/control_catalog.csv`
+   - evidence: `02_controls/evidence_catalog.csv`
+   - tests: `02_controls/test_suites.csv`
+4. Select your conformance profile: `03_conformance/profiles/`
+5. Produce an assurance outcome using the evaluation method: `docs/dcas-evaluate/`
 
 ---
 
-## Status
+## DCAS Evaluate (method)
 
-This repository contains **working-group drafts**.  
-Nothing here should be treated as a final standard, certification scheme, or compliance mandate
-without explicit WG approval and versioned release.
+DCAS Evaluate turns the repo into a **repeatable assessment workflow**:
+
+- method entry: `docs/dcas-evaluate/README.md`
+- report template: `docs/dcas-evaluate/report-template.md`
+- evidence checklist: `docs/dcas-evaluate/evidence-checklist.md`
+- scoring + confidence rubric: `docs/dcas-evaluate/scoring.md`
+- method version: `DCAS_METHOD_VERSION`
 
 ---
 
-## Contributing
+## Roadmap
 
-Contributions are welcome via issues and pull requests.  
-Please follow the governance and review processes defined in `05_governance/`.
+- `docs/roadmap.md`
 
+---
+
+## Tooling
+
+- Export risk register XLSX → CSV: `python tools/export_xlsx_to_csv.py`
+- Validate risk export: `python tools/validate_csv.py`
+
+See `tools/README.md` for details.
+
+---
+
+## License
+
+See `LICENSE`.
