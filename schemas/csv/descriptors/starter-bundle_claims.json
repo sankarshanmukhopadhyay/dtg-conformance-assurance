@@ -1,0 +1,60 @@
+{
+  "id": "starter-bundle.claims",
+  "title": "Claims CSV schema",
+  "applies_to": "templates/starter-bundle/claims.csv",
+  "columns": [
+    {
+      "name": "claim_id",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "claim_type",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "subject_id",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "profile_id",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "assurance_level",
+      "required": true,
+      "type": "enum",
+      "enum": [
+        "AL1",
+        "AL2",
+        "AL3",
+        "AL4"
+      ]
+    },
+    {
+      "name": "statement",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "issued_at",
+      "required": true,
+      "type": "datetime"
+    },
+    {
+      "name": "evidence_bundle_id",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "expires_at",
+      "required": false,
+      "type": "datetime"
+    }
+  ],
+  "allow_extensions": true,
+  "extension_prefix": "x_"
+}

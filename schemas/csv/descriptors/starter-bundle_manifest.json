@@ -1,0 +1,66 @@
+{
+  "id": "starter-bundle.bundle_manifest",
+  "title": "Bundle manifest CSV schema",
+  "applies_to": "templates/starter-bundle/bundle_manifest.csv",
+  "columns": [
+    {
+      "name": "bundle_id",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "bundle_version",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "created_at",
+      "required": true,
+      "type": "datetime"
+    },
+    {
+      "name": "issuer_id",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "issuer_name",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "target_profile_id",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "target_assurance_level",
+      "required": true,
+      "type": "enum",
+      "enum": [
+        "AL1",
+        "AL2",
+        "AL3",
+        "AL4"
+      ]
+    },
+    {
+      "name": "file_path",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "file_purpose",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "sha256",
+      "required": false,
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  ],
+  "allow_extensions": true,
+  "extension_prefix": "x_"
+}

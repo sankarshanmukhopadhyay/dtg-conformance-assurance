@@ -37,3 +37,7 @@ make validate
 ```
 
 CI runs the same checks on every PR/push.
+
+## Coverage report (automated)
+
+Use `make coverage` to generate a deterministic control coverage report (CSV + Markdown). This is intended to be a first-pass verifier lens before deeper evidence checks.

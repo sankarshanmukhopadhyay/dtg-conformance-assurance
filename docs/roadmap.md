@@ -12,10 +12,10 @@ This roadmap is organized as capability increments. Dates are intentionally omit
 - Updated “front door” docs (start-here, repo-map, FAQ)
 - Removal of maintainer-only broken reference inventory (replaced by automated checks)
 
-## Next increment (proposed)
-
-### v0.2.0 — Coverage reporting + stronger schemas
+## v0.2.0 — Coverage reporting + stronger schemas (DELIVERED)
 - Generate a coverage report from bundle + mappings (CSV + Markdown output)
 - Add explicit CSV schema descriptors for each template (machine-readable)
-- Expand control objectives catalog and align with profiles/ALs
-- Add a “verifier-first” workflow doc (independent checks + decision logging)
+- Add machine-readable CSV schema descriptors (drives `make validate`)
+- Add deterministic coverage reporting (`make coverage`)
+- Add a verifier-first workflow doc (`docs/verifier-workflow.md`)
+- Tighten CI to regenerate deterministic reports and fail on diffs

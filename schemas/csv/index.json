@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "generated_at": "2026-02-28T01:49:51.386474Z",
+  "descriptors": [
+    "schemas/csv/descriptors/starter-bundle_manifest.json",
+    "schemas/csv/descriptors/starter-bundle_claims.json",
+    "schemas/csv/descriptors/starter-bundle_evidence.json",
+    "schemas/csv/descriptors/starter-bundle_mappings_control_evidence.json",
+    "schemas/csv/descriptors/starter-bundle_evaluation_results.json",
+    "schemas/csv/descriptors/controls_control_objectives.json",
+    "schemas/csv/descriptors/risk_exports_risk_assessment.json"
+  ]
+}

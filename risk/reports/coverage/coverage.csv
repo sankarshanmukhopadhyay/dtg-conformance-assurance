@@ -1,0 +1,23 @@
+control_objective_id,control_title,coverage_status,mapped_evidence_count,evidence_ids,coverage_types
+CO1.1,Governance coherence,uncovered,0,,
+CO1.2,Anti-capture controls,uncovered,0,,
+CO1.3,Transparent adjudication,uncovered,0,,
+CO1.4,Change control & versioning,covered,1,EVID-0001,operational
+CO2.1,Access control,covered,1,EVID-0002,operational
+CO2.2,Access review cadence,uncovered,0,,
+CO2.3,Separation of duties,covered,1,EVID-0002,design
+CO2.4,Supply chain integrity,uncovered,0,,
+CO3.1,Identity binding,uncovered,0,,
+CO3.2,Delegation constraints,uncovered,0,,
+CO3.3,Lifecycle governance,uncovered,0,,
+CO3.4,Directory/registry correctness,uncovered,0,,
+CO4.1,Evidence completeness,uncovered,0,,
+CO4.2,Traceability,uncovered,0,,
+CO4.3,Testability,uncovered,0,,
+CO4.4,Repeatability,uncovered,0,,
+CO5.1,Disclosure baseline,uncovered,0,,
+CO5.2,Change disclosure,uncovered,0,,
+CO5.3,Incident disclosure,uncovered,0,,
+CO6.1,Continuity planning,uncovered,0,,
+CO6.2,Key management,uncovered,0,,
+CO6.3,Monitoring & response,uncovered,0,,

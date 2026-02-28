@@ -4,6 +4,7 @@ Use this checklist before cutting a tagged release.
 
 ## Required checks
 
+- [ ] `make coverage` produces deterministic outputs with no diff
 - [ ] `make validate` passes locally
 - [ ] CI `validate` workflow is green
 - [ ] Repo “front door” docs updated as needed (`README.md`, `docs/start-here.md`, `docs/repo-map.md`, `docs/FAQ.md`)

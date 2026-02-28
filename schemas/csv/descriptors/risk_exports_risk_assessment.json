@@ -1,0 +1,70 @@
+{
+  "id": "risk.exports.risk_assessment",
+  "title": "Risk assessment export CSV schema",
+  "applies_to": "risk/exports/risk_assessment.csv",
+  "columns": [
+    {
+      "name": "Risk ID",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "Category",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "Risk Statement",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "Cause",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "Consequence",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "Owner",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "Likelihood",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "Impact",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "Inherent Risk",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "Controls",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "Residual Risk",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "Control Objective IDs",
+      "required": false,
+      "type": "id_list",
+      "delimiter": ";"
+    }
+  ],
+  "allow_extensions": true,
+  "extension_prefix": "x_"
+}

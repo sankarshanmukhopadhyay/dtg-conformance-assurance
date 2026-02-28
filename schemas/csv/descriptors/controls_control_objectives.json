@@ -1,0 +1,34 @@
+{
+  "id": "controls.control_objectives",
+  "title": "Control objectives registry CSV schema",
+  "applies_to": "controls/control_objectives.csv",
+  "columns": [
+    {
+      "name": "control_objective_id",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "domain",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "title",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "objective",
+      "required": false,
+      "type": "string"
+    },
+    {
+      "name": "test_hint",
+      "required": false,
+      "type": "string"
+    }
+  ],
+  "allow_extensions": true,
+  "extension_prefix": "x_"
+}

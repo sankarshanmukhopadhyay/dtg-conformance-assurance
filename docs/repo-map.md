@@ -13,10 +13,15 @@ This repo is organized around an end-to-end traceability spine:
 - `conformance/` — assurance levels + conformance profiles + examples
 - `docs/` — adoption guidance and evaluation method
 - `spec/` — draft specification and annexes
-- `tools/` — validation tooling (runs in CI)
+- `schemas/` — machine-readable CSV schema descriptors used by tooling
+- `tools/` — validation + report tooling (runs in CI)
 
 ## Where to begin
 
 - New adopters: `docs/start-here.md`
 - Templates: `templates/starter-bundle/`
 - Validation: `tools/validate.py` (or `make validate`)
+
+## Reports
+
+- Control coverage (deterministic): `risk/reports/coverage/` (generated via `make coverage`)

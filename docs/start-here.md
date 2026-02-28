@@ -23,14 +23,20 @@ This repo is **issuer-first**: the fastest path to adoption is producing a consi
 5. **Run a self-evaluation**
    - Document results in `evaluation_results.csv` (pass/partial/fail + evidence links)
 
-6. **Validate**
+6. **Validate (automated)**
 ```bash
 pip install -r requirements.txt
 make validate
 ```
 
+7. **Generate a coverage report (automated)**
+```bash
+make coverage
+```
+This produces `risk/reports/coverage/coverage.csv` and `risk/reports/coverage/coverage.md` using the canonical control objective registry.
+
 ## Next paths (other roles)
 
-- **Verifier:** use the same bundle structure; focus on independent checks and decision logging.
+- **Verifier:** follow `docs/verifier-workflow.md` for an intake → validation → coverage → decision pipeline.
 - **Auditor/assessor:** see `docs/roles/auditor-assessor.md` for a repeatable sampling approach.
 - **Tool builder:** see `docs/roles/tool-builder.md` for automation patterns.

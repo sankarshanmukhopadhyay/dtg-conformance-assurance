@@ -1,0 +1,38 @@
+{
+  "id": "starter-bundle.mappings_control_evidence",
+  "title": "Control-to-evidence mappings CSV schema",
+  "applies_to": "templates/starter-bundle/mappings_control_evidence.csv",
+  "columns": [
+    {
+      "name": "control_objective_id",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "evidence_id",
+      "required": true,
+      "type": "string"
+    },
+    {
+      "name": "coverage_type",
+      "required": true,
+      "type": "enum",
+      "enum": [
+        "design",
+        "direct",
+        "indirect",
+        "operational",
+        "out-of-scope",
+        "partial",
+        "test"
+      ]
+    },
+    {
+      "name": "notes",
+      "required": false,
+      "type": "string"
+    }
+  ],
+  "allow_extensions": true,
+  "extension_prefix": "x_"
+}
