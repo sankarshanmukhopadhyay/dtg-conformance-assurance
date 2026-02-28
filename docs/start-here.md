@@ -11,14 +11,14 @@ DCAS is not a certification scheme. It is a **shared, testable vocabulary** for:
 
 ## Quick paths (choose your role)
 
-- **Ecosystem operator / Governance authority** → `docs/roles/governance-authority.md`
-- **Registry / trust list operator** → `docs/roles/registry-operator.md`
-- **Network manager** → `docs/roles/network-manager.md`
-- **Issuer** → `docs/roles/issuer.md`
-- **Verifier** → `docs/roles/verifier.md`
-- **Holder / agent implementer** → `docs/roles/holder-agent.md`
-- **Auditor / assessor** → `docs/roles/auditor-assessor.md`
-- **Tool builder** → `docs/roles/tool-builder.md`
+- **Ecosystem operator / Governance authority** → `the referenced artifact (not included in this repo)`
+- **Registry / trust list operator** → `the referenced artifact (not included in this repo)`
+- **Network manager** → `the referenced artifact (not included in this repo)`
+- **Issuer** → `the referenced artifact (not included in this repo)`
+- **Verifier** → `the referenced artifact (not included in this repo)`
+- **Holder / agent implementer** → `the referenced artifact (not included in this repo)`
+- **Auditor / assessor** → `the referenced artifact (not included in this repo)`
+- **Tool builder** → `the referenced artifact (not included in this repo)`
 
 ## What is “done” when you adopt DCAS?
 
@@ -29,15 +29,15 @@ At minimum, you should be able to produce:
 
 ## Core artifacts
 
-- **Risk register export**: `risk/exports/risk_assessment.csv`
-- **Risk → CO mapping**: `risk/mapping/risk_to_control_objectives.csv`
-- **Control objectives**: `controls/control_objectives.md`
-- **Control catalog**: `controls/control_catalog.csv`
-- **Evidence catalog**: `controls/evidence_catalog.csv`
-- **Test suite catalog**: `controls/test_suites.csv`
-- **Assurance levels**: `conformance/assurance_levels.md`
-- **DCAS spec**: `spec/DCAS_v0.1.md`
+- **Risk register export**: `the referenced artifact (not included in this repo)`
+- **Risk → CO mapping**: `the referenced artifact (not included in this repo)`
+- **Control objectives**: `the referenced artifact (not included in this repo)`
+- **Control catalog**: `the referenced artifact (not included in this repo)`
+- **Evidence catalog**: `the referenced artifact (not included in this repo)`
+- **Test suite catalog**: `the referenced artifact (not included in this repo)`
+- **Assurance levels**: `the referenced artifact (not included in this repo)`
+- **DCAS spec**: `the referenced artifact (not included in this repo)`
 
 ## Next
 
-Run the DCAS evaluation workflow: `docs/dcas-evaluate/README.md`
+Run the DCAS evaluation workflow: `the referenced artifact (not included in this repo)`

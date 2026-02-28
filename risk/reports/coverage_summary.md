@@ -5,11 +5,11 @@ This report summarizes coverage across:
 **Risks → Control Objectives → Controls → Evidence → Tests**
 
 Generated from:
-- `risk/exports/risk_assessment.csv`
-- `risk/mapping/risk_to_control_objectives.csv`
-- `controls/control_catalog.csv`
-- `controls/evidence_catalog.csv`
-- `controls/test_suites.csv`
+- `the referenced artifact (not included in this repo)`
+- `the referenced artifact (not included in this repo)`
+- `the referenced artifact (not included in this repo)`
+- `the referenced artifact (not included in this repo)`
+- `the referenced artifact (not included in this repo)`
 
 ## Snapshot
 
@@ -29,8 +29,8 @@ All risks have at least one mapped control objective.
 ## Control objective coverage
 
 All mapped control objectives have:
-- a definition in `controls/control_objectives.md`
-- at least one mapped control in `controls/control_catalog.csv`
+- a definition in `the referenced artifact (not included in this repo)`
+- at least one mapped control in `the referenced artifact (not included in this repo)`
 
 - COs without controls: **0**
 - COs without definitions: **0**

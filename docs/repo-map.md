@@ -17,7 +17,7 @@ This repo is organized as an **end-to-end traceability spine**:
 
 ## “First things to read”
 
-1. `docs/start-here.md`
-2. `spec/DCAS_Positioning.md`
-3. `spec/DCAS_v0.1.md`
-4. `conformance/assurance_levels.md`
+1. `the referenced artifact (not included in this repo)`
+2. `the referenced artifact (not included in this repo)`
+3. `the referenced artifact (not included in this repo)`
+4. `the referenced artifact (not included in this repo)`

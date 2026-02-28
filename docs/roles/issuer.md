@@ -10,6 +10,6 @@ Issue credentials/claims that are **authorized**, **policy-compliant**, and **au
 4. Publish conformance claim (examples in `conformance/examples/`).
 
 ## Where this shows up in DCAS
-- Conformance profile: `conformance/profiles/CP-Issuer.md`
+- Conformance profile: `the referenced artifact (not included in this repo)`
 - Mandatory control objectives: CO3.1, CO3.2, CO3.3
 - Typical minimum AL: AL3

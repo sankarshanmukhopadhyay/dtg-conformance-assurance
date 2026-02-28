@@ -7,11 +7,11 @@ This annex defines the normative machine-readable schema used to represent DCAS 
 
 ## B.2 Normative schema artefacts
 
-- Normative JSON Schema: `spec/schemas/dcas-conformance-schema-v0.1.json`
+- Normative JSON Schema: `the referenced artifact (not included in this repo)`
 
 Supporting examples (informative):
-- `conformance/examples/ecosystem_schema.example.yaml`
-- `conformance/examples/actor_conformance_claim.example.yaml`
+- `the referenced artifact (not included in this repo)`
+- `the referenced artifact (not included in this repo)`
 
 ## B.3 Requirements
 

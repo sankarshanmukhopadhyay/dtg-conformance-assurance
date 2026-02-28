@@ -10,6 +10,6 @@ Keep ecosystem operations stable: monitoring, incident response, escalation, and
 4. Track dependency inventory and fallback plans (EV-012).
 
 ## Where this shows up in DCAS
-- Conformance profile: `conformance/profiles/CP-NetworkManager.md`
+- Conformance profile: `the referenced artifact (not included in this repo)`
 - Mandatory control objectives: CO4.2, CO3.3
 - Typical minimum AL: AL3

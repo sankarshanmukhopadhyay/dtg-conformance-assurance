@@ -10,10 +10,10 @@ Set the **operating system** for the ecosystem: policies, roles, decision rights
 4. Run periodic control effectiveness review (CO6.3).
 
 ## Where this shows up in DCAS
-- Conformance profile: `conformance/profiles/CP-GovernanceAuthority.md`
+- Conformance profile: `the referenced artifact (not included in this repo)`
 - Mandatory control objectives: CO1.1–CO1.4
 - Typical minimum AL: AL3
 
 ## Outputs you should be able to produce
 - Governance evidence bundle (EV-001/2/3/4)
-- Assurance report (docs/dcas-evaluate/report-template.md)
+- Assurance report (the referenced artifact (not included in this repo))

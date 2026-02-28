@@ -4,18 +4,18 @@ Use this checklist before cutting a tagged release.
 
 ## Required artifacts (content)
 
-- [ ] Risk register XLSX updated (if applicable): `risk/source/Risk Register.xlsx`
+- [ ] Risk register XLSX updated (if applicable): `risk/source/Risk the referenced artifact (not included in this repo)`
 - [ ] Risk export regenerated: `python tools/export_xlsx_to_csv.py`
 - [ ] Risk export validated: `python tools/validate_csv.py`
-- [ ] Risk → CO mapping reviewed: `risk/mapping/risk_to_control_objectives.csv`
-- [ ] Control objectives reviewed: `controls/control_objectives.md`
+- [ ] Risk → CO mapping reviewed: `the referenced artifact (not included in this repo)`
+- [ ] Control objectives reviewed: `the referenced artifact (not included in this repo)`
 - [ ] Catalogs updated and internally consistent:
-  - [ ] `controls/control_catalog.csv`
-  - [ ] `controls/evidence_catalog.csv`
-  - [ ] `controls/test_suites.csv`
-- [ ] Coverage report refreshed: `risk/reports/coverage_summary.md`
+  - [ ] `the referenced artifact (not included in this repo)`
+  - [ ] `the referenced artifact (not included in this repo)`
+  - [ ] `the referenced artifact (not included in this repo)`
+- [ ] Coverage report refreshed: `the referenced artifact (not included in this repo)`
 - [ ] Conformance profiles reviewed: `conformance/profiles/`
-- [ ] DCAS spec updated (if applicable): `spec/DCAS_v0.1.md`
+- [ ] DCAS spec updated (if applicable): `the referenced artifact (not included in this repo)`
 - [ ] Evaluation method reviewed + versioned:
   - [ ] `docs/dcas-evaluate/`
   - [ ] `DCAS_METHOD_VERSION`
@@ -23,9 +23,9 @@ Use this checklist before cutting a tagged release.
 ## Required artifacts (repo hygiene)
 
 - [ ] README updated (routing for new adopters)
-- [ ] Roadmap updated: `docs/roadmap.md`
+- [ ] Roadmap updated: `the referenced artifact (not included in this repo)`
 - [ ] Release notes drafted (see `docs/releases/`)
-- [ ] Decision log updated (if applicable): `governance/decision_log.md`
+- [ ] Decision log updated (if applicable): `the referenced artifact (not included in this repo)`
 
 ## Tagging
 

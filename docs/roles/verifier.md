@@ -10,6 +10,6 @@ Make reliable accept/reject decisions based on authorization, schema conformance
 4. Publish conformance claim (examples in `conformance/examples/`).
 
 ## Where this shows up in DCAS
-- Conformance profile: `conformance/profiles/CP-Verifier.md`
+- Conformance profile: `the referenced artifact (not included in this repo)`
 - Mandatory control objectives: CO3.4
 - Typical minimum AL: AL2

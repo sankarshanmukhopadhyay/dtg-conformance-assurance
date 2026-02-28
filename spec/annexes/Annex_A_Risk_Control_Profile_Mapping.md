@@ -5,7 +5,7 @@
 
 This annex defines the **normative mapping** between:
 
-- risks identified in the DTG Risk Assessment Worksheet,
+- risks identified in the DTG risk assessment worksheet (use your organization’s preferred template),
 - control objectives that mitigate those risks, and
 - conformance profiles that apply those control objectives by actor class.
 
@@ -16,13 +16,13 @@ This mapping is the primary traceability mechanism for DCAS v0.1.
 The normative mapping for DCAS v0.1 SHALL be maintained in:
 
 - Risk inventory (authoritative):  
-  `risk/source/DTG_WG_Risk_Assessment_Worksheet_Populated_From_WIP.xlsx`
+  `the referenced artifact (not included in this repo)`
 
 - Risk → Control mapping (authoritative):  
-  `risk/mapping/risk_to_control.xlsx`
+  `the referenced artifact (not included in this repo)`
 
 - CSV mirror for GitHub review:  
-  `risk/mapping/risk_to_control.csv`
+  `the referenced artifact (not included in this repo)`
 
 If XLSX and CSV disagree, the XLSX source SHALL be treated as canonical and the CSV SHALL be regenerated.
 

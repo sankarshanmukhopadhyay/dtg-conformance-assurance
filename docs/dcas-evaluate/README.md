@@ -9,26 +9,26 @@ It packages DCAS into a **doable workflow**:
 ## Inputs
 
 - Target actor class profile: `conformance/profiles/`
-- Assurance levels: `conformance/assurance_levels.md`
-- Risk register export: `risk/exports/risk_assessment.csv`
-- Risk→CO mapping: `risk/mapping/risk_to_control_objectives.csv`
+- Assurance levels: `the referenced artifact (not included in this repo)`
+- Risk register export: `the referenced artifact (not included in this repo)`
+- Risk→CO mapping: `the referenced artifact (not included in this repo)`
 - Catalogs:
-  - controls: `controls/control_catalog.csv`
-  - evidence: `controls/evidence_catalog.csv`
-  - tests: `controls/test_suites.csv`
+  - controls: `the referenced artifact (not included in this repo)`
+  - evidence: `the referenced artifact (not included in this repo)`
+  - tests: `the referenced artifact (not included in this repo)`
 
 ## Outputs
 
-- An **assurance report** (template): `docs/dcas-evaluate/report-template.md`
-- A **score + confidence** rationale (rubric): `docs/dcas-evaluate/scoring.md`
-- An **evidence checklist** snapshot: `docs/dcas-evaluate/evidence-checklist.md`
+- An **assurance report** (template): `the referenced artifact (not included in this repo)`
+- A **score + confidence** rationale (rubric): `the referenced artifact (not included in this repo)`
+- An **evidence checklist** snapshot: `the referenced artifact (not included in this repo)`
 
 ## Minimal workflow
 
 1. Identify actor class (e.g., Issuer) and select the profile.
 2. Choose target AL (AL1–AL4).
 3. List mandatory COs for the profile.
-4. For each CO, pull required controls from `control_catalog.csv`.
+4. For each CO, pull required controls from `the referenced artifact (not included in this repo)`.
 5. Collect evidence (EV-###) and execute tests (TS-###).
 6. Score results and document confidence.
 7. Publish the assurance report.

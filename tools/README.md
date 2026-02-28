@@ -4,8 +4,8 @@ This folder contains lightweight utilities to keep the repo **diff-friendly** an
 
 ## 1) Export the risk register (XLSX → CSV)
 
-Source: `risk/source/Risk Register.xlsx`  
-Output: `risk/exports/risk_assessment.csv`
+Source: `risk/source/Risk the referenced artifact (not included in this repo)`  
+Output: `the referenced artifact (not included in this repo)`
 
 ```bash
 python tools/export_xlsx_to_csv.py
@@ -25,9 +25,9 @@ This checks:
 
 The control and evidence catalogs are intended to be simple CSVs that are easy to diff and integrate.
 
-- `controls/control_catalog.csv`
-- `controls/evidence_catalog.csv`
-- `controls/test_suites.csv`
+- `the referenced artifact (not included in this repo)`
+- `the referenced artifact (not included in this repo)`
+- `the referenced artifact (not included in this repo)`
 
 Suggested validation pattern:
 - ensure stable headers (do not rename casually)

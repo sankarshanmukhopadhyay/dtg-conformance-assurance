@@ -119,7 +119,7 @@ sampling, behavioral verification, integrity checks, and audit review.
 - DCAS uses actor classes to avoid applying the same requirements to actors with meaningfully different risk exposure.
 
 **TODO (Normative):**
-- Align actor class names with the DTG WG’s preferred taxonomy and the Risk Assessment Worksheet columns.
+- Align actor class names with the DTG WG’s preferred taxonomy and the risk assessment worksheet (use your organization’s preferred template) (use your organization’s preferred template) (use your organization’s preferred template) (use your organization’s preferred template) columns.
 - Confirm whether “holder/agent” should be treated as one class or two classes for v0.1.
 
 ---
@@ -172,7 +172,7 @@ A DTG ecosystem applying DCAS SHALL:
 - record ownership and treatment intent (e.g., mitigate, accept, transfer, avoid), and
 - support repeatable review and revision as the ecosystem evolves.
 
-The **Risk Assessment Worksheet** is the authoritative structure for risk inventory in DCAS v0.1.  
+The **risk assessment worksheet (use your organization’s preferred template) (use your organization’s preferred template) (use your organization’s preferred template) (use your organization’s preferred template)** is the authoritative structure for risk inventory in DCAS v0.1.  
 Risk categorizations and taxonomies MAY be used to support review and coverage analysis but SHALL NOT replace the underlying risk statements.
 
 ### 5.2 Proportionality and scaling
@@ -207,13 +207,13 @@ Control objectives SHALL be grouped into conformance profiles such that:
 ### 5.5 Normative references to artefacts
 
 DCAS v0.1 uses external artefacts as normative references. At minimum, an ecosystem claiming alignment with DCAS v0.1 SHALL provide:
-- a Risk Assessment Worksheet (risk inventory),
+- a risk assessment worksheet (use your organization’s preferred template) (use your organization’s preferred template) (use your organization’s preferred template) (use your organization’s preferred template) (risk inventory),
 - a Risk → Control Objective mapping,
 - defined conformance profiles for relevant actor classes.
 
 **TODO (Normative):**
 - Confirm which artefacts are required vs recommended for v0.1 (e.g., evidence catalogue, test suites).
-- Confirm whether the Risk Assessment Worksheet template is normative, or whether any structurally equivalent form is acceptable.
+- Confirm whether the risk assessment worksheet (use your organization’s preferred template) (use your organization’s preferred template) (use your organization’s preferred template) (use your organization’s preferred template) template is normative, or whether any structurally equivalent form is acceptable.
 
 ---
 

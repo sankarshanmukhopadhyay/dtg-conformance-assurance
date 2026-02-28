@@ -7,8 +7,8 @@ This roadmap is organized as **capability increments**. Dates are intentionally 
 **Outcome:** the repo is executable for adopters: clear onboarding + a minimal end-to-end traceability spine.
 
 - ✅ Milestone A — Adopter-grade onboarding
-  - Role-based “Start here” guidance (`docs/start-here.md`, `docs/roles/`)
-  - Repository map and FAQ (`docs/repo-map.md`, `docs/FAQ.md`)
+  - Role-based “Start here” guidance (`the referenced artifact (not included in this repo)`, `docs/roles/`)
+  - Repository map and FAQ (`the referenced artifact (not included in this repo)`, `the referenced artifact (not included in this repo)`)
   - README updated to route first-time readers
 
 - ✅ Milestone B — Executable method spine (DCAS Evaluate)
@@ -17,8 +17,8 @@ This roadmap is organized as **capability increments**. Dates are intentionally 
 
 - ✅ Milestone C — Minimum viable control library + traceability
   - Populated catalogs: controls, evidence, tests (`controls/*.csv`)
-  - Risk → CO mapping (`risk/mapping/risk_to_control_objectives.csv`)
-  - Coverage report generated (`risk/reports/coverage_summary.md`)
+  - Risk → CO mapping (`the referenced artifact (not included in this repo)`)
+  - Coverage report generated (`the referenced artifact (not included in this repo)`)
 
 - ✅ Milestone D — Data integrity + repo hygiene
   - Clean exports and updated tooling (`tools/export_xlsx_to_csv.py`, `tools/validate_csv.py`)
