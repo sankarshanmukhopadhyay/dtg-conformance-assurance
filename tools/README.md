@@ -1,34 +1,22 @@
 # Tools
 
-This folder contains lightweight utilities to keep the repo **diff-friendly** and **machine-readable**.
+This repo is **CSV-first**. Tooling exists to keep artifacts consistent and mechanically verifiable.
 
-## 1) Export the risk register (XLSX → CSV)
-
-Source: `risk/source/Risk an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`  
-Output: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+## Quickstart
 
 ```bash
-python tools/export_xlsx_to_csv.py
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+make validate
 ```
 
-## 2) Validate the risk register export
+## Commands
 
-```bash
-python tools/validate_csv.py
-```
+- `make validate` — run all repo checks (CSV structure + markdown links)
+- `make export-risk` — optional: export `risk/source/Risk Register.xlsx` to `risk/exports/risk_assessment.csv`
 
-This checks:
-- required columns exist
-- `Risk ID` values are present and unique
+## Notes
 
-## 3) Validate other CSV artifacts (optional)
-
-The control and evidence catalogs are intended to be simple CSVs that are easy to diff and integrate.
-
-- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-
-Suggested validation pattern:
-- ensure stable headers (do not rename casually)
-- keep IDs stable (`DCAS-CTRL-###`, `EV-###`, `TS-###`)
+- The XLSX exporter is optional. Prefer maintaining artifacts directly as CSV where possible.
+- Templates live under `templates/` (start with `templates/starter-bundle/`).

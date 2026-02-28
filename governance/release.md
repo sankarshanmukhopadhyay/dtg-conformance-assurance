@@ -2,32 +2,20 @@
 
 Use this checklist before cutting a tagged release.
 
-## Required artifacts (content)
+## Required checks
 
-- [ ] Risk register XLSX updated (if applicable): `risk/source/Risk an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- [ ] Risk export regenerated: `python tools/export_xlsx_to_csv.py`
-- [ ] Risk export validated: `python tools/validate_csv.py`
-- [ ] Risk → CO mapping reviewed: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- [ ] Control objectives reviewed: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- [ ] Catalogs updated and internally consistent:
-  - [ ] `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-  - [ ] `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-  - [ ] `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- [ ] Coverage report refreshed: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- [ ] Conformance profiles reviewed: `conformance/profiles/`
-- [ ] DCAS spec updated (if applicable): `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- [ ] Evaluation method reviewed + versioned:
-  - [ ] `docs/dcas-evaluate/`
-  - [ ] `DCAS_METHOD_VERSION`
+- [ ] `make validate` passes locally
+- [ ] CI `validate` workflow is green
+- [ ] Repo “front door” docs updated as needed (`README.md`, `docs/start-here.md`, `docs/repo-map.md`, `docs/FAQ.md`)
 
-## Required artifacts (repo hygiene)
+## Artifact hygiene
 
-- [ ] README updated (routing for new adopters)
-- [ ] Roadmap updated: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- [ ] Release notes drafted (see `docs/releases/`)
-- [ ] Decision log updated (if applicable): `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- [ ] Templates updated if bundle structure changed (`templates/`)
+- [ ] Control objectives updated if new IDs are introduced (`controls/control_objectives.csv`)
+- [ ] Risk exports updated if applicable (`risk/exports/`)
+- [ ] Remove accidental OS/editor artifacts (e.g., `.DS_Store`)
 
-## Tagging
+## Release notes
 
-- [ ] Version tag created (SemVer)
-- [ ] Release notes published with the tag
+- [ ] Add/refresh a release note under `docs/releases/`
+- [ ] Include breaking changes (if any) + migration notes

@@ -1,23 +1,22 @@
 # Repository map
 
-This repo is organized as an **end-to-end traceability spine**:
+This repo is organized around an end-to-end traceability spine:
 
-**Risks → Control Objectives → Controls → Evidence → Tests → Assurance output**
+**Risks → Control Objectives → Evidence → Evaluation outcome**
 
 ## Top-level folders
 
 - `context/` — glossary, assumptions, and DTG working group scope
-- `risk/` — risk register, exports, and traceability mappings
-- `controls/` — control objectives + machine-readable catalogs (controls, evidence, tests)
-- `conformance/` — assurance levels, conformance profiles, and claim examples
-- `spec/` — DCAS specification text + annexes + schemas
-- `governance/` — repo governance, review cycles, and release practices
-- `docs/` — adoption guidance and the DCAS evaluation method
-- `tools/` — lightweight scripts for exports and validation
+- `controls/` — DCAS control objectives (CSV + narrative)
+- `risk/` — risk register exports and mappings
+- `templates/` — CSV-first evidence bundle templates
+- `conformance/` — assurance levels + conformance profiles + examples
+- `docs/` — adoption guidance and evaluation method
+- `spec/` — draft specification and annexes
+- `tools/` — validation tooling (runs in CI)
 
-## “First things to read”
+## Where to begin
 
-1. `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-2. `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-3. `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-4. `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- New adopters: `docs/start-here.md`
+- Templates: `templates/starter-bundle/`
+- Validation: `tools/validate.py` (or `make validate`)

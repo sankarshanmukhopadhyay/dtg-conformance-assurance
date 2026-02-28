@@ -1,19 +1,28 @@
 # Governance authority playbook
 
 ## Your job-to-be-done
-Set the **operating system** for the ecosystem: policies, roles, decision rights, and change control.
+Set the ecosystem “operating system”: policies, roles, decision rights, and change control.
 
-## Minimum adoption checklist (DCAS-aligned)
-1. Publish a governance charter and RACI (EV-001, EV-002).
-2. Operate a decision log with attribution (EV-004).
-3. Implement policy change lifecycle + versioning (EV-003).
-4. Run periodic control effectiveness review (CO6.3).
+## Minimum DCAS-aligned expectations
 
-## Where this shows up in DCAS
-- Conformance profile: `a companion worksheet/template that implementers SHOULD supply from their own governance system (e.g., an organizational risk register, control checklist, or assessment form).`
-- Mandatory control objectives: CO1.1–CO1.4
-- Typical minimum AL: AL3
+1. **Publish role clarity**
+   - RACI and escalation paths (who can approve what)
 
-## Outputs you should be able to produce
-- Governance evidence bundle (EV-001/2/3/4)
-- Assurance report (an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).)
+2. **Version your policy artifacts**
+   - Clear version identifiers
+   - Change review + approvals
+   - Rollback expectations
+
+3. **Define risk ownership**
+   - Maintain a risk register snapshot (CSV export is preferred)
+   - Map risks to control objectives
+
+4. **Make decisions auditable**
+   - Log key decisions and exceptions with traceable rationale
+
+## Where this shows up in the repo
+
+- Control objectives: `controls/control_objectives.csv`
+- Risk exports: `risk/exports/`
+- Risk mappings: `risk/mapping/`
+- Bundle templates: `templates/starter-bundle/`

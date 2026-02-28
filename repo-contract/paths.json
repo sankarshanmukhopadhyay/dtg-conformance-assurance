@@ -1,0 +1,21 @@
+{
+  "version": "0.1.0",
+  "paths": {
+    "docs": "docs",
+    "spec": "spec",
+    "conformance": "conformance",
+    "controls": "controls",
+    "risk": "risk",
+    "templates": "templates",
+    "tools": "tools"
+  },
+  "risk_artifacts": {
+    "source_dir": "risk/source",
+    "exports_dir": "risk/exports",
+    "risk_assessment_csv": "risk/exports/risk_assessment.csv",
+    "risk_to_control_mapping_csv": "risk/mapping/risk_to_control_objectives.csv"
+  },
+  "templates": {
+    "starter_bundle": "templates/starter-bundle"
+  }
+}

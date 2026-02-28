@@ -1,0 +1,6 @@
+bundle_id,bundle_version,created_at,issuer_id,issuer_name,target_profile_id,target_assurance_level,file_path,file_purpose,sha256
+BUNDLE-EXAMPLE-0001,0.1,2026-02-28T01:28:34Z,did:example:issuer-123,Example Issuer,CP-1,AL2,claims.csv,Primary claims for this bundle,
+BUNDLE-EXAMPLE-0001,0.1,2026-02-28T01:28:34Z,did:example:issuer-123,Example Issuer,CP-1,AL2,risks.csv,Risk register snapshot used for evaluation,
+BUNDLE-EXAMPLE-0001,0.1,2026-02-28T01:28:34Z,did:example:issuer-123,Example Issuer,CP-1,AL2,evidence.csv,Evidence catalog referenced by claims,
+BUNDLE-EXAMPLE-0001,0.1,2026-02-28T01:28:34Z,did:example:issuer-123,Example Issuer,CP-1,AL2,mappings_control_evidence.csv,Trace links from controls to evidence,
+BUNDLE-EXAMPLE-0001,0.1,2026-02-28T01:28:34Z,did:example:issuer-123,Example Issuer,CP-1,AL2,evaluation_results.csv,Self-evaluation outputs,

@@ -1,10 +1,20 @@
+#!/usr/bin/env python3
+"""
+Optional helper to export the source XLSX risk register to CSV.
+
+CSV is the repo-first format. XLSX exists only as a convenience
+for teams that maintain the risk register in spreadsheets.
+
+Usage:
+    python tools/export_xlsx_to_csv.py
+"""
 import csv
 from pathlib import Path
 from openpyxl import load_workbook
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / "01_risk" / "source" / "Risk Register.xlsx"
-OUT = ROOT / "01_risk" / "exports" / "risk_assessment.csv"
+SRC = ROOT / "risk" / "source" / "Risk Register.xlsx"
+OUT = ROOT / "risk" / "exports" / "risk_assessment.csv"
 
 CATEGORY_SHEETS_EXCLUDE = {"Explanation (using Gemini)", "Risk to Control Mapping"}
 
@@ -13,8 +23,6 @@ COLUMNS = [
     "Category",
     "Risk Statement",
     "Cause",
-    "Consequence",
-    "Owner",
     "Likelihood",
     "Impact",
     "Inherent Risk",
@@ -22,33 +30,37 @@ COLUMNS = [
     "Residual Risk",
 ]
 
-def main():
-    wb = load_workbook(SRC, data_only=True)
+def main() -> None:
+    if not SRC.exists():
+        raise SystemExit(f"Missing source workbook: {SRC}")
 
-    rows = []
+    wb = load_workbook(SRC, data_only=True)
+    rows_out = []
     for name in wb.sheetnames:
         if name in CATEGORY_SHEETS_EXCLUDE:
             continue
         ws = wb[name]
-        header = [c.value for c in ws[1]]
-        idx = {h: i for i, h in enumerate(header) if h}
-
-        for r in ws.iter_rows(min_row=2, values_only=True):
-            if not any(v is not None and str(v).strip() != "" for v in r):
+        # Expect header row at 1
+        headers = [c.value for c in next(ws.iter_rows(min_row=1, max_row=1))]
+        if not headers:
+            continue
+        idx = {h: i for i, h in enumerate(headers) if h}
+        for row in ws.iter_rows(min_row=2, values_only=True):
+            if not any(row):
                 continue
-            row = {h: (r[i] if i < len(r) else None) for h, i in idx.items()}
-            row["Category"] = name
-            rows.append(row)
+            out = {col: "" for col in COLUMNS}
+            out["Category"] = name
+            for col in COLUMNS:
+                if col in idx and idx[col] < len(row):
+                    out[col] = row[idx[col]] if row[idx[col]] is not None else ""
+            rows_out.append(out)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     with OUT.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=COLUMNS)
         w.writeheader()
-        for row in rows:
-            out = {k: (row.get(k) if row.get(k) is not None else "") for k in COLUMNS}
-            w.writerow(out)
-
-    print(f"Wrote {OUT} ({len(rows)} risks).")
+        w.writerows(rows_out)
+    print(f"Wrote {len(rows_out)} rows to {OUT}")
 
 if __name__ == "__main__":
     main()

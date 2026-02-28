@@ -1,0 +1,3 @@
+Risk ID,Category,Risk Statement,Likelihood,Impact,Inherent Risk,Controls,Residual Risk,Owner,Status
+G1,Governance,"Policy drift across repos leads to incompatible assurance claims",Medium,High,High,"CO1.4; CO1.1",Medium,Governance Lead,Open
+S2,Security,"Unauthorized update of policy artifacts",Low,High,Medium,"CO2.1; CO2.3",Low,Security Lead,Open

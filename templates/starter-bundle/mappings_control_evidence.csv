@@ -1,0 +1,4 @@
+control_objective_id,evidence_id,coverage_type,notes
+CO1.4,EVID-0001,operational,"Demonstrates versioned governance changes and approvals"
+CO2.1,EVID-0002,operational,"Shows periodic review of privileged access"
+CO2.3,EVID-0002,design,"Supports segregation and least privilege controls"

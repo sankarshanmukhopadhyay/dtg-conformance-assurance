@@ -1,6 +1,9 @@
-# Deltas (placeholder)
+# Risk deltas
 
-This folder is reserved for future releases to capture **what changed** in the risk register, mappings, and catalogs.
+This folder is reserved for **change tracking** (risk register deltas between releases).
 
-For the current baseline coverage report, see:
-- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+Current approach:
+- Track changes via normal Git history
+- Optionally publish curated delta summaries per release here
+
+If you start producing delta CSVs, keep them CSV-first and reference the bundle/version they apply to.

@@ -1,74 +1,26 @@
 # Coverage summary
 
-This report summarizes coverage across:
+This document defines the intended coverage view across the DCAS spine:
 
-**Risks → Control Objectives → Controls → Evidence → Tests**
+**Risks → Control Objectives → Evidence → Evaluation results**
 
-Generated from:
-- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+## Inputs (CSV-first)
 
-## Snapshot
+- Risk export: `risk/exports/risk_assessment.csv`
+- Risk → control mapping: `risk/mapping/risk_to_control_objectives.csv`
+- Control objectives: `controls/control_objectives.csv`
+- Bundle outputs (issuer submissions): `templates/starter-bundle/` structure
 
-- Risks (total): **50**
-- Mapped risks (Risk → CO): **50**
-- Control objectives referenced: **22**
-- Controls in catalog: **22**
-- Evidence items in catalog: **15**
-- Tests in catalog: **15**
+## Recommended reporting outputs
 
-## Risk coverage
+A minimal coverage report should answer:
 
-All risks have at least one mapped control objective.
+1. Which risks are in-scope?
+2. Which control objectives mitigate each risk?
+3. Which control objectives have evidence attached?
+4. Which checks passed/failed/partial?
 
-- Unmapped risks: **0**
+## Automation
 
-## Control objective coverage
-
-All mapped control objectives have:
-- a definition in `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-- at least one mapped control in `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-
-- COs without controls: **0**
-- COs without definitions: **0**
-
-## Risks by category
-
-| Category | Count |
-|---|---:|
-| AI Agents | 5 |
-| Credentials | 5 |
-| Cryptography | 5 |
-| External | 5 |
-| Governance | 5 |
-| Human Experience | 5 |
-| Identity | 5 |
-| Network Managers | 5 |
-| Schemas | 5 |
-| Systemic | 5 |
-
-## Top control objectives by mapped risks
-
-| Control Objective ID | Risk count |
-|---|---:|
-| CO3.3 | 5 |
-| CO1.1 | 4 |
-| CO4.2 | 4 |
-| CO2.1 | 4 |
-| CO2.3 | 4 |
-| CO3.1 | 3 |
-| CO5.2 | 3 |
-| CO1.4 | 2 |
-| CO1.3 | 2 |
-| CO3.2 | 2 |
-
-## Notes
-
-This is a **minimum viable** control/evidence/test spine intended to make the repository executable for adopters.
-Future releases should expand:
-- control granularity (more controls per CO)
-- automated test coverage
-- richer evidence bundle examples and sample data
+This repo currently validates *structure and link integrity* via `make validate`.
+Coverage report generation can be added as a future tooling increment once adopters converge on bundle conventions.

@@ -1,0 +1,23 @@
+control_objective_id,domain,title,objective,test_hint
+CO1.1,Governance,Governance coherence,Roles; policies; and artifacts are consistent and non-contradictory across the ecosystem.,Check RACI; policy index; cross-repo references
+CO1.2,Governance,Anti-capture controls,Governance changes require multi-stakeholder approval and are auditable.,Verify quorum/approvals; review signer logs
+CO1.3,Governance,Transparent adjudication,Decisions and exceptions are logged with traceable rationale.,Sample decisions; verify rationale and links
+CO1.4,Governance,Change control & versioning,Policy/schema changes follow a versioned lifecycle with review and rollback.,Check versions; diffs; approvals; rollback
+CO2.1,Security,Access control,Privileged access to governance and release assets is controlled.,Review access lists; verify enforcement
+CO2.2,Security,Access review cadence,Privileged access is reviewed on a defined cadence with remediation.,Verify review evidence and follow-ups
+CO2.3,Security,Separation of duties,No single actor can unilaterally publish/activate high-impact changes.,Check protected branches; required reviewers
+CO2.4,Security,Supply chain integrity,Released artifacts are provenance-linked and integrity-checked.,Verify hashes/signatures; release process
+CO3.1,Operational,Identity binding,Actors and delegated agents are bound to identifiers with verifiable provenance.,Verify identifier issuance and linkage
+CO3.2,Operational,Delegation constraints,Delegated authority is scoped; time-bound; and revocable.,Check delegation records and expiry
+CO3.3,Operational,Lifecycle governance,Actor/agent lifecycle events are recorded and enforce policy transitions.,Check lifecycle logs and controls
+CO3.4,Operational,Directory/registry correctness,Registry entries are accurate; current; and change-controlled.,Sample registry updates and approvals
+CO4.1,Assurance,Evidence completeness,Required evidence exists for the target profile + assurance level.,Check bundle completeness vs profile
+CO4.2,Assurance,Traceability,Control objectives are trace-linked to evidence and evaluation results.,Verify mapping tables and references
+CO4.3,Assurance,Testability,Claims are phrased in testable terms with clear evaluation criteria.,Review claim language; check criteria
+CO4.4,Assurance,Repeatability,Independent reviewers can reproduce the outcome from the artifacts.,Attempt replay of evaluation
+CO5.1,Transparency,Disclosure baseline,Required disclosures are published (scope; assumptions; limitations).,Check disclosures in bundle/docs
+CO5.2,Transparency,Change disclosure,Material changes are disclosed with rationale and version impacts.,Check release notes and diffs
+CO5.3,Transparency,Incident disclosure,Relevant incidents and remediations are logged and disclosed per policy.,Review incident log entries
+CO6.1,Resilience,Continuity planning,Continuity and recovery procedures exist for critical services.,Check DR/BCP artifacts
+CO6.2,Resilience,Key management,Key custody; rotation; and recovery are defined and evidenced.,Review key policy and events
+CO6.3,Resilience,Monitoring & response,Monitoring and response mechanisms exist for critical controls.,Check alerts; response playbooks

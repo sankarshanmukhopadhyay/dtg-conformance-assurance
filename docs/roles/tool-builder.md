@@ -4,13 +4,21 @@
 Turn DCAS artifacts into automation: validation, reporting, dashboards, and integration.
 
 ## What to build first (highest ROI)
-1. A join pipeline that links:
-   - risks (`an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`)
-   - risk→CO (`an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`)
-   - CO→controls/evidence/tests (`controls/*.csv`)
-2. A report generator that renders `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).` from structured inputs.
-3. CSV validators and diff tooling for catalogs.
 
-## Design constraints
-- Keep IDs stable and diff-friendly.
-- Prefer CSV/JSON outputs and deterministic ordering.
+1. **Bundle validator**
+   - Treat `templates/starter-bundle/` as the canonical contract.
+   - Enforce required columns + referential integrity.
+
+2. **Coverage views**
+   - Join: risks → control objectives → evidence → results
+   - Output CSV and a human-readable report (Markdown/PDF)
+
+3. **Profile-driven checks**
+   - For each profile + AL, compute required control objectives.
+   - Flag missing evidence and “partial” results.
+
+## Repo utilities
+
+- Validation entrypoint: `tools/validate.py`
+- Make targets: `Makefile` (`make validate`)
+- Paths contract: `repo-contract/paths.json`

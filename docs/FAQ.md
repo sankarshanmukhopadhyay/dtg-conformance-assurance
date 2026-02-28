@@ -2,22 +2,20 @@
 
 ## Is DCAS a certification program?
 No. DCAS provides **structures and artifacts** that ecosystems can use for risk-based conformance and assurance.
-Certification, procurement, or regulation is out of scope for this repository.
+Certification and regulation are out of scope.
 
 ## What is an Assurance Level (AL)?
-AL1–AL4 describe increasing rigor for evidence and testing. See `an implementer-supplied evidence artifact (e.g., audit report excerpt, test output, or signed attestation).`.
+AL1–AL4 describe increasing expectations for what must be true and what evidence must be available.
+See `conformance/assurance_levels.md`.
 
-## What should I publish to be “DCAS-aligned”?
-At minimum:
-- a conformance claim (example formats in `conformance/examples/`)
-- a minimal evidence bundle mapped to controls (`controls/`)
-- an assurance report produced via `docs/dcas-evaluate/`
+## What formats does this repo prefer?
+**CSV-first.** CSV is the default interchange format for templates and mappings.
+XLSX exists only as an optional convenience for teams maintaining a spreadsheet source.
 
-## How do I map a risk to what I should do?
-Use:
-1. `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-2. `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
-3. `an implementer-supplied evidence artifact (e.g., audit report excerpt, test output, or signed attestation).` (CO → controls → evidence/tests)
+## What should I adopt first?
+Start with the issuer bundle:
+- `templates/starter-bundle/`
+- validate with `make validate`
 
-## Is DCAS tied to a specific DID method, ledger, or product?
-No. DCAS is explicitly implementation-neutral.
+## How do extensions work?
+Add optional columns prefixed with `x_` (e.g., `x_ticket_url`). Core columns remain stable for interoperability.

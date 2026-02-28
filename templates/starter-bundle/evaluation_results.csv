@@ -1,0 +1,3 @@
+check_id,profile_id,assurance_level,result,evidence_ids,notes,checked_at,checker
+CHK-CP1-001,CP-1,AL2,pass,"EVID-0001","Change control evidence present and mapped", 2026-02-28T01:28:34Z,self
+CHK-CP1-002,CP-1,AL2,partial,"EVID-0002","Access review present; missing remediation ticket links", 2026-02-28T01:28:34Z,self
