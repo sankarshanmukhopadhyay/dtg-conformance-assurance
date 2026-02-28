@@ -7,8 +7,8 @@ This roadmap is organized as **capability increments**. Dates are intentionally 
 **Outcome:** the repo is executable for adopters: clear onboarding + a minimal end-to-end traceability spine.
 
 - ✅ Milestone A — Adopter-grade onboarding
-  - Role-based “Start here” guidance (`the referenced artifact (not included in this repo)`, `docs/roles/`)
-  - Repository map and FAQ (`the referenced artifact (not included in this repo)`, `the referenced artifact (not included in this repo)`)
+  - Role-based “Start here” guidance (`an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`, `docs/roles/`)
+  - Repository map and FAQ (`an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`, `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`)
   - README updated to route first-time readers
 
 - ✅ Milestone B — Executable method spine (DCAS Evaluate)
@@ -17,8 +17,8 @@ This roadmap is organized as **capability increments**. Dates are intentionally 
 
 - ✅ Milestone C — Minimum viable control library + traceability
   - Populated catalogs: controls, evidence, tests (`controls/*.csv`)
-  - Risk → CO mapping (`the referenced artifact (not included in this repo)`)
-  - Coverage report generated (`the referenced artifact (not included in this repo)`)
+  - Risk → CO mapping (`an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`)
+  - Coverage report generated (`an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`)
 
 - ✅ Milestone D — Data integrity + repo hygiene
   - Clean exports and updated tooling (`tools/export_xlsx_to_csv.py`, `tools/validate_csv.py`)

@@ -7,11 +7,11 @@ This annex defines the normative machine-readable schema used to represent DCAS 
 
 ## B.2 Normative schema artefacts
 
-- Normative JSON Schema: `the referenced artifact (not included in this repo)`
+- Normative JSON Schema: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
 
 Supporting examples (informative):
-- `the referenced artifact (not included in this repo)`
-- `the referenced artifact (not included in this repo)`
+- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
 
 ## B.3 Requirements
 

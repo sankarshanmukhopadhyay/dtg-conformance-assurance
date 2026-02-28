@@ -10,6 +10,6 @@ Keep ecosystem operations stable: monitoring, incident response, escalation, and
 4. Track dependency inventory and fallback plans (EV-012).
 
 ## Where this shows up in DCAS
-- Conformance profile: `the referenced artifact (not included in this repo)`
+- Conformance profile: `a companion worksheet/template that implementers SHOULD supply from their own governance system (e.g., an organizational risk register, control checklist, or assessment form).`
 - Mandatory control objectives: CO4.2, CO3.3
 - Typical minimum AL: AL3

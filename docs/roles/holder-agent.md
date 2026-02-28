@@ -10,6 +10,6 @@ Protect end-user agency: consent, delegation boundaries, and safe defaults.
 4. Provide user-facing transparency and redress pointers (CO4.4).
 
 ## Where this shows up in DCAS
-- Conformance profile: `the referenced artifact (not included in this repo)`
+- Conformance profile: `a companion worksheet/template that implementers SHOULD supply from their own governance system (e.g., an organizational risk register, control checklist, or assessment form).`
 - Mandatory control objectives: CO4.1, CO4.2, CO4.4
 - Typical minimum AL: AL1/AL2

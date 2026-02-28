@@ -5,11 +5,11 @@ This report summarizes coverage across:
 **Risks → Control Objectives → Controls → Evidence → Tests**
 
 Generated from:
-- `the referenced artifact (not included in this repo)`
-- `the referenced artifact (not included in this repo)`
-- `the referenced artifact (not included in this repo)`
-- `the referenced artifact (not included in this repo)`
-- `the referenced artifact (not included in this repo)`
+- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
 
 ## Snapshot
 
@@ -29,8 +29,8 @@ All risks have at least one mapped control objective.
 ## Control objective coverage
 
 All mapped control objectives have:
-- a definition in `the referenced artifact (not included in this repo)`
-- at least one mapped control in `the referenced artifact (not included in this repo)`
+- a definition in `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- at least one mapped control in `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
 
 - COs without controls: **0**
 - COs without definitions: **0**

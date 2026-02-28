@@ -3,8 +3,8 @@
 Control objectives (COs) define *what must be true* for a DTG ecosystem to operate within acceptable risk bounds.
 They are **testable**, **implementation-neutral**, and **scope-bounded**.
 
-- Canonical spec context: `the referenced artifact (not included in this repo)` (Section 6).
-- Control catalog mapping: `the referenced artifact (not included in this repo)`
+- Canonical spec context: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).` (Section 6).
+- Control catalog mapping: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
 
 ## Control objectives
 
@@ -36,5 +36,5 @@ They are **testable**, **implementation-neutral**, and **scope-bounded**.
 
 ## Notes
 
-- “Risk linkage” is the **traceability anchor** to `the referenced artifact (not included in this repo)` via `the referenced artifact (not included in this repo)`.
+- “Risk linkage” is the **traceability anchor** to `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).` via `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`.
 - External alignment is informative: DCAS does not import external frameworks as normative requirements.

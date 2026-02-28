@@ -11,14 +11,14 @@ DCAS is not a certification scheme. It is a **shared, testable vocabulary** for:
 
 ## Quick paths (choose your role)
 
-- **Ecosystem operator / Governance authority** → `the referenced artifact (not included in this repo)`
-- **Registry / trust list operator** → `the referenced artifact (not included in this repo)`
-- **Network manager** → `the referenced artifact (not included in this repo)`
-- **Issuer** → `the referenced artifact (not included in this repo)`
-- **Verifier** → `the referenced artifact (not included in this repo)`
-- **Holder / agent implementer** → `the referenced artifact (not included in this repo)`
-- **Auditor / assessor** → `the referenced artifact (not included in this repo)`
-- **Tool builder** → `the referenced artifact (not included in this repo)`
+- **Ecosystem operator / Governance authority** → `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **Registry / trust list operator** → `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **Network manager** → `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **Issuer** → `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **Verifier** → `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **Holder / agent implementer** → `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **Auditor / assessor** → `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **Tool builder** → `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
 
 ## What is “done” when you adopt DCAS?
 
@@ -29,15 +29,15 @@ At minimum, you should be able to produce:
 
 ## Core artifacts
 
-- **Risk register export**: `the referenced artifact (not included in this repo)`
-- **Risk → CO mapping**: `the referenced artifact (not included in this repo)`
-- **Control objectives**: `the referenced artifact (not included in this repo)`
-- **Control catalog**: `the referenced artifact (not included in this repo)`
-- **Evidence catalog**: `the referenced artifact (not included in this repo)`
-- **Test suite catalog**: `the referenced artifact (not included in this repo)`
-- **Assurance levels**: `the referenced artifact (not included in this repo)`
-- **DCAS spec**: `the referenced artifact (not included in this repo)`
+- **Risk register export**: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **Risk → CO mapping**: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **Control objectives**: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **Control catalog**: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **Evidence catalog**: `an implementer-supplied evidence artifact (e.g., audit report excerpt, test output, or signed attestation).`
+- **Test suite catalog**: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **Assurance levels**: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- **DCAS spec**: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
 
 ## Next
 
-Run the DCAS evaluation workflow: `the referenced artifact (not included in this repo)`
+Run the DCAS evaluation workflow: `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`

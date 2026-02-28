@@ -10,7 +10,7 @@ Operate trust registries/lists as **critical infrastructure**: integrity, proven
 4. Maintain continuity objectives (EV-011 as operational evidence).
 
 ## Where this shows up in DCAS
-- Conformance profile: `the referenced artifact (not included in this repo)`
+- Conformance profile: `a companion worksheet/template that implementers SHOULD supply from their own governance system (e.g., an organizational risk register, control checklist, or assessment form).`
 - Mandatory control objectives: CO2.1–CO2.3 (CO2.4 strongly recommended)
 - Typical minimum AL: AL4
 

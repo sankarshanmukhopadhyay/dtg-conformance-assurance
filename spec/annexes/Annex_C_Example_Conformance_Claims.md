@@ -28,8 +28,8 @@ Examples of how ecosystems and actors may express DCAS conformance claims.
 ## C.4 Machine-readable examples (YAML)
 
 See:
-- `the referenced artifact (not included in this repo)`
-- `the referenced artifact (not included in this repo)`
+- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+- `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
 
 ## C.5 Disclosure expectation
 

@@ -68,3 +68,7 @@ See `tools/README.md` for details.
 ## License
 
 See `LICENSE`.
+
+## Context
+
+Reader-oriented orientation material lives in [`context/`](context/): scope, assumptions, and a glossary.

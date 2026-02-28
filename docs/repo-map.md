@@ -17,7 +17,7 @@ This repo is organized as an **end-to-end traceability spine**:
 
 ## “First things to read”
 
-1. `the referenced artifact (not included in this repo)`
-2. `the referenced artifact (not included in this repo)`
-3. `the referenced artifact (not included in this repo)`
-4. `the referenced artifact (not included in this repo)`
+1. `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+2. `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+3. `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
+4. `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`

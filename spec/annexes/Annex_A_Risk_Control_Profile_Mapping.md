@@ -16,13 +16,13 @@ This mapping is the primary traceability mechanism for DCAS v0.1.
 The normative mapping for DCAS v0.1 SHALL be maintained in:
 
 - Risk inventory (authoritative):  
-  `the referenced artifact (not included in this repo)`
+  `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
 
 - Risk → Control mapping (authoritative):  
-  `the referenced artifact (not included in this repo)`
+  `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
 
 - CSV mirror for GitHub review:  
-  `the referenced artifact (not included in this repo)`
+  `an implementer-supplied artifact appropriate to your context (e.g., risk register entry, test evidence, or approval record).`
 
 If XLSX and CSV disagree, the XLSX source SHALL be treated as canonical and the CSV SHALL be regenerated.
 

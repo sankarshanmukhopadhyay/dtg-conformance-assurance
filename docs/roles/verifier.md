@@ -10,6 +10,6 @@ Make reliable accept/reject decisions based on authorization, schema conformance
 4. Publish conformance claim (examples in `conformance/examples/`).
 
 ## Where this shows up in DCAS
-- Conformance profile: `the referenced artifact (not included in this repo)`
+- Conformance profile: `a companion worksheet/template that implementers SHOULD supply from their own governance system (e.g., an organizational risk register, control checklist, or assessment form).`
 - Mandatory control objectives: CO3.4
 - Typical minimum AL: AL2
