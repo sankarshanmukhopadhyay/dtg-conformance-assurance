@@ -16,9 +16,9 @@ This roadmap is organized as **capability increments**. Dates are intentionally 
   - Report template, evidence checklist, scoring + confidence rubric
 
 - ✅ Milestone C — Minimum viable control library + traceability
-  - Populated catalogs: controls, evidence, tests (`02_controls/*.csv`)
-  - Risk → CO mapping (`01_risk/mapping/risk_to_control_objectives.csv`)
-  - Coverage report generated (`01_risk/reports/coverage_summary.md`)
+  - Populated catalogs: controls, evidence, tests (`controls/*.csv`)
+  - Risk → CO mapping (`risk/mapping/risk_to_control_objectives.csv`)
+  - Coverage report generated (`risk/reports/coverage_summary.md`)
 
 - ✅ Milestone D — Data integrity + repo hygiene
   - Clean exports and updated tooling (`tools/export_xlsx_to_csv.py`, `tools/validate_csv.py`)

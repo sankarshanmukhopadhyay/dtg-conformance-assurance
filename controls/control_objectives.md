@@ -3,8 +3,8 @@
 Control objectives (COs) define *what must be true* for a DTG ecosystem to operate within acceptable risk bounds.
 They are **testable**, **implementation-neutral**, and **scope-bounded**.
 
-- Canonical spec context: `04_spec/DCAS_v0.1.md` (Section 6).
-- Control catalog mapping: `02_controls/control_catalog.csv`
+- Canonical spec context: `spec/DCAS_v0.1.md` (Section 6).
+- Control catalog mapping: `controls/control_catalog.csv`
 
 ## Control objectives
 
@@ -36,5 +36,5 @@ They are **testable**, **implementation-neutral**, and **scope-bounded**.
 
 ## Notes
 
-- “Risk linkage” is the **traceability anchor** to `01_risk/exports/risk_assessment.csv` via `01_risk/mapping/risk_to_control_objectives.csv`.
+- “Risk linkage” is the **traceability anchor** to `risk/exports/risk_assessment.csv` via `risk/mapping/risk_to_control_objectives.csv`.
 - External alignment is informative: DCAS does not import external frameworks as normative requirements.

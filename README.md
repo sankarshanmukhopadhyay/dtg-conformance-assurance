@@ -14,9 +14,9 @@ DCAS is a practical, implementation-neutral way to move from **implicit trust** 
 
 ## Read the DCAS documents
 
-- **DCAS Positioning Note:** `04_spec/DCAS_Positioning.md`
-- **DCAS v0.1 Draft Specification:** `04_spec/DCAS_v0.1.md`
-- **Assurance levels (AL1–AL4):** `03_conformance/assurance_levels.md` (aligned to canonical model in the `schemas` repository)
+- **DCAS Positioning Note:** `spec/DCAS_Positioning.md`
+- **DCAS v0.1 Draft Specification:** `spec/DCAS_v0.1.md`
+- **Assurance levels (AL1–AL4):** `conformance/assurance_levels.md` (aligned to canonical model in the `schemas` repository)
 
 ---
 
@@ -26,14 +26,14 @@ DCAS is organized as a traceability chain:
 
 **Risks → Control Objectives → Controls → Evidence → Tests → Assurance output**
 
-1. Start with the risk register export: `01_risk/exports/risk_assessment.csv`
-2. Map risks to control objectives (COs): `01_risk/mapping/risk_to_control_objectives.csv`
+1. Start with the risk register export: `risk/exports/risk_assessment.csv`
+2. Map risks to control objectives (COs): `risk/mapping/risk_to_control_objectives.csv`
 3. Use catalogs to enumerate what to implement and prove:
-   - control objectives: `02_controls/control_objectives.md`
-   - controls: `02_controls/control_catalog.csv`
-   - evidence: `02_controls/evidence_catalog.csv`
-   - tests: `02_controls/test_suites.csv`
-4. Select your conformance profile: `03_conformance/profiles/`
+   - control objectives: `controls/control_objectives.md`
+   - controls: `controls/control_catalog.csv`
+   - evidence: `controls/evidence_catalog.csv`
+   - tests: `controls/test_suites.csv`
+4. Select your conformance profile: `conformance/profiles/`
 5. Produce an assurance outcome using the evaluation method: `docs/dcas-evaluate/`
 
 ---

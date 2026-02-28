@@ -10,10 +10,10 @@ This folder captures the *traceability spine* between the risk register and DCAS
 
 ## How to use
 
-1. Start with `01_risk/exports/risk_assessment.csv` (the risk register export).
+1. Start with `risk/exports/risk_assessment.csv` (the risk register export).
 2. Join on `Risk ID` using `risk_to_control_objectives.csv`.
-3. Use `02_controls/control_catalog.csv` to map **CO → Controls → Evidence → Tests**.
-4. Generate a coverage report (see `01_risk/reports/coverage_summary.md`).
+3. Use `controls/control_catalog.csv` to map **CO → Controls → Evidence → Tests**.
+4. Generate a coverage report (see `risk/reports/coverage_summary.md`).
 
 ## Mapping principles
 

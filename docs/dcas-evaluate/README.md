@@ -8,14 +8,14 @@ It packages DCAS into a **doable workflow**:
 
 ## Inputs
 
-- Target actor class profile: `03_conformance/profiles/`
-- Assurance levels: `03_conformance/assurance_levels.md`
-- Risk register export: `01_risk/exports/risk_assessment.csv`
-- Risk→CO mapping: `01_risk/mapping/risk_to_control_objectives.csv`
+- Target actor class profile: `conformance/profiles/`
+- Assurance levels: `conformance/assurance_levels.md`
+- Risk register export: `risk/exports/risk_assessment.csv`
+- Risk→CO mapping: `risk/mapping/risk_to_control_objectives.csv`
 - Catalogs:
-  - controls: `02_controls/control_catalog.csv`
-  - evidence: `02_controls/evidence_catalog.csv`
-  - tests: `02_controls/test_suites.csv`
+  - controls: `controls/control_catalog.csv`
+  - evidence: `controls/evidence_catalog.csv`
+  - tests: `controls/test_suites.csv`
 
 ## Outputs
 

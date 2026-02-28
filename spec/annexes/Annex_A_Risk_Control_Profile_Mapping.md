@@ -16,13 +16,13 @@ This mapping is the primary traceability mechanism for DCAS v0.1.
 The normative mapping for DCAS v0.1 SHALL be maintained in:
 
 - Risk inventory (authoritative):  
-  `01_risk/source/DTG_WG_Risk_Assessment_Worksheet_Populated_From_WIP.xlsx`
+  `risk/source/DTG_WG_Risk_Assessment_Worksheet_Populated_From_WIP.xlsx`
 
 - Risk → Control mapping (authoritative):  
-  `01_risk/mapping/risk_to_control.xlsx`
+  `risk/mapping/risk_to_control.xlsx`
 
 - CSV mirror for GitHub review:  
-  `01_risk/mapping/risk_to_control.csv`
+  `risk/mapping/risk_to_control.csv`
 
 If XLSX and CSV disagree, the XLSX source SHALL be treated as canonical and the CSV SHALL be regenerated.
 
@@ -36,13 +36,13 @@ If XLSX and CSV disagree, the XLSX source SHALL be treated as canonical and the 
 ## A.4 Relationship to conformance profiles
 
 Conformance profiles (CPs) determine which actor classes are obligated to implement which control objectives.  
-Profile artefacts live under `03_conformance/profiles/`.
+Profile artefacts live under `conformance/profiles/`.
 
 ## A.5 Mapping table (excerpt)
 
-The complete mapping table is maintained in `01_risk/mapping/`. An excerpt is included below.
+The complete mapping table is maintained in `risk/mapping/`. An excerpt is included below.
 
-_(Mapping table not found in repo. See `01_risk/mapping/`.)_
+_(Mapping table not found in repo. See `risk/mapping/`.)_
 
 ## A.6 Required reporting
 

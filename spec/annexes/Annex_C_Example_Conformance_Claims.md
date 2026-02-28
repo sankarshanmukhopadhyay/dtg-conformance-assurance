@@ -28,8 +28,8 @@ Examples of how ecosystems and actors may express DCAS conformance claims.
 ## C.4 Machine-readable examples (YAML)
 
 See:
-- `03_conformance/examples/actor_conformance_claim.example.yaml`
-- `03_conformance/examples/ecosystem_schema.example.yaml`
+- `conformance/examples/actor_conformance_claim.example.yaml`
+- `conformance/examples/ecosystem_schema.example.yaml`
 
 ## C.5 Disclosure expectation
 

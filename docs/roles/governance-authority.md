@@ -10,7 +10,7 @@ Set the **operating system** for the ecosystem: policies, roles, decision rights
 4. Run periodic control effectiveness review (CO6.3).
 
 ## Where this shows up in DCAS
-- Conformance profile: `03_conformance/profiles/CP-6_GovernanceAuthority.md`
+- Conformance profile: `conformance/profiles/CP-GovernanceAuthority.md`
 - Mandatory control objectives: CO1.1–CO1.4
 - Typical minimum AL: AL3
 

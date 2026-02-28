@@ -15,7 +15,7 @@
 
 ## 2. Applicable profiles and control objectives
 
-- Profile: (link to `03_conformance/profiles/...`)
+- Profile: (link to `conformance/profiles/...`)
 - Mandatory COs:
 - Optional COs (if assessed):
 

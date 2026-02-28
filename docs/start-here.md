@@ -23,20 +23,20 @@ DCAS is not a certification scheme. It is a **shared, testable vocabulary** for:
 ## What is “done” when you adopt DCAS?
 
 At minimum, you should be able to produce:
-1. a **conformance claim** for your actor class (`03_conformance/examples/`)
-2. an **evidence bundle** aligned to controls (`02_controls/`)
+1. a **conformance claim** for your actor class (`conformance/examples/`)
+2. an **evidence bundle** aligned to controls (`controls/`)
 3. an **assurance report** using the evaluation method (`docs/dcas-evaluate/`)
 
 ## Core artifacts
 
-- **Risk register export**: `01_risk/exports/risk_assessment.csv`
-- **Risk → CO mapping**: `01_risk/mapping/risk_to_control_objectives.csv`
-- **Control objectives**: `02_controls/control_objectives.md`
-- **Control catalog**: `02_controls/control_catalog.csv`
-- **Evidence catalog**: `02_controls/evidence_catalog.csv`
-- **Test suite catalog**: `02_controls/test_suites.csv`
-- **Assurance levels**: `03_conformance/assurance_levels.md`
-- **DCAS spec**: `04_spec/DCAS_v0.1.md`
+- **Risk register export**: `risk/exports/risk_assessment.csv`
+- **Risk → CO mapping**: `risk/mapping/risk_to_control_objectives.csv`
+- **Control objectives**: `controls/control_objectives.md`
+- **Control catalog**: `controls/control_catalog.csv`
+- **Evidence catalog**: `controls/evidence_catalog.csv`
+- **Test suite catalog**: `controls/test_suites.csv`
+- **Assurance levels**: `conformance/assurance_levels.md`
+- **DCAS spec**: `spec/DCAS_v0.1.md`
 
 ## Next
 
