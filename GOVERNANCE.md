@@ -1,6 +1,6 @@
 # Governance
 
-This repository is the working home for DTG WG risk, conformance, and assurance artefacts. The goal is to keep changes reviewable, auditable, and reproducible.
+This repository is the working home for the project risk, conformance, and assurance artefacts. The goal is to keep changes reviewable, auditable, and reproducible.
 
 ## Roles
 
@@ -11,7 +11,7 @@ Maintainers are responsible for repository health and decision hygiene.
 - Triage issues, apply labels, and manage milestones
 - Review and merge PRs into `main`
 - Enforce branch protection rules and required checks
-- Cut releases/tags for WG milestones
+- Cut releases/tags for project milestones
 - Maintain the decision log and ensure decisions are captured
 
 **Powers**
@@ -19,7 +19,7 @@ Maintainers are responsible for repository health and decision hygiene.
 - May revert PRs when necessary to restore integrity
 
 **Selection**
-- Maintainers are nominated by the WG leads and confirmed by consensus in a WG meeting.
+- Maintainers are nominated by the project leads and confirmed by consensus in a maintainer meeting.
 - Changes to the Maintainers list must occur via PR.
 
 ### Reviewers
@@ -41,7 +41,7 @@ Contributors propose changes via issues and PRs.
 ## Decision policy
 
 - Technical/editorial decisions are captured via PR + Decision Log entry.
-- Breaking changes to schemas, scoring scales, or profile requirements require explicit WG approval and MUST be recorded as a Decision.
+- Breaking changes to schemas, scoring scales, or profile requirements require explicit project approval and MUST be recorded as a Decision.
 
 ## Approval rules (default)
 
@@ -51,7 +51,7 @@ Contributors propose changes via issues and PRs.
 
 ## Maintainers
 
-- @dtg-wg-maintainers (team)
+- @dtg-project-maintainers (team)
 - (Add named maintainers here)
 
 ## Code Owners

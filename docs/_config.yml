@@ -1,0 +1,7 @@
+title: "DCAS Documentation"
+description: "Decentralized Conformance & Assurance Standard (DCAS) — adoption-ready artifacts and guidance"
+theme: minima
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false

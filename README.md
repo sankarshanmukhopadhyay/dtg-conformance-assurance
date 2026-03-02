@@ -16,6 +16,21 @@ DCAS is an implementation-neutral way to move from implicit trust to **explicit,
 - **FAQ:** `docs/FAQ.md`
 - **Verifier workflow:** `docs/verifier-workflow.md`
 
+## Documentation site (GitHub Pages)
+
+This repo is structured so it can be published via **GitHub Pages** from the `/docs` folder.
+
+- Entry point: `docs/index.md`
+- Recommended Pages source: **Deploy from a branch → `/docs` folder**
+
+## Methodology and ecosystem context
+
+- Methodology: `docs/methodology.md`
+- Standards & policy references: `docs/standards-and-policies.md`
+
+DCAS is designed to interoperate with other trust-infrastructure repositories (e.g., trust registries, conformance suites, assurance hubs). This repository focuses on the **portable artifact layer**: profiles, assurance levels, control objectives, evidence templates, and evaluation guidance.
+
+
 ## Golden path (issuer-first)
 
 1. Copy the starter bundle: `templates/starter-bundle/`

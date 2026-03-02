@@ -6,7 +6,7 @@ This repo is organized around an end-to-end traceability spine:
 
 ## Top-level folders
 
-- `context/` — glossary, assumptions, and DTG working group scope
+- `context/` — glossary, assumptions, and project scope (`context/project-scope.md`)
 - `controls/` — DCAS control objectives (CSV + narrative)
 - `risk/` — risk register exports and mappings
 - `templates/` — CSV-first evidence bundle templates

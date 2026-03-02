@@ -1,12 +1,12 @@
 # DCAS v0.1 — Decentralized Conformance and Assurance Standard  
-**Draft for DTG Working Group Review**
+**Draft for community review**
 
 ## Status of This Document
 
-This document is a **working draft** produced for the Decentralized Trust Graph (DTG) Working Group.  
+This document is a **working draft** produced for the DCAS community.  
 It is **not** a final standard and **must not** be treated as a certification requirement, procurement mandate, or regulatory instrument.
 
-DCAS v0.1 establishes a **shared conceptual and structural foundation** for risk-based conformance and assurance in DTG ecosystems. It is intentionally scoped to enable precise working group review and iterative refinement.
+DCAS v0.1 establishes a **shared conceptual and structural foundation** for risk-based conformance and assurance in DTG ecosystems. It is intentionally scoped to enable precise community review and iterative refinement.
 
 ---
 
@@ -38,7 +38,7 @@ requirements—both within a community and across communities.
 ecosystem. Ecosystems may extend DCAS, but SHALL NOT weaken its core semantics without explicitly defining a derivative profile.
 
 **TODO (Editorial):**
-- Confirm the preferred DTG WG framing for “DTG ecosystem” and “trust graph” terminology.
+- Confirm the preferred DCAS community framing for “DTG ecosystem” and “trust graph” terminology.
 - Confirm whether references to “epistemic fog” are acceptable in the core spec, or should move to informative text.
 
 ---
@@ -73,7 +73,7 @@ DCAS v0.1 explicitly does **not**:
 Where ecosystems require such elements, they MAY define additional documents and governance artefacts that reference DCAS.
 
 **TODO (Normative):**
-- Confirm whether the WG wants an explicit statement that DCAS is compatible with multiple assurance frameworks (e.g., internal audit,
+- Confirm whether the community wants an explicit statement that DCAS is compatible with multiple assurance frameworks (e.g., internal audit,
   third-party audit, continuous assurance), without naming them.
 
 ---
@@ -119,7 +119,7 @@ sampling, behavioral verification, integrity checks, and audit review.
 - DCAS uses actor classes to avoid applying the same requirements to actors with meaningfully different risk exposure.
 
 **TODO (Normative):**
-- Align actor class names with the DTG WG’s preferred taxonomy and the risk assessment worksheet (use your organization’s preferred template) (use your organization’s preferred template) (use your organization’s preferred template) (use your organization’s preferred template) columns.
+- Align actor class names with the DCAS community’s preferred taxonomy and the risk assessment worksheet (use your organization’s preferred template) (use your organization’s preferred template) (use your organization’s preferred template) (use your organization’s preferred template) columns.
 - Confirm whether “holder/agent” should be treated as one class or two classes for v0.1.
 
 ---
@@ -379,7 +379,7 @@ Assurance levels are **orthogonal** to conformance profiles:
 - an AL defines how strongly conformance is substantiated.
 
 **TODO (Normative):**
-- Finalize AL1–AL4 definitions using WG-approved language.
+- Finalize AL1–AL4 definitions using community-approved language.
 - Define minimal evidence expectations per AL (or normatively reference the evidence catalog).
 
 ---
@@ -424,7 +424,7 @@ A canonical machine-readable schema:
 
 ## 11. Governance and Evolution
 
-DCAS evolves through working group review, versioned releases, and explicit decision recording.
+DCAS evolves through community review, versioned releases, and explicit decision recording.
 
 Changes to DCAS that alter meaning or requirements (e.g., control semantics, profile requirements, assurance definitions, schema breaking changes):
 - SHALL be clearly identified as semantic or breaking,
@@ -438,7 +438,7 @@ Ecosystems claiming alignment with DCAS:
 
 **TODO (Normative):**
 - Align this section with repository governance documents (decision log, release checklist, review cadence).
-- Define WG decision thresholds for breaking changes (e.g., meeting consensus requirement).
+- Define community decision thresholds for breaking changes (e.g., meeting consensus requirement).
 
 ---
 
