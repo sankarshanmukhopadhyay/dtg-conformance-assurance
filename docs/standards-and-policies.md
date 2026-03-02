@@ -52,3 +52,8 @@ This document provides a practical reference map so adopters can cite upstream s
 ## Planned enhancements
 
 - Add an explicit mapping matrix: DCAS control objectives → common upstream standards clauses, with “starter defaults” vs ecosystem-specific overlays.
+
+
+## Standards mapping matrix
+
+This repo provides a non-normative crosswalk from DCAS control objectives to common standards families: see [Standards mapping matrix](standards-mapping-matrix.md).

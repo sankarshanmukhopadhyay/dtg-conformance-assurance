@@ -27,3 +27,5 @@ Welcome. This documentation site is generated from the repository’s `/docs` fo
 DCAS is an operational packaging of conformance + assurance artifacts: risks, control objectives, evidence templates, and a repeatable evaluation approach.
 
 It is not a regulator, a certification body, or a compliance “stamp”. Think of it as a reusable assurance substrate that ecosystems can compose into their own programs.
+
+- **Standards mapping matrix:** [Standards mapping matrix](standards-mapping-matrix.md)

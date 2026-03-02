@@ -64,3 +64,8 @@ make coverage
 ## Contributing
 
 See `CONTRIBUTING.md`. CI enforces mechanical correctness (CSV structure + markdown link integrity).
+
+
+## Standards
+
+**Standards mapping matrix:** see `controls/standards_mapping_matrix.csv` and `docs/standards-mapping-matrix.md`.

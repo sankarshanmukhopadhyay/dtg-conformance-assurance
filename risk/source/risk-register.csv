@@ -1,0 +1,51 @@
+Risk Domain,Risk ID,Risk Statement,Cause,Consequence,Likelihood,Impact,Inherent Risk,Controls,Residual Risk,Owner
+Governance,G1,Policy drift,Decentralised autonomy,Fragmentation,Medium,High,High,Policy harmonisation,Medium,Governing Authority
+Governance,G2,Governance capture,Power concentration,Loss of legitimacy,Medium,Critical,Critical,Multi-stakeholder checks,High,Admin Authority
+Governance,G3,Decision latency,Slow processes,Operational delays,Medium,Medium,Medium,Time-bound escalation,Low,Gov Council
+Governance,G4,Role ambiguity,Weak design,Accountability gaps,Medium,High,High,Clear RACI,Medium,Gov Authority
+Governance,G5,Opaque decisions,Poor logging,Regulatory risk,Medium,High,High,Transparent logs,Medium,Admin Authority
+Identity,ID1,Ambiguous identity models,Lack of definitions,Inconsistency,Medium,High,High,Normative profiles,Medium,DTGWG
+Identity,ID2,Weak onboarding,Poor KYC/KYB,Fraud risk,High,High,Critical,Strong verification,Medium,Entity Admin
+Identity,ID3,Delegation misconfig,Ambiguous policy,Rogue agent actions,High,Critical,Critical,Delegation registry,High,Network Managers
+Identity,ID4,Lifecycle mismanagement,Missing deactivation,Ghost identities,Medium,Medium,Medium,Lifecycle governance,Low,Identity Admin
+Identity,ID5,Behavioural opaqueness,AI nondeterminism,Misleading decisions,Medium,High,High,Interpretability tooling,Medium,AI Providers
+Schemas,S1,Semantic divergence,Flexible schema,Interop failure,High,High,Critical,Canonical registry,Medium,DTGWG
+Schemas,S2,Schema collisions,Uncoordinated upgrades,Validation errors,Medium,High,High,Version negotiation,Medium,Standards Body
+Schemas,S3,Under-specification,Incomplete requirements,Unsafe implementations,Medium,High,High,Mandatory profiles,Medium,Standards Council
+Schemas,S4,Over-specification,Feature creep,Low adoption,Medium,Medium,Medium,Lean standards,Low,WG
+Schemas,S5,Model drift,Domain change,Schema invalidity,Medium,Medium,Medium,Periodic reviews,Low,DTGWG
+Network Managers,NM1,Trust graph manipulation,Biased policies,Unfair ranking,Medium,Critical,Critical,Audits,High,Community Managers
+Network Managers,NM2,Misissuance by orgs,Weak checks,Contamination,Medium,High,High,Issuer accreditation,Medium,Credential Board
+Network Managers,NM3,rCard lifecycle failures,Stale relationships,Privacy leakage,Medium,High,High,Lifecycle API,Medium,Personal Manager
+Network Managers,NM4,Storage misconfig,Weak encryption,Breach,Medium,Critical,Critical,HSM storage,Medium,Tech Providers
+Network Managers,NM5,Policy drift across communities,Uncoordinated governance,Interoperability issues,Medium,High,High,Governance sync,Medium,Community Council
+Credentials,C1,Credential misissuance,Human error,Fraud propagation,High,High,Critical,Issuance policy,Medium,Issuer
+Credentials,C2,Misbinding,Weak binding checks,Wrong entity assignment,Medium,Critical,Critical,Binding proofs,Medium,Issuer
+Credentials,C3,Revocation failures,Poor registry sync,Stale creds,Medium,High,High,Real-time revocation,Medium,Registry Admin
+Credentials,C4,Verifier overreach,Poor UX,Data exploitation,Medium,Medium,Medium,Selective disclosure,Low,Verifier
+Credentials,C5,Protocol downgrade,Adversarial forcing,Weak verification,Low,High,Medium,Protocol enforcement,Low,Verifier
+Cryptography,CR1,Key leakage,Weak storage,Systemic compromise,Medium,Critical,Critical,HSM,Medium,Tech Provider
+Cryptography,CR2,Weak entropy,Bad RNG,Key vulnerability,Low,High,Medium,Entropy validation,Low,Crypto Maintainer
+Cryptography,CR3,Registry poisoning,Malicious writes,Graph corruption,Medium,Critical,Critical,Signed entries,Medium,Registry Admin
+Cryptography,CR4,Side-channel leaks,Hardware flaws,Data inference,Low,High,Medium,Mitigation guards,Low,Infra Provider
+Cryptography,CR5,Unbounded registry growth,Poor pruning,Performance issues,Medium,Medium,Medium,Archiving policies,Low,Registry Admin
+AI Agents,AI1,Hallucinated decisions,LLM unpredictability,False trust actions,Medium,High,High,Policy constraints,Medium,AI Providers
+AI Agents,AI2,Model poisoning,Malicious supply chain,Compromised decisions,Medium,Critical,Critical,Signed models,Medium,Model Provider
+AI Agents,AI3,Over-autonomy,Weak scoping,Unintended actions,Medium,Critical,Critical,Kill switches,Medium,Agent Owner
+AI Agents,AI4,Adversarial inputs,Hostile prompts,Misleading outputs,Medium,High,High,Input sanitisation,Medium,AI Security
+AI Agents,AI5,Recursive agent behaviour,Improper looping,Runaway operations,Low,High,Medium,Rate limiters,Low,Agent Owner
+External,EX1,Marketplace malicious inputs,Unvetted assets,Ecosystem contamination,Medium,High,High,Sandboxing,Medium,Marketplace Admin
+External,EX2,Cross-policy incompatibility,Governance mismatch,Interop breaks,Medium,Medium,Medium,Policy negotiation,Low,Gov Council
+External,EX3,Regulatory volatility,Frequent changes,Compliance overhead,Medium,High,High,Legal monitoring,Medium,Compliance
+External,EX4,Jurisdiction conflicts,Different legal regimes,Enforcement issues,Medium,Medium,Medium,Legal harmonisation,Low,Regulatory Affairs
+External,EX5,Utility failure,Infra outage,Ecosystem downtime,Low,Critical,High,Redundancy,Low,Infra Provider
+Human Experience,HX1,Low digital literacy,Complex flows,Incorrect usage,High,Medium,High,Assisted flows,Medium,UX Team
+Human Experience,HX2,Digital exclusion,Access barriers,Unequal participation,Medium,High,High,Multi-channel access,Medium,Gov Council
+Human Experience,HX3,Cognitive overload,Poor UX,Drop-offs,Medium,Medium,Medium,Simplified flows,Low,UX Team
+Human Experience,HX4,Consent ambiguity,Bad UI,Uninformed decisions,Medium,High,High,Clear consent screens,Medium,UX + Legal
+Human Experience,HX5,Trust graph bias,Biased data,Discrimination,Medium,High,High,Fairness audits,Medium,Community Managers
+Systemic,SYS1,Cascading credential failures,Misissuance,System collapse,Medium,Critical,Critical,Circuit breakers,Medium,Ecosystem Authority
+Systemic,SYS2,Feedback loop polarisation,Graph reinforcement,Polarisation,Low,High,Medium,Stabilisation policy,Low,Governance Council
+Systemic,SYS3,Orphan entities,Lifecycle neglect,Ghost graphs,Medium,Medium,Medium,Sunset policy,Low,Identity Admin
+Systemic,SYS4,Network partitioning,Governance splits,Trust fractures,Low,High,Medium,Interoperability councils,Low,Gov Authority
+Systemic,SYS5,Legacy credential persistence,Long retention,Attack vectors,Medium,Medium,Medium,Expiry mandates,Low,Credential Board
