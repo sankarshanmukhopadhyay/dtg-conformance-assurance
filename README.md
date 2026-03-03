@@ -9,6 +9,17 @@ DCAS is an implementation-neutral way to move from implicit trust to **explicit,
 - **Primary goal (this repo):** make DCAS *operational* — templates, schemas, and a repeatable evaluation method.
 - **Spec:** `spec/DCAS_v0.1.md` is a **draft** (contains TODOs). Templates + validation tooling are treated as the stable “adoption surface”.
 
+## Ecosystem & related repositories
+
+DCAS is designed to work with:
+
+- **`schemas`:** canonical data contracts and the normative AL model (`assurance/assurance-levels.md`).
+- **Domain baselines (example: `agent-name-assurance-baseline`):** domain-specific requirements that emit declarations and evidence bundles.
+- **This repo (DCAS):** evaluates those declarations and evidence using a repeatable verifier workflow.
+
+Start with: `docs/ecosystem-overview.md` and `docs/compatibility-matrix.md`.
+
+
 ## Start here
 
 - **Adoption guide (role-based):** `docs/start-here.md`
