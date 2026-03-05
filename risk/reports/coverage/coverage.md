@@ -1,7 +1,7 @@
 # Coverage report
 
 - Generated: 1970-01-01 00:00 UTC
-- Bundle: `templates/starter-bundle`
+- Bundle: `/mnt/data/work/dtg-conformance-assurance-main/templates/starter-bundle`
 - Control objectives (registry): `controls/control_objectives.csv`
 
 ## Summary

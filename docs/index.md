@@ -29,3 +29,13 @@ DCAS is an operational packaging of conformance + assurance artifacts: risks, co
 It is not a regulator, a certification body, or a compliance “stamp”. Think of it as a reusable assurance substrate that ecosystems can compose into their own programs.
 
 - **Standards mapping matrix:** [Standards mapping matrix](standards-mapping-matrix.md)
+
+## Ecosystem interoperability
+
+- Ecosystem interoperability: `ecosystem-interoperability.md`
+- Architecture snapshot: `architecture.md`
+- Upstream references:
+  - `../upstream/dtg-credentials.md`
+  - `../upstream/verifiable-trust-infrastructure.md`
+  - `../upstream/openvtc.md`
+

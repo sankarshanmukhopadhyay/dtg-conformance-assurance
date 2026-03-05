@@ -1,5 +1,8 @@
 # DTG Conformance & Assurance (DCAS)
 
+**Release:** v0.3.0  \
+**Last reviewed:** 2026-03-05
+
 This repository publishes **DCAS (Decentralized Conformance and Assurance Standard)** artifacts for DTG ecosystems.
 
 DCAS is an implementation-neutral way to move from implicit trust to **explicit, reviewable, risk-proportionate claims**.
@@ -80,3 +83,7 @@ See `CONTRIBUTING.md`. CI enforces mechanical correctness (CSV structure + markd
 ## Standards
 
 **Standards mapping matrix:** see `controls/standards_mapping_matrix.csv` and `docs/standards-mapping-matrix.md`.
+
+## Ecosystem interoperability
+
+See `docs/ecosystem-interoperability.md` and `docs/architecture.md` for how this repo composes with DTG Labs upstream work (`dtg-credentials`, `verifiable-trust-infrastructure`, `openVTC`).

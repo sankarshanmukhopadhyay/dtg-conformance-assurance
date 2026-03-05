@@ -1,0 +1,25 @@
+name: link-check (external)
+
+on:
+  schedule:
+    - cron: '0 3 * * 1' # Mondays 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  external-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: External link check
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --verbose
+            --include-fragments
+            --max-retries 3
+            --timeout 20
+            --accept 200,206,429
+            --exclude-path docs/_config.yml
+            docs/**/*.md README.md
