@@ -39,3 +39,9 @@ It is not a regulator, a certification body, or a compliance “stamp”. Think 
   - `../upstream/verifiable-trust-infrastructure.md`
   - `../upstream/openvtc.md`
 
+## Interoperability
+
+- [Ecosystem interoperability](ecosystem-interoperability.md)
+- [Architecture snapshot](architecture.md)
+- [Transport alignment (TSP)](tsp-alignment.md)
+

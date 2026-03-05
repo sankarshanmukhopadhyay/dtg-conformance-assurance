@@ -5,6 +5,10 @@ on:
     - cron: '0 3 * * 1' # Mondays 03:00 UTC
   workflow_dispatch:
 
+
+permissions:
+  contents: read
+
 jobs:
   external-links:
     runs-on: ubuntu-latest

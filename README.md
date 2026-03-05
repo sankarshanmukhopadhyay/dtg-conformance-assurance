@@ -1,6 +1,6 @@
 # DTG Conformance & Assurance (DCAS)
 
-**Release:** v0.3.0  \
+**Release:** v0.4.0  \
 **Last reviewed:** 2026-03-05
 
 This repository publishes **DCAS (Decentralized Conformance and Assurance Standard)** artifacts for DTG ecosystems.
