@@ -1,6 +1,6 @@
 # Assurance Levels (AL1–AL4) in DCAS
 
-**Normative source:** The canonical AL model is defined in the `schemas` repository at `assurance/assurance-levels.md`.
+**Normative source:** The canonical AL model is defined in the `trust-infrastructure-schemas` repository as part of the Open Trust Artifact Model (OTAM) at `assurance/assurance-levels.md`.
 
 This document explains how DCAS uses Assurance Levels to parameterize **evidence strength** and **evaluation rigor**. Assurance Levels do **not** change which requirements apply. They change how rigorously conformance is substantiated.
 
@@ -28,5 +28,5 @@ DCAS treats AL as an “auditability dial”:
 
 ## Drift prevention
 
-DCAS intentionally avoids re-defining AL semantics. If you believe the canonical AL model needs adjustment, propose changes upstream in `schemas` and then update DCAS operational guidance accordingly.
+DCAS intentionally avoids re-defining AL semantics. If you believe the canonical AL model needs adjustment, propose changes upstream in `trust-infrastructure-schemas` and then update DCAS operational guidance accordingly.
 

@@ -24,7 +24,7 @@ Welcome. This documentation site is generated from the repository’s `/docs` fo
 
 ## What this repo is (and isn’t)
 
-DCAS is an operational packaging of conformance + assurance artifacts: risks, control objectives, evidence templates, and a repeatable evaluation approach.
+DCAS is an operational packaging of conformance + assurance artifacts: risks, control objectives, evidence templates, and a repeatable evaluation approach built to sit on top of the canonical trust artifact layer in `trust-infrastructure-schemas` (OTAM implementation).
 
 It is not a regulator, a certification body, or a compliance “stamp”. Think of it as a reusable assurance substrate that ecosystems can compose into their own programs.
 

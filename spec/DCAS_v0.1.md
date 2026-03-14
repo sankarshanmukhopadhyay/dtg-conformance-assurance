@@ -369,7 +369,7 @@ Assurance levels (ALs) define the depth, rigor, and independence of evaluation a
 
 DCAS v0.1 defines assurance levels AL1–AL4. Each AL:
 
-> **Alignment note:** The AL1–AL4 model in this repository is intended to remain consistent with the canonical Assurance Level definitions published in the DTG `schemas` repository. Downstream tooling SHOULD treat AL identifiers as shared ecosystem vocabulary.
+> **Alignment note:** The AL1–AL4 model in this repository is intended to remain consistent with the canonical Assurance Level definitions published in the DTG `trust-infrastructure-schemas` repository. Downstream tooling SHOULD treat AL identifiers as shared ecosystem vocabulary.
 - SHALL define the expected evaluation rigor,
 - SHALL define the expected evidence depth,
 - SHOULD define the expected frequency of evaluation (periodic or continuous).

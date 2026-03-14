@@ -44,7 +44,7 @@ Use **CP-7 A2A Agent / Service Endpoint** when an implementation publishes an Ag
 
 ## Relationship to domain baselines
 
-DCAS is the portable assurance layer. Domain baselines such as **ANAB** define the domain-specific controls that should sit inside that assurance envelope. For named agents in A2A ecosystems, the normal deployment model is:
+DCAS is the portable assurance layer that evaluates artifacts defined against the upstream OTAM-aligned trust schema surface. Domain baselines such as **ANAB** define the domain-specific controls that should sit inside that assurance envelope. For named agents in A2A ecosystems, the normal deployment model is:
 
 1. **ANAB** for the name, page, and operator binding
 2. **DCAS CP-7** for the operational assurance of the A2A endpoint

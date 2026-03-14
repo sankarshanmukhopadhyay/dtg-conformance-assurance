@@ -1,11 +1,11 @@
-# Ecosystem overview: schemas ↔ DCAS ↔ domain baselines
+# Ecosystem overview: OTAM schemas ↔ DCAS ↔ domain baselines
 
 This repository (DCAS) is designed to work as part of a small ecosystem of repositories that, together, enable **reviewable, machine-checkable assurance**.
 
 ## The stack
 
-1. **`schemas`**: the shared data contracts  
-   - Canonical JSON Schemas and registries for credentials, controls, and machine-checkable declarations.
+1. **`trust-infrastructure-schemas` (OTAM implementation)**: the shared trust artifact contracts  
+   - Canonical JSON Schemas and registries for trust artifacts, controls, and machine-checkable declarations.
    - Canonical definition of **Assurance Levels (AL1–AL4)**.
 
 2. **`dtg-conformance-assurance` (this repo / DCAS)**: the assurance method and evaluation kit  
@@ -31,13 +31,13 @@ Baseline (domain)
 
 ## Why this split exists
 
-- The ecosystem needs **stable contracts** (`schemas`).
+- The ecosystem needs **stable trust artifact contracts** (`trust-infrastructure-schemas`).
 - It needs a **repeatable assurance method** (DCAS).
 - It needs **domain baselines** that can evolve independently without breaking the shared contract.
 
 ## Links
 
-- Canonical AL model: `schemas/assurance/assurance-levels.md`
+- Canonical AL model: `trust-infrastructure-schemas/assurance/assurance-levels.md`
 - DCAS AL usage: `conformance/assurance_levels.md`
 - Example baseline: Agent Name Assurance Baseline (`agent-name-assurance-baseline`)
 

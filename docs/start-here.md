@@ -33,7 +33,7 @@ make validate
 ```bash
 make coverage
 ```
-This produces `risk/reports/coverage/coverage.csv` and `risk/reports/coverage/coverage.md` using the canonical control objective registry.
+This produces `risk/reports/coverage/coverage.csv` and `risk/reports/coverage/coverage.md` using the canonical control objective registry and the upstream OTAM-aligned assurance model.
 
 ## Next paths (other roles)
 
