@@ -1,7 +1,7 @@
 # DTG Conformance & Assurance (DCAS)
 
-**Release:** v0.4.0  \
-**Last reviewed:** 2026-03-05
+**Release:** v0.5.0  \
+**Last reviewed:** 2026-03-14
 
 This repository publishes **DCAS (Decentralized Conformance and Assurance Standard)** artifacts for DTG ecosystems.
 
@@ -20,7 +20,7 @@ DCAS is designed to work with:
 - **Domain baselines (example: `agent-name-assurance-baseline`):** domain-specific requirements that emit declarations and evidence bundles.
 - **This repo (DCAS):** evaluates those declarations and evidence using a repeatable verifier workflow.
 
-Start with: `docs/ecosystem-overview.md` and `docs/compatibility-matrix.md`.
+Start with: `docs/ecosystem-overview.md`, `docs/compatibility-matrix.md`, and `docs/a2a-assurance-profile.md`.
 
 
 ## Start here
@@ -36,6 +36,17 @@ This repo is structured so it can be published via **GitHub Pages** from the `/d
 
 - Entry point: `docs/index.md`
 - Recommended Pages source: **Deploy from a branch → `/docs` folder**
+
+
+## A2A alignment in this release
+
+This release adds an explicit **A2A-facing assurance surface** for agent ecosystems.
+
+- **New A2A profile:** `conformance/profiles/CP-7_A2AAgent.md`
+- **A2A assurance guidance:** `docs/a2a-assurance-profile.md`
+- **A2A example claim:** `conformance/examples/a2a_agent_conformance_claim.example.yaml`
+
+The intent is simple: A2A handles communication. DCAS evaluates whether an A2A agent is trustworthy enough to rely on in production.
 
 ## Methodology and ecosystem context
 

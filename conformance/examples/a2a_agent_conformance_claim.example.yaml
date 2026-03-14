@@ -1,0 +1,29 @@
+profile_id: CP-7
+profile_name: A2A Agent / Service Endpoint
+assurance_level: AL3
+implementation:
+  name: example-a2a-agent
+  version: 1.2.0
+  operator: Example Org
+  public_endpoint: https://agent.example.org/a2a
+claims:
+  - control_objective_id: CO3.1
+    implemented: true
+    evidence:
+      - docs/signed-agent-card.json
+      - docs/operator-binding.md
+  - control_objective_id: CO3.5
+    implemented: true
+    evidence:
+      - docs/signed-agent-card.json
+      - tests/agent-card-signature-test.md
+  - control_objective_id: CO3.6
+    implemented: true
+    evidence:
+      - tests/task-authz-matrix.csv
+      - tests/tenant-isolation-report.md
+  - control_objective_id: CO6.4
+    implemented: true
+    evidence:
+      - tests/sse-replay-test.md
+      - tests/webhook-signature-test.md
