@@ -20,7 +20,7 @@ DCAS is designed to work with:
 - **Domain baselines (example: `agent-name-assurance-baseline`):** domain-specific requirements that emit declarations and evidence bundles.
 - **This repo (DCAS):** evaluates those declarations and evidence using a repeatable verifier workflow.
 
-Start with: `docs/ecosystem-overview.md`, `docs/compatibility-matrix.md`, and `docs/a2a-assurance-profile.md`.
+Start with: `docs/ecosystem-overview.md`, `docs/compatibility-matrix.md`, `docs/a2a-assurance-profile.md`, and `docs/anab-a2a-evaluation.md`.
 
 
 ## Start here
@@ -38,9 +38,9 @@ This repo is structured so it can be published via **GitHub Pages** from the `/d
 - Recommended Pages source: **Deploy from a branch → `/docs` folder**
 
 
-## A2A alignment in this release
+## A2A alignment
 
-This release adds an explicit **A2A-facing assurance surface** for agent ecosystems.
+This repo includes an explicit **A2A-facing assurance surface** for agent ecosystems.
 
 - **New A2A profile:** `conformance/profiles/CP-7_A2AAgent.md`
 - **A2A assurance guidance:** `docs/a2a-assurance-profile.md`
@@ -48,9 +48,20 @@ This release adds an explicit **A2A-facing assurance surface** for agent ecosyst
 
 The intent is simple: A2A handles communication. DCAS evaluates whether an A2A agent is trustworthy enough to rely on in production.
 
+### ANAB-over-A2A impact
+
+ANAB now publishes a detailed **ANAB-over-A2A description extension** plus new A2A-oriented controls (`ANAGB-A2A-07` through `ANAGB-A2A-10`). DCAS therefore needs to evaluate not only generic Agent Card integrity, but also:
+
+- operator-to-card coherence
+- issuer and trust-anchor disclosure
+- freshness and revocation semantics
+- downgrade-safe handling when the extension is absent, stale, or unverifiable
+
+This impact is documented in `docs/anab-a2a-evaluation.md` and illustrated in `conformance/examples/anab_over_a2a_evaluation_claim.example.yaml`.
+
 ## Cross-repo composition
 
-This release adds a concrete composition pack for evaluating a downstream baseline such as ANAB without collapsing its control namespace into DCAS-local labels too early.
+This repo includes a concrete composition pack for evaluating a downstream baseline such as ANAB without collapsing its control namespace into DCAS-local labels too early.
 
 - Composition note: `docs/domain-baseline-composition.md`
 - Example evaluation claim: `conformance/examples/anab_evaluation_claim.example.yaml`

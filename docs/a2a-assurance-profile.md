@@ -49,3 +49,23 @@ DCAS is the portable assurance layer that evaluates artifacts defined against th
 1. **ANAB** for the name, page, and operator binding
 2. **DCAS CP-7** for the operational assurance of the A2A endpoint
 3. ecosystem-specific overlays for sector rules, procurement rules, or higher-risk actions
+
+## ANAB-over-A2A implications
+
+Where an implementation publishes the ANAB-over-A2A description extension, DCAS evaluators SHOULD treat that as part of the A2A assurance surface rather than as unrelated descriptive metadata. In particular, evaluators SHOULD assess:
+
+- whether the Agent Card is coherently bound to the accountable operator
+- whether the issuer or trust anchor for any verified identity state is disclosed
+- whether freshness, expiry, cache, and revocation semantics are operationally testable
+- whether clients fail safely if the ANAB extension is absent, stale, unsupported, or unverifiable
+
+Those concerns now map naturally to ANAB controls `ANAGB-A2A-07` through `ANAGB-A2A-10`. DCAS does not need to reissue those controls under a new namespace in order to evaluate them. It needs to preserve the ANAB identifiers for traceability and layer DCAS evaluation semantics on top.
+
+## Recommended evidence additions when ANAB is present
+
+- published Agent Card with the ANAB extension
+- ANAB declaration referenced by the extension
+- evidence bundle and integrity pins, where present
+- card-binding verification material
+- trust-anchor or issuer policy material for externally verified identity states
+- downgrade and stale-metadata test results

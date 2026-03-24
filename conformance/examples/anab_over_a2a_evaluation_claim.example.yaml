@@ -1,0 +1,58 @@
+dcas_version: "0.1.0"
+claim_id: "claim-anab-a2a-example-001"
+issued_at: "2026-03-24T00:00:00Z"
+subject:
+  actor_id: "https://agents.example.invalid/research"
+  actor_class: "HolderAgent"
+profile:
+  profile_id: "CP-7"
+  profile_version: "0.6.0"
+assurance_level: "AL3"
+coverage_window:
+  from: "2026-03-01T00:00:00Z"
+  to: "2026-03-24T00:00:00Z"
+scope:
+  control_objectives:
+    - "CO3.1"
+    - "CO3.5"
+    - "CO6.4"
+  limitations: "Illustrative ANAB-over-A2A evaluation example."
+evidence_references:
+  - evidence_id: "agent-card"
+    ref: "../agent-name-assurance-baseline/conformance/samples/a2a-agent-card-with-anab-extension.json"
+    hash: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    content_type: "application/json"
+  - evidence_id: "anab-extension-schema"
+    ref: "../agent-name-assurance-baseline/conformance/anab-over-a2a-description-extension.schema.json"
+    hash: "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    content_type: "application/schema+json"
+  - evidence_id: "anab-declaration"
+    ref: "https://example.org/.well-known/anab/conformance.json"
+    hash: "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    content_type: "application/json"
+  - evidence_id: "trust-anchor"
+    ref: "https://registry.example.org/agents/example-research-agent"
+    content_type: "application/json"
+test_references:
+  - test_id: "T7101"
+    ref: "https://example.invalid/tests/anab/card-operator-coherence"
+    result: "pass"
+  - test_id: "T7102"
+    ref: "https://example.invalid/tests/anab/revocation-check"
+    result: "pass"
+  - test_id: "T7103"
+    ref: "https://example.invalid/tests/anab/downgrade-safe-handling"
+    result: "pass"
+assessor:
+  assessor_id: "example.assessor"
+  organization: "Example Assurance Partners"
+  independence_model: "contractual"
+  conflict_disclosure: "None disclosed."
+outcome:
+  status: "pass"
+  summary: "The ANAB-over-A2A trust description was evaluated through DCAS while preserving ANAGB A2A control references for traceability."
+  notes:
+    - "Reviewed ANAGB-A2A-07 for card and operator coherence."
+    - "Reviewed ANAGB-A2A-08 for issuer and trust-anchor disclosure."
+    - "Reviewed ANAGB-A2A-09 for freshness and revocation semantics."
+    - "Reviewed ANAGB-A2A-10 for downgrade-safe failure behavior."

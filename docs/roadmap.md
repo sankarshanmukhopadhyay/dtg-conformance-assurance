@@ -41,3 +41,12 @@ This roadmap is organized as capability increments. Dates are intentionally omit
 - Added `docs/domain-baseline-composition.md`
 - Added `conformance/examples/anab_evaluation_claim.example.yaml`
 - Refreshed README so cross-repo composition is visible from the front door
+
+
+## Unreleased follow-on — ANAB-over-A2A evaluation alignment
+
+**Outcome:** DCAS can evaluate ANAB A2A-bound trust descriptions without flattening their control identifiers or treating the extension as mere descriptive prose.
+
+- Add evaluator guidance for ANAB-over-A2A trust metadata
+- Add a worked evaluation example preserving `ANAGB-A2A-07` through `ANAGB-A2A-10`
+- Refresh compatibility and composition docs to recognize the ANAB description extension

@@ -1,5 +1,15 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- Added `docs/anab-a2a-evaluation.md` to explain how DCAS should evaluate ANAB-over-A2A trust descriptions.
+- Added `conformance/examples/anab_over_a2a_evaluation_claim.example.yaml` as an illustrative evaluator artifact preserving `ANAGB-A2A-07` through `ANAGB-A2A-10`.
+
+### Changed
+- Refreshed A2A assurance, compatibility, composition, and README docs to account for the ANAB-over-A2A binding spec and controls.
+
+
 ## [0.6.0] - 2026-03-24
 
 ### Added
