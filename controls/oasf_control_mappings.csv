@@ -1,0 +1,5 @@
+mapping_id,baseline_id,baseline_control_id,dcas_control_objective_id,oasf_surface,notes
+OASFMAP-001,ANAB,ANAGB-A2A-07,CO4.1,record.publisher,Operator binding published through OASF discovery surface.
+OASFMAP-002,ANAB,ANAGB-A2A-08,CO4.1,modules.anab_publication.identity_verification,Issuer and trust-anchor disclosure for verified identity state.
+OASFMAP-003,ANAB,ANAGB-A2A-09,CO4.2,modules.anab_publication.freshness,Freshness expiry and revocation semantics carried as discoverable metadata.
+OASFMAP-004,ANAB,ANAGB-A2A-10,CO4.2,modules.anab_publication.downgrade_policy,Fail-safe handling when ANAB trust metadata is absent or unverifiable.

@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import csv
 import json
+import jsonschema
 import os
 import re
 import sys
@@ -182,6 +183,22 @@ def validate_csv_schemas(control_ids: Set[str]) -> None:
 
     ok(f"Validated {checked} CSV files against schema descriptors.")
 
+
+def validate_oasf_envelope() -> None:
+    schema_path = ROOT / "spec" / "schemas" / "dcas-oasf-evaluation-envelope.schema.json"
+    example_path = ROOT / "conformance" / "examples" / "oasf_evaluation_envelope.example.json"
+    if not schema_path.exists() or not example_path.exists():
+        warn("OASF evaluation envelope artifacts not present; skipping JSON schema validation.")
+        return
+    schema = load_json(schema_path)
+    instance = load_json(example_path)
+    try:
+        jsonschema.validate(instance=instance, schema=schema)
+    except jsonschema.ValidationError as e:
+        path = ".".join(str(p) for p in e.path) or "<root>"
+        fail(f"OASF evaluation envelope invalid at {path}: {e.message}")
+    ok("Validated OASF evaluation envelope example against schema.")
+
 def validate_markdown_links() -> None:
     md_files = [p for p in ROOT.rglob("*.md") if ".git" not in str(p)]
     link_re = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
@@ -286,6 +303,7 @@ def main() -> None:
     print("DTG DCAS repo validation\n")
     control_ids = load_control_ids()
     validate_csv_schemas(control_ids)
+    validate_oasf_envelope()
     validate_coverage_reports()
     validate_markdown_links()
     ok("All checks passed.")

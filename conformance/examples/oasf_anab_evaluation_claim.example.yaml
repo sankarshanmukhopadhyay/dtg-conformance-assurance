@@ -1,0 +1,40 @@
+dcas_version: 0.1.0
+claim_id: DCAS-OASF-ANAB-EXAMPLE-001
+issued_at: 2026-03-25T00:00:00Z
+subject:
+  actor_id: did:web:example.org:agents:concierge
+  actor_class: HolderAgent
+profile:
+  profile_id: CP-7
+  profile_version: 0.6.0
+assurance_level: AL3
+coverage_window:
+  from: 2026-03-01T00:00:00Z
+  to: 2026-03-25T00:00:00Z
+scope:
+  control_objectives:
+    - CO4.1
+    - CO4.2
+  limitations: Evaluation constrained to the OASF-published ANAB assurance surface and linked evidence.
+evidence_references:
+  - evidence_id: oasf-record
+    ref: https://example.org/oasf/records/concierge-agent.json
+    content_type: application/json
+  - evidence_id: anab-publication-profile
+    ref: ./oasf_evaluation_envelope.example.json
+    content_type: application/json
+  - evidence_id: anab-evidence-bundle
+    ref: https://example.org/evidence/bundles/concierge/bundle.json
+    content_type: application/json
+test_references:
+  - test_id: OASF-DISCOVERY-01
+    ref: https://example.org/tests/oasf-discovery-01
+    result: pass
+  - test_id: ANAB-BINDING-07
+    ref: https://example.org/tests/anab-binding-07
+    result: partial
+outcome:
+  status: conditional
+  findings_summary: >-
+    OASF publication pointers were present and coherent, but revocation behavior for the
+    published ANAB trust description needs stronger evidence before reliance can be upgraded.

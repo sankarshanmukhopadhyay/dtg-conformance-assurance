@@ -21,6 +21,7 @@ Welcome. This documentation site is generated from the repository’s `/docs` fo
 - **Conformance profiles:** [Profiles](profiles.md)
 - **Templates (starter bundle):** [Starter bundle](../templates/starter-bundle/)
 - **Evaluation workflow:** [Verifier workflow](verifier-workflow.md)
+- **OASF integration:** [OASF integration](oasf-integration.md)
 
 ## What this repo is (and isn’t)
 

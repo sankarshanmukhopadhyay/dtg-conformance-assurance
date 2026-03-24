@@ -1,0 +1,120 @@
+{
+  "$id": "https://example.org/dtg/dcas-oasf-evaluation-envelope.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DCAS OASF Evaluation Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "subject",
+    "source_record",
+    "baseline",
+    "evaluation"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "subject_id",
+        "subject_class"
+      ],
+      "properties": {
+        "subject_id": {
+          "type": "string"
+        },
+        "subject_class": {
+          "type": "string",
+          "enum": [
+            "Agent",
+            "Service",
+            "Issuer",
+            "Verifier"
+          ]
+        }
+      }
+    },
+    "source_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "framework",
+        "record_ref"
+      ],
+      "properties": {
+        "framework": {
+          "type": "string",
+          "const": "OASF"
+        },
+        "record_ref": {
+          "type": "string"
+        },
+        "publisher_ref": {
+          "type": "string"
+        },
+        "interaction_surface": {
+          "type": "string"
+        }
+      }
+    },
+    "baseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "baseline_id",
+        "declaration_ref",
+        "evidence_bundle_ref"
+      ],
+      "properties": {
+        "baseline_id": {
+          "type": "string"
+        },
+        "declaration_ref": {
+          "type": "string"
+        },
+        "evidence_bundle_ref": {
+          "type": "string"
+        },
+        "control_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "claim_ref",
+        "decision"
+      ],
+      "properties": {
+        "method": {
+          "type": "string",
+          "const": "DCAS"
+        },
+        "claim_ref": {
+          "type": "string"
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "conformant",
+            "non_conformant",
+            "conditional"
+          ]
+        },
+        "tsmm_anchor": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

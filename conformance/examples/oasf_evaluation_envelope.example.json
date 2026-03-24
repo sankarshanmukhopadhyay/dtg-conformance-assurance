@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1.0",
+  "subject": {
+    "subject_id": "did:web:example.org:agents:concierge",
+    "subject_class": "Agent"
+  },
+  "source_record": {
+    "framework": "OASF",
+    "record_ref": "https://example.org/oasf/records/concierge-agent.json",
+    "publisher_ref": "did:web:example.org",
+    "interaction_surface": "a2a"
+  },
+  "baseline": {
+    "baseline_id": "ANAB",
+    "declaration_ref": "../../agent-name-assurance-baseline-main/conformance/samples/oasf-anab-publication-profile.json",
+    "evidence_bundle_ref": "https://example.org/evidence/bundles/concierge/bundle.json",
+    "control_ids": [
+      "ANAGB-A2A-07",
+      "ANAGB-A2A-08",
+      "ANAGB-A2A-09",
+      "ANAGB-A2A-10"
+    ]
+  },
+  "evaluation": {
+    "method": "DCAS",
+    "claim_ref": "./anab_over_a2a_evaluation_claim.example.yaml",
+    "decision": "conditional",
+    "tsmm_anchor": "tsmm:ServiceDescriptor"
+  }
+}

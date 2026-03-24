@@ -1,7 +1,7 @@
 # DTG Conformance & Assurance (DCAS)
 
 **Release:** v0.6.0  \
-**Last reviewed:** 2026-03-24
+**Last reviewed:** 2026-03-25
 
 This repository publishes **DCAS (Decentralized Conformance and Assurance Standard)** artifacts for DTG ecosystems.
 
@@ -58,6 +58,15 @@ ANAB now publishes a detailed **ANAB-over-A2A description extension** plus new A
 - downgrade-safe handling when the extension is absent, stale, or unverifiable
 
 This impact is documented in `docs/anab-a2a-evaluation.md` and illustrated in `conformance/examples/anab_over_a2a_evaluation_claim.example.yaml`.
+
+## OASF publication composition
+
+This repo now includes a small OASF-facing handoff so OASF-described agents can be evaluated under DCAS without flattening discovery metadata into ad hoc local fields.
+
+- Integration note: `docs/oasf-integration.md`
+- Envelope schema: `spec/schemas/dcas-oasf-evaluation-envelope.schema.json`
+- Example envelope: `conformance/examples/oasf_evaluation_envelope.example.json`
+- OASF ↔ ANAB ↔ DCAS mapping table: `controls/oasf_control_mappings.csv`
 
 ## Cross-repo composition
 
