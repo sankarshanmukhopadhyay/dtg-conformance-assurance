@@ -22,7 +22,7 @@ This roadmap is organized as capability increments. Dates are intentionally omit
 
 
 
-## v0.2.1 — Adoption polish + GitHub Pages documentation (PLANNED)
+## v0.2.1 — Adoption polish + GitHub Pages documentation (DELIVERED)
 
 **Outcome:** a casual visitor can understand the project in 5 minutes, and adopters can self-serve via a published docs site.
 
@@ -32,3 +32,12 @@ This roadmap is organized as capability increments. Dates are intentionally omit
 - Remove references to any specific working group governance; adopt repo-neutral governance language
 - Lightweight doc hygiene improvements (navigation, cross-links)
 
+
+
+## v0.3.0 — Domain baseline composition pack (DELIVERED)
+
+**Outcome:** downstream baselines can be evaluated by DCAS without losing their own control namespaces.
+
+- Added `docs/domain-baseline-composition.md`
+- Added `conformance/examples/anab_evaluation_claim.example.yaml`
+- Refreshed README so cross-repo composition is visible from the front door

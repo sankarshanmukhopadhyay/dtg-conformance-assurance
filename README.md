@@ -1,7 +1,7 @@
 # DTG Conformance & Assurance (DCAS)
 
-**Release:** v0.5.1  \
-**Last reviewed:** 2026-03-14
+**Release:** v0.6.0  \
+**Last reviewed:** 2026-03-24
 
 This repository publishes **DCAS (Decentralized Conformance and Assurance Standard)** artifacts for DTG ecosystems.
 
@@ -47,6 +47,13 @@ This release adds an explicit **A2A-facing assurance surface** for agent ecosyst
 - **A2A example claim:** `conformance/examples/a2a_agent_conformance_claim.example.yaml`
 
 The intent is simple: A2A handles communication. DCAS evaluates whether an A2A agent is trustworthy enough to rely on in production.
+
+## Cross-repo composition
+
+This release adds a concrete composition pack for evaluating a downstream baseline such as ANAB without collapsing its control namespace into DCAS-local labels too early.
+
+- Composition note: `docs/domain-baseline-composition.md`
+- Example evaluation claim: `conformance/examples/anab_evaluation_claim.example.yaml`
 
 ## Methodology and ecosystem context
 
