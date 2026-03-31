@@ -22,6 +22,7 @@ Welcome. This documentation site is generated from the repository’s `/docs` fo
 - **Templates (starter bundle):** [Starter bundle](../templates/starter-bundle/)
 - **Evaluation workflow:** [Verifier workflow](verifier-workflow.md)
 - **OASF integration:** [OASF integration](oasf-integration.md)
+- **AIS-1 experimental profile:** [AIS-1 experimental assurance profile](ais1-experimental-assurance-profile.md)
 
 ## What this repo is (and isn’t)
 

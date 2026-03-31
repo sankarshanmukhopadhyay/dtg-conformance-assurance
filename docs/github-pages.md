@@ -19,3 +19,5 @@ GitHub Pages will build a simple Jekyll site from the Markdown files in `/docs`.
 
 - The landing page is `docs/index.md`.
 - If you do not want Jekyll processing, add a `.nojekyll` file to `/docs`. (Not recommended unless you know why.)
+
+- Experimental profiles that should appear on the docs site need a `/docs` landing page. The AIS-1 profile is surfaced via `docs/ais1-experimental-assurance-profile.md`.

@@ -10,6 +10,8 @@ Profiles define *what is in scope* for a DCAS claim and what evidence/verifier e
 - **CP-4 NetworkManager:** `conformance/profiles/CP-4_NetworkManager.md`
 - **CP-5 RegistryOperator:** `conformance/profiles/CP-5_RegistryOperator.md`
 - **CP-6 GovernanceAuthority:** `conformance/profiles/CP-6_GovernanceAuthority.md`
+- **CP-7 A2AAgent:** `conformance/profiles/CP-7_A2AAgent.md`
+- **CP-8 AIS1Experimental:** `conformance/profiles/CP-8_AIS1Experimental.md` *(experimental)*
 
 ## Adding a new profile
 - Add the profile file under `conformance/profiles/`.

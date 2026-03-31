@@ -40,3 +40,14 @@ This produces `risk/reports/coverage/coverage.csv` and `risk/reports/coverage/co
 - **Verifier:** follow `docs/verifier-workflow.md` for an intake → validation → coverage → decision pipeline.
 - **Auditor/assessor:** see `docs/roles/auditor-assessor.md` for a repeatable sampling approach.
 - **Tool builder:** see `docs/roles/tool-builder.md` for automation patterns.
+
+
+## Experimental AIS-1 path
+
+If you are evaluating an AIS-1-described agent surface, start with:
+
+1. `conformance/profiles/CP-8_AIS1Experimental.md`
+2. `docs/ais1-experimental-assurance-profile.md`
+3. `conformance/examples/ais1_experimental_evaluation_claim.example.yaml`
+
+Treat this path as experimental and bounded. It helps you assess identity binding, bond integrity, issuer disclosure, lifecycle evidence, and traceability. It does not substitute for separate delegation or provenance checks.

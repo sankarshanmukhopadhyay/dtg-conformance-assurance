@@ -10,7 +10,7 @@ This repo is organized around an end-to-end traceability spine:
 - `controls/` — DCAS control objectives (CSV + narrative)
 - `risk/` — risk register exports and mappings
 - `templates/` — CSV-first evidence bundle templates
-- `conformance/` — assurance levels + conformance profiles + examples
+- `conformance/` — assurance levels + conformance profiles + examples, including experimental profiles such as AIS-1
 - `docs/` — adoption guidance and evaluation method
 - `spec/` — draft specification and annexes
 - `schemas/` — machine-readable CSV schema descriptors used by tooling

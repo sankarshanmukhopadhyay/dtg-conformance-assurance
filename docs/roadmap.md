@@ -50,3 +50,13 @@ This roadmap is organized as capability increments. Dates are intentionally omit
 - Add evaluator guidance for ANAB-over-A2A trust metadata
 - Add a worked evaluation example preserving `ANAGB-A2A-07` through `ANAGB-A2A-10`
 - Refresh compatibility and composition docs to recognize the ANAB description extension
+
+
+## Unreleased follow-on — AIS-1 experimental evaluation lane
+
+**Outcome:** DCAS can evaluate AIS-1 as a bounded, experimental accountability substrate while preserving the correct maturity signal.
+
+- Add an experimental AIS-1 profile for bonded agent identity and accountability
+- Add a worked evaluation claim example
+- Refresh README and docs navigation so the profile is discoverable
+- Keep delegation, provenance, and production-readiness explicitly out of scope for the profile

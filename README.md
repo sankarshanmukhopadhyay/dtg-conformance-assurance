@@ -11,6 +11,7 @@ DCAS is an implementation-neutral way to move from implicit trust to **explicit,
 
 - **Primary goal (this repo):** make DCAS *operational* — templates, schemas, and a repeatable evaluation method.
 - **Spec:** `spec/DCAS_v0.1.md` is a **draft** (contains TODOs). Templates + validation tooling are treated as the stable “adoption surface”.
+- **AIS-1 integration:** present as an **experimental** assurance profile for bounded evaluation, not as a settled production trust profile.
 
 ## Ecosystem & related repositories
 
@@ -58,6 +59,21 @@ ANAB now publishes a detailed **ANAB-over-A2A description extension** plus new A
 - downgrade-safe handling when the extension is absent, stale, or unverifiable
 
 This impact is documented in `docs/anab-a2a-evaluation.md` and illustrated in `conformance/examples/anab_over_a2a_evaluation_claim.example.yaml`.
+
+## Experimental AIS-1 integration
+
+This repo now includes an **experimental AIS-1 assurance profile** so DCAS can evaluate AIS-1 as a bonded identity and accountability substrate without overstating it as a complete trust execution layer.
+
+- **Experimental profile:** `conformance/profiles/CP-8_AIS1Experimental.md`
+- **Guidance note:** `docs/ais1-experimental-assurance-profile.md`
+- **Example claim:** `conformance/examples/ais1_experimental_evaluation_claim.example.yaml`
+
+The evaluation posture is intentionally narrow:
+- bond is not delegation
+- tier is not full assurance
+- verification is not provenance
+
+Use this profile when you need a reviewable decision about whether an AIS-1 surface is coherent enough to consume as an accountability input. Do not treat it as a standalone production recommendation.
 
 ## OASF publication composition
 

@@ -1,0 +1,51 @@
+dcas_version: "0.1.0"
+claim_id: "claim-ais1-experimental-001"
+issued_at: "2026-03-31T00:00:00Z"
+subject:
+  actor_id: "did:ais1:agent:example-001"
+  actor_class: "HolderAgent"
+profile:
+  profile_id: "CP-8"
+  profile_version: "0.6.0"
+  profile_status: "experimental"
+assurance_level: "AL2"
+coverage_window:
+  from: "2026-03-01T00:00:00Z"
+  to: "2026-03-31T00:00:00Z"
+scope:
+  control_objectives:
+    - "CO3.1"
+    - "CO3.2"
+    - "CO3.3"
+    - "CO4.1"
+    - "CO4.2"
+    - "CO5.1"
+  limitations: "AIS-1 evaluated as an experimental bonded identity and accountability substrate. Delegation and provenance remain out of scope."
+evidence_references:
+  - evidence_id: "ais1-bond-record"
+    ref: "https://example.invalid/ais1/bonds/agent-001"
+    hash: "3333333333333333333333333333333333333333333333333333333333333333"
+    content_type: "application/json"
+  - evidence_id: "ais1-status-log"
+    ref: "https://example.invalid/ais1/status/agent-001"
+    hash: "4444444444444444444444444444444444444444444444444444444444444444"
+    content_type: "application/json"
+test_references:
+  - test_id: "T8001"
+    ref: "https://example.invalid/tests/ais1/did-resolution"
+    result: "pass"
+  - test_id: "T8002"
+    ref: "https://example.invalid/tests/ais1/bond-status"
+    result: "pass"
+assessor:
+  assessor_id: "example.assessor"
+  organization: "Example Assurance Partners"
+  independence_model: "contractual"
+  conflict_disclosure: "None disclosed."
+outcome:
+  status: "conditional-pass"
+  summary: "The AIS-1 surface is usable as an experimental accountability input, but separate delegation and provenance evidence is still required for higher-risk reliance."
+  notes:
+    - "Bond integrity was reproducible."
+    - "Lifecycle state was disclosed and testable."
+    - "Delegation semantics were not established by AIS-1 alone."

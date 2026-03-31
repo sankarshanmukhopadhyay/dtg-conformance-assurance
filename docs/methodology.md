@@ -34,3 +34,8 @@ Evaluation is a structured process that results in an outcome such as pass, cond
 DCAS is designed to interoperate with a broader trust infrastructure ecosystem (e.g., trust registries, conformance test suites, assurance hubs).
 
 This repository focuses on the portable artifact layer: profiles, assurance levels, control objectives, evidence templates, and evaluation guidance.
+
+
+## Experimental profiles
+
+DCAS can evaluate emerging or incomplete substrates as long as the profile preserves clear boundary conditions. Experimental profiles are included so ecosystems can pressure-test an assurance surface without implying production endorsement. The AIS-1 profile is the current example of this pattern.

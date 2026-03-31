@@ -29,3 +29,16 @@ This repository provides the **assurance and conformance layer**. The upstream r
 Interoperability depends on a transport substrate for secure, privacy-preserving exchange of messages and artifacts between endpoints. This repo aligns with the **Trust Spanning Protocol (TSP)** from ToIP as a candidate transport layer for these exchanges.
 
 See: https://trustoverip.github.io/tswg-tsp-specification/
+
+
+## Experimental AIS-1 composition
+
+DCAS can also compose with AIS-1 as an **experimental** identity-and-accountability substrate.
+
+In this repo, that means DCAS evaluates whether an AIS-1 surface is sufficiently coherent to consume as a bounded trust input:
+- `did:ais1` identifiers are testable
+- agent-to-sponsor bond integrity is reviewable
+- issuer or trust-anchor disclosure is available for policy decisions
+- lifecycle state is externally checkable
+
+This composition is intentionally limited. AIS-1 is not treated here as a full delegation, provenance, or execution-layer trust protocol.

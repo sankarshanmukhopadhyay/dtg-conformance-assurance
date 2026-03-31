@@ -19,3 +19,8 @@ Start with the issuer bundle:
 
 ## How do extensions work?
 Add optional columns prefixed with `x_` (e.g., `x_ticket_url`). Core columns remain stable for interoperability.
+
+
+## Does DCAS support AIS-1?
+
+DCAS includes an **experimental** AIS-1 profile. It allows verifiers to assess whether an AIS-1 surface is coherent enough to use as an identity-and-accountability input. It does not treat AIS-1 as a complete delegation or provenance layer.
