@@ -23,6 +23,8 @@ Welcome. This documentation site is generated from the repository’s `/docs` fo
 - **Evaluation workflow:** [Verifier workflow](verifier-workflow.md)
 - **OASF integration:** [OASF integration](oasf-integration.md)
 - **AIS-1 experimental profile:** [AIS-1 experimental assurance profile](ais1-experimental-assurance-profile.md)
+- **Runtime decision receipts:** [Runtime decision receipt pattern](patterns/runtime-decision-receipt.md)
+- **Experimental runtime controls:** [Agent runtime controls overlay](experimental/agent-runtime-controls.md)
 
 ## What this repo is (and isn’t)
 

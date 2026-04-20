@@ -2,13 +2,16 @@
 
 ## [Unreleased]
 
+
+## [0.7.0] - 2026-04-20
+
 ### Added
-- Added `docs/anab-a2a-evaluation.md` to explain how DCAS should evaluate ANAB-over-A2A trust descriptions.
-- Added `conformance/examples/anab_over_a2a_evaluation_claim.example.yaml` as an illustrative evaluator artifact preserving `ANAGB-A2A-07` through `ANAGB-A2A-10`.
+- Added `docs/patterns/runtime-decision-receipt.md` to define a portable runtime evidence pattern for pre-effect policy decisions.
+- Added `docs/experimental/agent-runtime-controls.md` and `conformance/examples/runtime_decision_receipt.example.yaml` as an experimental runtime-governance overlay.
+- Extended the control, evidence, and test catalogs with `CO3.7`, `CO4.5`, `CO6.4`, `EV-016` through `EV-018`, and `TS-016` through `TS-018`.
 
 ### Changed
-- Refreshed A2A assurance, compatibility, composition, and README docs to account for the ANAB-over-A2A binding spec and controls.
-
+- Refreshed README, docs index, methodology, and verifier workflow to make runtime-governance evidence expectations visible without changing the stable DCAS method core.
 
 ## [0.6.0] - 2026-03-24
 

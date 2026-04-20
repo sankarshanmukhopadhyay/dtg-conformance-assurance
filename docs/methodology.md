@@ -39,3 +39,8 @@ This repository focuses on the portable artifact layer: profiles, assurance leve
 ## Experimental profiles
 
 DCAS can evaluate emerging or incomplete substrates as long as the profile preserves clear boundary conditions. Experimental profiles are included so ecosystems can pressure-test an assurance surface without implying production endorsement. The AIS-1 profile is the current example of this pattern.
+
+
+## Experimental runtime-governance interpretation
+
+For agentic systems with side-effecting execution paths, assessors MAY require runtime evidence showing what was checked immediately before execution. The experimental runtime overlay introduced in this release uses structured receipts and fail-safe behavior tests to make those decisions reviewable without redefining the stable DCAS method.

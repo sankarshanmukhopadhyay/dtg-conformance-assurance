@@ -14,3 +14,6 @@ EV-012,Dependency inventory,Dataset,Inventory of critical dependencies with SLAs
 EV-013,Schema governance record,Record,"Schema versions, compatibility notes, and breaking-change documentation.",Governance/Registry,MD/JSON
 EV-014,Dispute/redress procedure,Document,"Publicly accessible process for disputes and corrections, with timelines.",Governance/Registry,MD/PDF
 EV-015,User disclosure text,Document,"Plain-language disclosures about trust signals, errors, and recourse.",All roles,MD
+EV-016,Runtime decision receipt,Record,Structured record of a runtime decision including request; authority basis; policy; evidence inputs; verdict; and effect,Operator/Verifier,JSON/YAML
+EV-017,Runtime policy evaluation trace,Log,Tamper-evident trace showing policy admission checks immediately before a runtime effect,Operator,JSON/Log
+EV-018,Fail-safe behavior test evidence,Record,Test outputs proving deny/suspend/degrade behavior under stale or missing runtime governance inputs,Operator/Assessor,MD/JSON

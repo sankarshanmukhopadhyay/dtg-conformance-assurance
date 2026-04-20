@@ -1,0 +1,33 @@
+receipt_id: rcp-runtime-0001
+issued_at: "2026-04-20T10:30:00Z"
+subject:
+  actor_id: did:example:agent-ops-001
+  actor_class: HolderAgent
+request:
+  action: submit_invoice_adjustment
+  target: https://api.example.invalid/accounts/adjustments
+  effect_class: transactional
+authority_basis:
+  delegation_ref: did:example:delegation-7788
+  scope: "bounded invoice adjustments below 5000 units"
+policy:
+  profile_id: CP-7
+  control_objective_ids:
+    - CO3.7
+    - CO4.5
+    - CO6.4
+  policy_ref: https://example.invalid/policies/pre-effect-admission/v1
+inputs:
+  status_snapshot_ref: https://example.invalid/status/delegation-7788.json
+  evidence_refs:
+    - evidence://runtime-status-snapshot
+    - evidence://runtime-policy-evaluation-log
+verdict:
+  status: allow
+  rationale: "Delegation active, revocation status fresh, action within threshold."
+outcome:
+  resulting_effect: adjustment_submitted
+  blocked_effect: null
+integrity:
+  log_ref: https://example.invalid/logs/runtime/2026-04-20/0001
+  sha256: "3333333333333333333333333333333333333333333333333333333333333333"

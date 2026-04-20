@@ -14,3 +14,6 @@ TS-012,Dependency governance check,Dependency inventory coverage,"Validate EV-01
 TS-013,Schema governance check,Schema versioning & compatibility,Confirm EV-013 documents versions and breaking changes with effective dates.,Manual
 TS-014,Redress check,Dispute workflow,"Validate EV-014 includes intake, timeline, decision, appeal, and publication.",Manual
 TS-015,UX transparency check,Disclosure clarity,Validate EV-015 is plain-language and references recourse pathways.,Manual
+TS-016,Runtime evidence check,Runtime receipt completeness,Validate EV-016 contains request authority policy evidence verdict and effect fields.,Automatable
+TS-017,Replay check,Runtime decision replay,Verify EV-017 and EV-016 allow an assessor to reconstruct the runtime trust decision path.,Manual
+TS-018,Negative-path check,Fail-safe runtime behavior,Demonstrate deny suspend or degrade behavior when status freshness or policy admission data is unavailable.,Automatable

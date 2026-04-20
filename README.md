@@ -1,6 +1,6 @@
 # DTG Conformance & Assurance (DCAS)
 
-**Release:** v0.6.0  \
+**Release:** v0.7.0  \
 **Last reviewed:** 2026-03-25
 
 This repository publishes **DCAS (Decentralized Conformance and Assurance Standard)** artifacts for DTG ecosystems.
@@ -141,3 +141,8 @@ See `CONTRIBUTING.md`. CI enforces mechanical correctness (CSV structure + markd
 ## Ecosystem interoperability
 
 See `docs/ecosystem-interoperability.md` and `docs/architecture.md` for how this repo composes with DTG Labs upstream work (`dtg-credentials`, `verifiable-trust-infrastructure`, `openVTC`).
+
+
+## Experimental agent runtime governance overlay
+
+This release adds an **experimental** runtime-governance overlay informed by the Microsoft Agent Governance Toolkit as an upstream reference. The overlay adds portable control objectives, evidence expectations, and a runtime decision receipt pattern for systems that need to prove what happened **at execution time**, without changing the stable DCAS method core.

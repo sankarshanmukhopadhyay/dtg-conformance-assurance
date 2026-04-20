@@ -21,3 +21,6 @@ CO5.3,Transparency,Incident disclosure,Relevant incidents and remediations are l
 CO6.1,Resilience,Continuity planning,Continuity and recovery procedures exist for critical services.,Check DR/BCP artifacts
 CO6.2,Resilience,Key management,Key custody; rotation; and recovery are defined and evidenced.,Review key policy and events
 CO6.3,Resilience,Monitoring & response,Monitoring and response mechanisms exist for critical controls.,Check alerts; response playbooks
+CO3.7,Operational,Runtime admission control,High-risk runtime actions are evaluated against policy and current status before execution produces an effect.,Review runtime decision receipts and policy admission traces
+CO4.5,Assurance,Runtime decision traceability,Runtime trust decisions are reproducible from structured receipts or tamper-evident traces that identify authority; policy; evidence; and resulting effect.,Replay a sample decision from receipt fields and linked evidence
+CO6.4,Resilience,Fail-safe runtime behavior,Systems deny; suspend; or degrade safely when policy state; delegation scope; or status freshness cannot be established at execution time.,Test stale-status and missing-policy scenarios for fail-safe handling

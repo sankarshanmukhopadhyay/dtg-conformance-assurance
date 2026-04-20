@@ -6,10 +6,10 @@
 
 ## Summary
 
-- Total control objectives: **22**
+- Total control objectives: **25**
 - Covered: **3**
-- Uncovered: **19**
-- Coverage: **13.6%**
+- Uncovered: **22**
+- Coverage: **12.0%**
 
 ## Uncovered control objectives
 
@@ -22,16 +22,19 @@
 - `CO3.2` — Delegation constraints
 - `CO3.3` — Lifecycle governance
 - `CO3.4` — Directory/registry correctness
+- `CO3.7` — Runtime admission control
 - `CO4.1` — Evidence completeness
 - `CO4.2` — Traceability
 - `CO4.3` — Testability
 - `CO4.4` — Repeatability
+- `CO4.5` — Runtime decision traceability
 - `CO5.1` — Disclosure baseline
 - `CO5.2` — Change disclosure
 - `CO5.3` — Incident disclosure
 - `CO6.1` — Continuity planning
 - `CO6.2` — Key management
 - `CO6.3` — Monitoring & response
+- `CO6.4` — Fail-safe runtime behavior
 
 ## Outputs
 

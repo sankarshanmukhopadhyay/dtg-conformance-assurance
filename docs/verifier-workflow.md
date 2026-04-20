@@ -113,3 +113,8 @@ At minimum, the verifier produces:
 - a coverage report (CSV + Markdown)
 - a decision record (Markdown or CSV)
 
+
+
+## Experimental runtime overlay step
+
+Where the target deployment performs delegated or side-effecting runtime actions, the verifier SHOULD request runtime decision receipts and negative-path evidence for stale-status or missing-policy scenarios.
