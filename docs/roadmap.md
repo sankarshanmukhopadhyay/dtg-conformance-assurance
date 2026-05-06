@@ -60,3 +60,22 @@ This roadmap is organized as capability increments. Dates are intentionally omit
 - Add a worked evaluation claim example
 - Refresh README and docs navigation so the profile is discoverable
 - Keep delegation, provenance, and production-readiness explicitly out of scope for the profile
+
+## v0.8.0 — TIS v0.9 runtime trust artifact evaluation alignment (DELIVERED)
+
+**Outcome:** DCAS can evaluate TIS v0.9 DTG/OpenVTC/VTI runtime trust artifacts without copying TIS schemas or collapsing downstream domain-baseline semantics.
+
+- Added evaluator guidance for TIS v0.9 runtime artifacts.
+- Added a drift review process and compatibility review manifest.
+- Added a worked TIS-backed evaluation claim.
+- Added known-good stack and cross-repo alignment documentation.
+- Updated validation to keep the new artifacts CI-safe.
+
+## Future follow-on — automated cross-repo drift reporting
+
+**Outcome:** DCAS can generate a local drift report from the TIS compatibility matrix and local manifest.
+
+- Compare tracked TIS release and schema references against local review manifest.
+- Emit machine-readable drift status for CI or release readiness checks.
+- Keep this as a release-readiness gate rather than a hard dependency on network access.
+

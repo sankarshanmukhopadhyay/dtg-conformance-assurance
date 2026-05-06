@@ -3,6 +3,25 @@
 ## [Unreleased]
 
 
+## [0.8.0] - 2026-05-06
+
+### Added
+- Added a TIS v0.9 runtime trust artifact evaluation profile for DTG/OpenVTC/VTI evidence consumption.
+- Added a worked TIS v0.9 evaluation claim example that preserves canonical TIS artifact references.
+- Added a machine-readable TIS compatibility review manifest and drift review process.
+- Added a known-good stack statement and cross-repo DCAS/ANAB/TIS alignment matrix.
+
+### Changed
+- Refreshed README, docs index, interoperability, compatibility matrix, and roadmap for TIS v0.9 synchronization.
+- Clarified that TIS artifact validity is evidence input, not an automatic DCAS assurance outcome.
+- Updated validation tooling to parse the new YAML example and verify the compatibility review manifest.
+
+### Quality
+- Confirmed `make validate` and `make coverage` remain compatible with the existing CI workflow.
+- Preserved additive, non-breaking control semantics and existing DCAS control namespaces.
+
+
+
 ## [0.7.0] - 2026-04-20
 
 ### Added

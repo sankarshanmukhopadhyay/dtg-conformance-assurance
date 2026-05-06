@@ -42,3 +42,23 @@ In this repo, that means DCAS evaluates whether an AIS-1 surface is sufficiently
 - lifecycle state is externally checkable
 
 This composition is intentionally limited. AIS-1 is not treated here as a full delegation, provenance, or execution-layer trust protocol.
+
+## TIS v0.9 runtime artifact alignment
+
+DCAS v0.8.0 aligns with TIS v0.9.0 by consuming DTG/OpenVTC/VTI runtime trust artifacts as evaluation evidence.
+
+The intended control-plane flow is:
+
+1. TIS defines the canonical artifact shape.
+2. DTG/OpenVTC/VTI systems produce runtime artifacts.
+3. DCAS evaluates whether the artifacts are sufficient for a declared assurance level and relying-party context.
+4. Domain baselines such as ANAB preserve their own control namespace while referencing the same evidence surface.
+
+This makes governance executable without turning DCAS into a schema registry or implementation repository.
+
+See also:
+
+- `tis-v0.9-runtime-artifact-evaluation-profile.md`
+- `tis-drift-review.md`
+- `tis-dcas-anab-alignment-matrix.md`
+

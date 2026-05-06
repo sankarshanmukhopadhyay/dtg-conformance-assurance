@@ -15,6 +15,7 @@ from __future__ import annotations
 import csv
 import json
 import jsonschema
+import yaml
 import os
 import re
 import sys
@@ -299,12 +300,44 @@ def validate_coverage_reports() -> None:
         warn("Coverage markdown does not appear deterministic (expected SOURCE_DATE_EPOCH=0 output). Consider regenerating with `make coverage`.")
     ok("Coverage report outputs are up-to-date and deterministic.")
 
+
+def validate_tis_alignment_artifacts() -> None:
+    manifest_path = ROOT / "model" / "tis-compatibility-review.json"
+    if not manifest_path.exists():
+        fail("Missing model/tis-compatibility-review.json for TIS drift tracking.")
+    manifest = load_json(manifest_path)
+    required = {"aligned_to_tis_release", "reviewed_at", "review_status", "tracked_artifact_families", "drift_triggers"}
+    missing = required - set(manifest.keys())
+    if missing:
+        fail(f"TIS compatibility review manifest missing keys: {sorted(missing)}")
+    if manifest.get("aligned_to_tis_release") != "v0.9.0":
+        fail("TIS compatibility review manifest must declare alignment to v0.9.0 for this release.")
+    if not manifest.get("tracked_artifact_families"):
+        fail("TIS compatibility review manifest must track at least one artifact family.")
+
+    example_path = ROOT / "conformance" / "examples" / "tis_v0_9_runtime_artifact_evaluation_claim.example.yaml"
+    if not example_path.exists():
+        fail("Missing TIS v0.9 runtime artifact evaluation example.")
+    with example_path.open("r", encoding="utf-8") as f:
+        example = yaml.safe_load(f)
+    if not isinstance(example, dict):
+        fail("TIS v0.9 evaluation example must parse as a YAML mapping.")
+    if example.get("assurance_level") not in {"AL1", "AL2", "AL3", "AL4"}:
+        fail("TIS v0.9 evaluation example has invalid assurance_level.")
+    tis_alignment = example.get("tis_alignment") or {}
+    if tis_alignment.get("aligned_tis_release") != "v0.9.0":
+        fail("TIS v0.9 evaluation example must declare aligned_tis_release v0.9.0.")
+    if not tis_alignment.get("canonical_profiles"):
+        fail("TIS v0.9 evaluation example must include canonical_profiles.")
+    ok("Validated TIS v0.9 alignment manifest and evaluation example.")
+
 def main() -> None:
     print("DTG DCAS repo validation\n")
     control_ids = load_control_ids()
     validate_csv_schemas(control_ids)
     validate_oasf_envelope()
     validate_coverage_reports()
+    validate_tis_alignment_artifacts()
     validate_markdown_links()
     ok("All checks passed.")
 

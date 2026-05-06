@@ -24,6 +24,9 @@ Welcome. This documentation site is generated from the repository’s `/docs` fo
 - **OASF integration:** [OASF integration](oasf-integration.md)
 - **AIS-1 experimental profile:** [AIS-1 experimental assurance profile](ais1-experimental-assurance-profile.md)
 - **Runtime decision receipts:** [Runtime decision receipt pattern](patterns/runtime-decision-receipt.md)
+- **TIS v0.9 runtime artifact evaluation:** [TIS v0.9 evaluation profile](tis-v0.9-runtime-artifact-evaluation-profile.md)
+- **TIS drift review:** [TIS drift review process](tis-drift-review.md)
+- **Known-good stack:** [Known-good stack](known-good-stack.md)
 - **Experimental runtime controls:** [Agent runtime controls overlay](experimental/agent-runtime-controls.md)
 
 ## What this repo is (and isn’t)
@@ -48,4 +51,5 @@ It is not a regulator, a certification body, or a compliance “stamp”. Think 
 - [Ecosystem interoperability](ecosystem-interoperability.md)
 - [Architecture snapshot](architecture.md)
 - [Transport alignment (TSP)](tsp-alignment.md)
+- [TIS, DCAS, and ANAB alignment matrix](tis-dcas-anab-alignment-matrix.md)
 

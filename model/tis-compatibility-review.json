@@ -1,0 +1,33 @@
+{
+  "aligned_to_tis_release": "v0.9.0",
+  "reviewed_at": "2026-05-06",
+  "review_status": "aligned",
+  "alignment_scope": "DCAS evaluates TIS v0.9 DTG/OpenVTC/VTI runtime trust artifacts as evidence inputs without copying canonical schemas.",
+  "tracked_artifact_families": [
+    "DTG VC envelope and credential subject profiles",
+    "OpenVTC relationship state, VRC issuance, configuration, and DIDComm routing profiles",
+    "VTI VTA context, ACL, authorization credential, sealed transfer, DID template, TEE attestation, and provision integration profiles",
+    "TIS decision receipt schema",
+    "TIS evidence bundle manifest schema",
+    "TIS cross-repo compatibility matrix"
+  ],
+  "affected_local_artifacts": [
+    "docs/tis-v0.9-runtime-artifact-evaluation-profile.md",
+    "docs/tis-drift-review.md",
+    "docs/compatibility-matrix.md",
+    "conformance/examples/tis_v0_9_runtime_artifact_evaluation_claim.example.yaml"
+  ],
+  "drift_triggers": [
+    "new or renamed TIS schema $id",
+    "changed authority, delegation, revocation, expiry, or scope semantics",
+    "changed decision receipt or evidence bundle manifest structure",
+    "changed TIS assurance-level guidance",
+    "new DTG/OpenVTC/VTI runtime evidence surface"
+  ],
+  "required_action_on_drift": "Open a DCAS drift review and update evaluator guidance, examples, compatibility matrix, or validation checks as needed.",
+  "upstream_references": [
+    "https://github.com/OpenVTC/dtg-credentials",
+    "https://github.com/OpenVTC/openvtc",
+    "https://github.com/OpenVTC/verifiable-trust-infrastructure"
+  ]
+}

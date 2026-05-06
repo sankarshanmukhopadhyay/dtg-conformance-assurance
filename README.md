@@ -1,7 +1,7 @@
 # DTG Conformance & Assurance (DCAS)
 
-**Release:** v0.7.0  \
-**Last reviewed:** 2026-03-25
+**Release:** v0.8.0  \
+**Last reviewed:** 2026-05-06
 
 This repository publishes **DCAS (Decentralized Conformance and Assurance Standard)** artifacts for DTG ecosystems.
 
@@ -17,11 +17,23 @@ DCAS is an implementation-neutral way to move from implicit trust to **explicit,
 
 DCAS is designed to work with:
 
-- **`trust-infrastructure-schemas` (OTAM implementation):** canonical trust artifact schemas and the normative AL model (`assurance/assurance-levels.md`).
+- **`trust-infrastructure-schemas` (OTAM implementation):** canonical trust artifact schemas, the normative AL model (`assurance/assurance-levels.md`), and the v0.9 DTG/OpenVTC/VTI runtime trust artifact compatibility profiles.
 - **Domain baselines (example: `agent-name-assurance-baseline`):** domain-specific requirements that emit declarations and evidence bundles.
 - **This repo (DCAS):** evaluates those declarations and evidence using a repeatable verifier workflow.
 
 Start with: `docs/ecosystem-overview.md`, `docs/compatibility-matrix.md`, `docs/a2a-assurance-profile.md`, and `docs/anab-a2a-evaluation.md`.
+
+
+## TIS v0.9 runtime trust artifact alignment
+
+DCAS v0.8.0 adds an evaluator-facing alignment layer for TIS v0.9 runtime trust artifacts. The key rule is boundary discipline: TIS owns canonical schema contracts; DCAS evaluates whether those artifacts are sufficient evidence for a specific assurance decision.
+
+- Evaluation profile: `docs/tis-v0.9-runtime-artifact-evaluation-profile.md`
+- Drift review process: `docs/tis-drift-review.md`
+- Machine-readable compatibility review: `model/tis-compatibility-review.json`
+- Worked example claim: `conformance/examples/tis_v0_9_runtime_artifact_evaluation_claim.example.yaml`
+- Known-good stack: `docs/known-good-stack.md`
+
 
 
 ## Start here

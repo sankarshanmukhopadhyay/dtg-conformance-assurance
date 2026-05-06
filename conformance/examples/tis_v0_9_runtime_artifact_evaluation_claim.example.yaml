@@ -1,0 +1,76 @@
+dcas_version: "0.8.0"
+claim_id: "claim-tis-v0-9-runtime-artifacts-001"
+issued_at: "2026-05-06T00:00:00Z"
+subject:
+  actor_id: "did:example:agent:enterprise-claims-agent"
+  actor_class: "A2AAgent"
+profile:
+  profile_id: "CP-7"
+  profile_version: "0.8.0"
+assurance_level: "AL3"
+coverage_window:
+  from: "2026-04-01T00:00:00Z"
+  to: "2026-05-06T00:00:00Z"
+scope:
+  control_objectives:
+    - "CO1.1"
+    - "CO3.2"
+    - "CO3.7"
+    - "CO4.5"
+    - "CO6.4"
+  limitations: "Illustrative evaluation claim for TIS v0.9 DTG/OpenVTC/VTI runtime artifacts."
+tis_alignment:
+  aligned_tis_release: "v0.9.0"
+  compatibility_matrix_ref: "../trust-infrastructure-schemas/model/cross-repo-compatibility-matrix.json"
+  canonical_profiles:
+    - family: "DTG credential profiles"
+      schema_refs:
+        - "credentials/dtg/v1/dtg-vc-envelope.json"
+        - "credentials/dtg/v1/dtg-credential-subject.json"
+    - family: "OpenVTC runtime profiles"
+      schema_refs:
+        - "profiles/openvtc/openvtc-relationship-state.schema.json"
+        - "profiles/openvtc/openvtc-vrc-issuance-receipt.schema.json"
+        - "profiles/openvtc/openvtc-config-evidence.schema.json"
+        - "profiles/openvtc/openvtc-didcomm-routing-evidence.schema.json"
+    - family: "VTI runtime assurance profiles"
+      schema_refs:
+        - "profiles/vti/vta-context.schema.json"
+        - "profiles/vti/vta-authorization-credential.schema.json"
+        - "profiles/vti/provision-integration-receipt.schema.json"
+evidence_references:
+  - evidence_id: "tis-dtg-vc-envelope"
+    ref: "evidence://tis/dtg/vc-envelope/example-001"
+    hash: "3333333333333333333333333333333333333333333333333333333333333333"
+    content_type: "application/vc+json"
+  - evidence_id: "tis-openvtc-relationship-state"
+    ref: "evidence://tis/openvtc/relationship-state/example-001"
+    hash: "4444444444444444444444444444444444444444444444444444444444444444"
+    content_type: "application/json"
+  - evidence_id: "tis-vti-authorization-credential"
+    ref: "evidence://tis/vti/authorization-credential/example-001"
+    hash: "5555555555555555555555555555555555555555555555555555555555555555"
+    content_type: "application/json"
+  - evidence_id: "tis-decision-receipt"
+    ref: "evidence://tis/decision/receipt/example-001"
+    hash: "6666666666666666666666666666666666666666666666666666666666666666"
+    content_type: "application/json"
+test_references:
+  - test_id: "TIS-090-001"
+    ref: "https://example.invalid/tests/tis/schema-validation"
+    result: "pass"
+  - test_id: "TIS-090-002"
+    ref: "https://example.invalid/tests/tis/revocation-freshness"
+    result: "pass"
+assessor:
+  assessor_id: "example.assessor"
+  organization: "Example Assurance Partners"
+  independence_model: "contractual"
+  conflict_disclosure: "None disclosed."
+outcome:
+  status: "pass-with-limitations"
+  summary: "TIS v0.9 runtime artifacts were treated as assurance evidence for authority, scope, enforcement, revocation, and auditability."
+  notes:
+    - "Schema validity was treated as an evidence prerequisite, not as automatic assurance success."
+    - "Canonical TIS profile references were preserved for downstream auditability."
+    - "Revocation freshness was evaluated within the stated coverage window."
