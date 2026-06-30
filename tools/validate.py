@@ -14,13 +14,17 @@ from __future__ import annotations
 
 import csv
 import json
-import jsonschema
 import yaml
 import os
 import re
 import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
+
+try:
+    import jsonschema  # type: ignore
+except ModuleNotFoundError:  # pragma: no cover - exercised only in minimal local runtimes.
+    jsonschema = None
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -49,6 +53,52 @@ def read_csv_rows(path: Path) -> List[Dict[str, str]]:
 
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
+
+def _minimal_json_schema_validate(instance: Any, schema: Dict[str, Any], path: str = "<root>") -> None:
+    """Validate the small JSON Schema subset used by local examples.
+
+    CI environments should use the jsonschema package. This fallback keeps local
+    validation useful in constrained runtimes where that dependency is absent.
+    """
+    expected_type = schema.get("type")
+    if expected_type == "object":
+        if not isinstance(instance, dict):
+            fail(f"JSON schema fallback invalid at {path}: expected object")
+        required = schema.get("required") or []
+        missing = [key for key in required if key not in instance]
+        if missing:
+            fail(f"JSON schema fallback invalid at {path}: missing required keys {missing}")
+        props = schema.get("properties") or {}
+        if schema.get("additionalProperties") is False:
+            unknown = [key for key in instance if key not in props]
+            if unknown:
+                fail(f"JSON schema fallback invalid at {path}: unknown keys {unknown}")
+        for key, value in instance.items():
+            if key in props:
+                _minimal_json_schema_validate(value, props[key], f"{path}.{key}")
+    elif expected_type == "array":
+        if not isinstance(instance, list):
+            fail(f"JSON schema fallback invalid at {path}: expected array")
+        item_schema = schema.get("items") or {}
+        for idx, item in enumerate(instance):
+            _minimal_json_schema_validate(item, item_schema, f"{path}[{idx}]")
+    elif expected_type == "string":
+        if not isinstance(instance, str):
+            fail(f"JSON schema fallback invalid at {path}: expected string")
+    elif expected_type == "number":
+        if not isinstance(instance, (int, float)) or isinstance(instance, bool):
+            fail(f"JSON schema fallback invalid at {path}: expected number")
+    elif expected_type == "integer":
+        if not isinstance(instance, int) or isinstance(instance, bool):
+            fail(f"JSON schema fallback invalid at {path}: expected integer")
+    elif expected_type == "boolean":
+        if not isinstance(instance, bool):
+            fail(f"JSON schema fallback invalid at {path}: expected boolean")
+
+    if "const" in schema and instance != schema["const"]:
+        fail(f"JSON schema fallback invalid at {path}: expected constant {schema['const']!r}")
+    if "enum" in schema and instance not in schema["enum"]:
+        fail(f"JSON schema fallback invalid at {path}: value {instance!r} not in enum {schema['enum']}")
 
 def load_control_ids() -> Set[str]:
     path = ROOT / "controls" / "control_objectives.csv"
@@ -193,11 +243,14 @@ def validate_oasf_envelope() -> None:
         return
     schema = load_json(schema_path)
     instance = load_json(example_path)
-    try:
-        jsonschema.validate(instance=instance, schema=schema)
-    except jsonschema.ValidationError as e:
-        path = ".".join(str(p) for p in e.path) or "<root>"
-        fail(f"OASF evaluation envelope invalid at {path}: {e.message}")
+    if jsonschema is not None:
+        try:
+            jsonschema.validate(instance=instance, schema=schema)
+        except jsonschema.ValidationError as e:
+            path = ".".join(str(p) for p in e.path) or "<root>"
+            fail(f"OASF evaluation envelope invalid at {path}: {e.message}")
+    else:
+        _minimal_json_schema_validate(instance=instance, schema=schema)
     ok("Validated OASF evaluation envelope example against schema.")
 
 def validate_markdown_links() -> None:
@@ -301,6 +354,31 @@ def validate_coverage_reports() -> None:
     ok("Coverage report outputs are up-to-date and deterministic.")
 
 
+def _validate_tis_v10_runtime_example() -> None:
+    example_path = ROOT / "conformance" / "examples" / "tis_v0_10_runtime_assurance_evaluation_claim.example.yaml"
+    if not example_path.exists():
+        fail("Missing TIS v0.10 runtime assurance evaluation example.")
+    with example_path.open("r", encoding="utf-8") as f:
+        example = yaml.safe_load(f)
+    if not isinstance(example, dict):
+        fail("TIS v0.10 runtime assurance example must parse as a YAML mapping.")
+    if example.get("dcas_version") != "0.9.0":
+        fail("TIS v0.10 runtime assurance example must declare dcas_version 0.9.0.")
+    if example.get("assurance_level") not in {"AL1", "AL2", "AL3", "AL4"}:
+        fail("TIS v0.10 runtime assurance example has invalid assurance_level.")
+    tis_alignment = example.get("tis_alignment") or {}
+    if tis_alignment.get("aligned_tis_release") != "v0.10.0":
+        fail("TIS v0.10 runtime assurance example must declare aligned_tis_release v0.10.0.")
+    if not tis_alignment.get("canonical_profiles"):
+        fail("TIS v0.10 runtime assurance example must include canonical_profiles.")
+    tsmm_alignment = example.get("tsmm_alignment") or {}
+    if tsmm_alignment.get("aligned_tsmm_release") != "v0.21.0":
+        fail("TIS v0.10 runtime assurance example must declare aligned_tsmm_release v0.21.0.")
+    for section in ["runtime_findings", "evidence_references", "test_references", "outcome"]:
+        if not example.get(section):
+            fail(f"TIS v0.10 runtime assurance example missing required section: {section}")
+
+
 def validate_tis_alignment_artifacts() -> None:
     manifest_path = ROOT / "model" / "tis-compatibility-review.json"
     if not manifest_path.exists():
@@ -310,10 +388,13 @@ def validate_tis_alignment_artifacts() -> None:
     missing = required - set(manifest.keys())
     if missing:
         fail(f"TIS compatibility review manifest missing keys: {sorted(missing)}")
-    if manifest.get("aligned_to_tis_release") != "v0.9.0":
-        fail("TIS compatibility review manifest must declare alignment to v0.9.0 for this release.")
+    if manifest.get("aligned_to_tis_release") != "v0.10.0":
+        fail("TIS compatibility review manifest must declare alignment to v0.10.0 for this release.")
     if not manifest.get("tracked_artifact_families"):
         fail("TIS compatibility review manifest must track at least one artifact family.")
+    for expected in ["TSMM runtime governance projection", "Trust Task reference, manifest reference, lifecycle event, and execution receipt schemas", "Registry publication profile"]:
+        if expected not in manifest.get("tracked_artifact_families", []):
+            fail(f"TIS compatibility review manifest missing tracked artifact family: {expected}")
 
     example_path = ROOT / "conformance" / "examples" / "tis_v0_9_runtime_artifact_evaluation_claim.example.yaml"
     if not example_path.exists():
@@ -329,7 +410,8 @@ def validate_tis_alignment_artifacts() -> None:
         fail("TIS v0.9 evaluation example must declare aligned_tis_release v0.9.0.")
     if not tis_alignment.get("canonical_profiles"):
         fail("TIS v0.9 evaluation example must include canonical_profiles.")
-    ok("Validated TIS v0.9 alignment manifest and evaluation example.")
+    _validate_tis_v10_runtime_example()
+    ok("Validated TIS v0.10 alignment manifest and runtime assurance examples.")
 
 def main() -> None:
     print("DTG DCAS repo validation\n")

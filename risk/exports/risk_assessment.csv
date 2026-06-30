@@ -49,3 +49,8 @@ SYS2,Systemic,Feedback loop polarisation,Graph reinforcement,Polarisation,Govern
 SYS3,Systemic,Orphan entities,Lifecycle neglect,Ghost graphs,Identity Admin,Medium,Medium,Medium,Sunset policy,CO3.3,Low
 SYS4,Systemic,Network partitioning,Governance splits,Trust fractures,Gov Authority,Low,High,Medium,Interoperability councils,CO6.1,Low
 SYS5,Systemic,Legacy credential persistence,Long retention,Attack vectors,Credential Board,Medium,Medium,Medium,Expiry mandates,CO3.3,Low
+RT1,Runtime Assurance,Authority projection loss,Semantic authority is flattened during artifact packaging,Delegated effects may be admitted outside legitimate scope,Operator,Medium,Critical,Critical,Authority boundary preservation,CO3.8,Medium
+RT2,Runtime Assurance,Evidence tampering or bundle substitution,Evidence set is not digest-bound or reproducible,Assurance decision may rely on altered artifacts,Assessor,Medium,Critical,Critical,Evidence bundle integrity,CO4.6,Medium
+RT3,Runtime Assurance,Incomplete runtime decision receipts,Receipts omit policy authority evidence status or effect fields,Auditors cannot replay the decision path,Verifier,Medium,High,High,Decision receipt completeness,CO4.7,Medium
+RT4,Runtime Assurance,Stale status reliance,Runtime checks use expired unavailable or unknown status data,Revoked or suspended authority may still produce effects,Operator,Medium,Critical,Critical,Status freshness enforcement,CO6.5,Medium
+RT5,Runtime Assurance,Registry publication misread as authorization,Discovery artifacts are treated as authority grants,Published artifacts may be over-relied on without policy checks,Registry Operator,Medium,High,High,Runtime admission control,CO3.7,Medium

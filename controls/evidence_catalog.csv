@@ -17,3 +17,9 @@ EV-015,User disclosure text,Document,"Plain-language disclosures about trust sig
 EV-016,Runtime decision receipt,Record,Structured record of a runtime decision including request; authority basis; policy; evidence inputs; verdict; and effect,Operator/Verifier,JSON/YAML
 EV-017,Runtime policy evaluation trace,Log,Tamper-evident trace showing policy admission checks immediately before a runtime effect,Operator,JSON/Log
 EV-018,Fail-safe behavior test evidence,Record,Test outputs proving deny/suspend/degrade behavior under stale or missing runtime governance inputs,Operator/Assessor,MD/JSON
+EV-019,TSMM runtime governance projection,Record,Projection of actor effect boundary authority policy evidence status and audit expectation into executable runtime assurance artifacts,Operator/Verifier,JSON
+EV-020,Authority boundary,Record,Bounded authority evidence preserving source delegation path scope lifecycle state and revocation obligations,Governance Authority/Operator,JSON
+EV-021,Status-list reference,Dataset,Status or revocation reference showing active suspended revoked expired or unknown state and freshness metadata,Issuer/Registry Operator,JSON
+EV-022,Trust Task execution receipt,Record,Runtime task receipt separating lifecycle state decision outcome and effect admission,Operator,JSON
+EV-023,Integrity-bound evidence bundle,Record,Evidence bundle manifest with artifact inventory hashes canonicalization bundle digest proof or signature metadata,Assessor/Operator,JSON
+EV-024,Registry publication profile,Record,Publication evidence showing discoverable artifact chain assurance posture and discovery-versus-authorization boundary,Registry Operator,JSON

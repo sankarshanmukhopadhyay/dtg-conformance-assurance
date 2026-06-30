@@ -118,3 +118,16 @@ At minimum, the verifier produces:
 ## Experimental runtime overlay step
 
 Where the target deployment performs delegated or side-effecting runtime actions, the verifier SHOULD request runtime decision receipts and negative-path evidence for stale-status or missing-policy scenarios.
+
+For v0.9.0 runtime assurance reviews, the verifier SHOULD also request:
+
+- TSMM runtime governance projection;
+- TIS authority boundary;
+- policy and evidence references;
+- status-list or revocation reference with freshness metadata;
+- Trust Task lifecycle event or execution receipt where runtime task execution is in scope;
+- integrity-bound evidence bundle manifest;
+- decision receipt with outcome, effect admission, and review path;
+- registry publication profile where discoverability is part of the relying-party context.
+
+Use `docs/tis-v0.10-runtime-assurance-evaluation-profile.md` for the detailed evaluator checklist.

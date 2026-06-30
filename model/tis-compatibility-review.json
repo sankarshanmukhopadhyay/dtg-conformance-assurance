@@ -1,28 +1,39 @@
 {
-  "aligned_to_tis_release": "v0.9.0",
-  "reviewed_at": "2026-05-06",
+  "aligned_to_tis_release": "v0.10.0",
+  "reviewed_at": "2026-06-29",
   "review_status": "aligned",
-  "alignment_scope": "DCAS evaluates TIS v0.9 DTG/OpenVTC/VTI runtime trust artifacts as evidence inputs without copying canonical schemas.",
+  "alignment_scope": "DCAS evaluates TSMM-aligned TIS v0.10 runtime assurance artifacts as evidence inputs without copying canonical schemas or redefining TSMM semantics.",
   "tracked_artifact_families": [
-    "DTG VC envelope and credential subject profiles",
-    "OpenVTC relationship state, VRC issuance, configuration, and DIDComm routing profiles",
-    "VTI VTA context, ACL, authorization credential, sealed transfer, DID template, TEE attestation, and provision integration profiles",
+    "TSMM runtime governance projection",
+    "Authority boundary schema",
+    "VTI ACL, authorization credential, and status-list reference profiles",
+    "OpenVTC state normalization and task evidence profiles",
+    "Trust Task reference, manifest reference, lifecycle event, and execution receipt schemas",
+    "Integrity-bound evidence bundle manifest schema",
     "TIS decision receipt schema",
-    "TIS evidence bundle manifest schema",
+    "Registry publication profile",
     "TIS cross-repo compatibility matrix"
   ],
   "affected_local_artifacts": [
-    "docs/tis-v0.9-runtime-artifact-evaluation-profile.md",
+    "docs/tsmm-runtime-governance-evaluation-profile.md",
+    "docs/tis-v0.10-runtime-assurance-evaluation-profile.md",
     "docs/tis-drift-review.md",
+    "docs/portfolio-drift-review-tis-v0.10.md",
+    "docs/release-impact-v0.9.0.md",
     "docs/compatibility-matrix.md",
-    "conformance/examples/tis_v0_9_runtime_artifact_evaluation_claim.example.yaml"
+    "conformance/examples/tis_v0_10_runtime_assurance_evaluation_claim.example.yaml"
   ],
   "drift_triggers": [
     "new or renamed TIS schema $id",
     "changed authority, delegation, revocation, expiry, or scope semantics",
     "changed decision receipt or evidence bundle manifest structure",
     "changed TIS assurance-level guidance",
-    "new DTG/OpenVTC/VTI runtime evidence surface"
+    "new DTG/OpenVTC/VTI runtime evidence surface",
+    "changed TSMM runtime governance projection semantics",
+    "changed Trust Task lifecycle vocabulary",
+    "changed VTI capability, ACL role, or status-list semantics",
+    "changed registry publication profile semantics",
+    "changed evidence bundle integrity or detached proof requirements"
   ],
   "required_action_on_drift": "Open a DCAS drift review and update evaluator guidance, examples, compatibility matrix, or validation checks as needed.",
   "upstream_references": [

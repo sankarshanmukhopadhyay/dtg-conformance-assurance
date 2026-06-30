@@ -4,8 +4,9 @@ This matrix is a lightweight coordination tool to prevent cross-repo drift. It d
 
 | Repository | Repo version (declared) | Canonical AL model | Control ID namespace | Conformance declaration schema | Evidence bundle expectations |
 | --- | --- | --- | --- | --- | --- |
-| `trust-infrastructure-schemas` | See upstream repo | `AL-Model-Version: 1.0` (canonical OTAM artifact) | N/A | Canonical trust artifact schemas | N/A |
-| `dtg-conformance-assurance` (DCAS) | See `DCAS_METHOD_VERSION` | References `trust-infrastructure-schemas` AL model | `DCAS-*` (method-level) | DCAS declaration templates | DCAS evidence bundle structure |
+| `trust-systems-meta-model` | v0.21.0 | N/A | N/A | Semantic governance model | Runtime governance envelope, authority graph, decision receipt, evidence artifact |
+| `trust-infrastructure-schemas` | v0.10.0 | `AL-Model-Version: 1.0` (canonical OTAM artifact) | N/A | Canonical trust artifact schemas | Evidence bundle manifest, decision receipt, authority boundary, registry publication profile |
+| `dtg-conformance-assurance` (DCAS) | See `DCAS_METHOD_VERSION` | References `trust-infrastructure-schemas` AL model | `DCAS-*` (method-level) | DCAS declaration templates | DCAS evidence bundle structure and runtime assurance evidence checklist |
 | `agent-name-assurance-baseline` (ANAB) | See README / badges | References `trust-infrastructure-schemas` AL model | `ANAGB-*` | ANAB conformance declarations and A2A description extension artifacts | ANAB evidence bundles, evaluable via DCAS |
 
 ## Notes
@@ -30,6 +31,8 @@ This matrix is a lightweight coordination tool to prevent cross-repo drift. It d
 
 ## TIS v0.9 runtime trust artifact profile alignment
 
+This section is retained for legacy v0.8.0 evaluations. New runtime assurance evaluations SHOULD use the TIS v0.10 profile below.
+
 | Surface | Expected DCAS treatment | Drift signal |
 | --- | --- | --- |
 | TIS v0.9 DTG credential profiles | Credential evidence substrate for issuer, subject, proof, and validity review | credential context, type, proof, or subject shape changes |
@@ -41,3 +44,17 @@ This matrix is a lightweight coordination tool to prevent cross-repo drift. It d
 
 DCAS MUST treat this table as an evaluation compatibility map, not as a schema copy. Canonical schema ownership remains with TIS.
 
+## TSMM/TIS v0.10 runtime assurance profile alignment
+
+| Surface | Expected DCAS treatment | Drift signal |
+|---|---|---|
+| TSMM runtime governance projection | Semantic bridge for actor, effect, boundary, authority, delegation, policy, evidence, decision, and audit expectation | projection shape or runtime governance semantics change |
+| TIS authority boundary | Bounded authority, scope, delegation, lifecycle state, and revocation obligation evidence | authority source, scope, delegation, lifecycle, or status semantics change |
+| VTI ACL / authorization evidence | Capability, allowed context, consumer kind, lifecycle state, step-up, and status evidence | ACL role, capability grant, context, or status-list semantics change |
+| OpenVTC task evidence | Relationship state, normalized workflow state, and task evidence | state normalization or task evidence semantics change |
+| Trust Task lifecycle and execution receipts | Separation of lifecycle state, decision outcome, and effect admission | lifecycle vocabulary, receipt structure, or effect admission changes |
+| Integrity-bound evidence bundle manifest | Evidence inventory, artifact hashes, bundle digest, canonicalization, detached proof, and signature references | digest, proof, canonicalization, or validation metadata changes |
+| TIS decision receipts | Runtime audit pivot for policy, authority, evidence, status, outcome, effect, and review path | receipt structure, outcome vocabulary, or authority semantics change |
+| Registry publication profile | Discoverability and assurance publication evidence, not runtime authorization | publication profile or discovery-versus-authorization boundary changes |
+
+DCAS MUST treat this table as an evaluation compatibility map. Canonical schema ownership remains with TIS, and semantic model ownership remains with TSMM.

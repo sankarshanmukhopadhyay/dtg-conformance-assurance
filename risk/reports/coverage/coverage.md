@@ -1,15 +1,15 @@
 # Coverage report
 
 - Generated: 1970-01-01 00:00 UTC
-- Bundle: `/mnt/data/work/dtg-conformance-assurance-main/templates/starter-bundle`
+- Bundle: `templates/starter-bundle`
 - Control objectives (registry): `controls/control_objectives.csv`
 
 ## Summary
 
-- Total control objectives: **25**
-- Covered: **3**
-- Uncovered: **22**
-- Coverage: **12.0%**
+- Total control objectives: **29**
+- Covered: **9**
+- Uncovered: **20**
+- Coverage: **31.0%**
 
 ## Uncovered control objectives
 
@@ -27,14 +27,12 @@
 - `CO4.2` — Traceability
 - `CO4.3` — Testability
 - `CO4.4` — Repeatability
-- `CO4.5` — Runtime decision traceability
 - `CO5.1` — Disclosure baseline
 - `CO5.2` — Change disclosure
 - `CO5.3` — Incident disclosure
 - `CO6.1` — Continuity planning
 - `CO6.2` — Key management
 - `CO6.3` — Monitoring & response
-- `CO6.4` — Fail-safe runtime behavior
 
 ## Outputs
 

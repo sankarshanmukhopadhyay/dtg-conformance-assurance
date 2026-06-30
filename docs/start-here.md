@@ -41,6 +41,16 @@ This produces `risk/reports/coverage/coverage.csv` and `risk/reports/coverage/co
 - **Auditor/assessor:** see `docs/roles/auditor-assessor.md` for a repeatable sampling approach.
 - **Tool builder:** see `docs/roles/tool-builder.md` for automation patterns.
 
+## Runtime assurance path
+
+If you are evaluating delegated or side-effecting runtime operations, use the v0.9.0 runtime assurance path:
+
+1. Read `docs/tsmm-runtime-governance-evaluation-profile.md` to understand authority, delegation, policy, evidence, decision, effect, and review-path expectations.
+2. Read `docs/tis-v0.10-runtime-assurance-evaluation-profile.md` for the machine-validatable artifact chain.
+3. Review `conformance/examples/tis_v0_10_runtime_assurance_evaluation_claim.example.yaml`.
+4. Check the relevant runtime controls in `controls/control_objectives.csv`, especially `CO3.8`, `CO4.6`, `CO4.7`, and `CO6.5`.
+5. Run `make validate` and `make coverage` before publishing or relying on the evaluation.
+
 
 ## Experimental AIS-1 path
 

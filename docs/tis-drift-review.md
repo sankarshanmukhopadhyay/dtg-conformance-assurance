@@ -1,8 +1,8 @@
 # TIS drift review process
 
-**Status:** Active synchronization process for DCAS v0.8.0
-**Aligned TIS release:** v0.9.0
-**Last reviewed:** 2026-05-06
+**Status:** Active synchronization process for DCAS v0.9.0
+**Aligned TIS release:** v0.10.0
+**Last reviewed:** 2026-06-29
 
 ## Purpose
 
@@ -16,7 +16,9 @@ DCAS tracks TIS through:
 - TIS `model/cross-repo-compatibility-matrix.json`;
 - TIS schemas under `credentials/`, `profiles/`, `decision/`, `evidence/`, and `common/`;
 - TIS documentation for DTG/OpenVTC/VTI interoperability;
-- the local manifest at `../model/tis-compatibility-review.json`.
+- the local manifest at `../model/tis-compatibility-review.json`;
+- portfolio drift review records such as `portfolio-drift-review-tis-v0.10.md`;
+- release impact records such as `release-impact-v0.9.0.md`.
 
 ## Drift triggers
 
@@ -28,7 +30,23 @@ Open a DCAS drift review when any of the following changes upstream:
 - changed revocation, expiry, delegation, or scope semantics;
 - changed decision receipt or evidence bundle manifest structure;
 - changed assurance-level guidance;
+- changed TSMM runtime governance projection semantics;
+- changed Trust Task lifecycle or execution receipt semantics;
+- changed status-list, revocation, suspension, expiry, or activation semantics;
+- changed evidence bundle integrity, digest, detached proof, or signature metadata;
+- changed registry publication profile semantics;
 - upstream DTG/OpenVTC/VTI implementation change that alters artifact shape or evidence meaning.
+
+## Portfolio drift classification
+
+Use the portfolio change-management classifications when recording a review:
+
+| Classification | DCAS interpretation |
+|---|---|
+| Documentation drift | README, onboarding, compatibility, or evaluator guidance needs refresh. |
+| Artifact drift | Schema, example, evidence output, decision receipt, registry publication, or fixture expectations changed. |
+| Assurance drift | Assurance-level interpretation, control mapping, receipt expectation, status freshness, or evidence integrity expectation changed. |
+| Standards drift | External standard or binding reference changed and requires crosswalk or policy update. |
 
 ## Review record
 
@@ -38,7 +56,7 @@ Each review SHOULD produce a machine-readable or issue-trackable record with the
 {
   "drift_review_id": "dcas-tis-drift-YYYYMMDD-001",
   "source_repo": "trust-infrastructure-schemas",
-  "source_version": "v0.9.0",
+  "source_version": "v0.10.0",
   "affected_dcas_controls": [],
   "affected_examples": [],
   "assurance_impact": "none | additive | breaking",
@@ -69,6 +87,7 @@ A completed drift review updates one or more of:
 
 - `../model/tis-compatibility-review.json`;
 - `compatibility-matrix.md`;
-- `tis-v0.9-runtime-artifact-evaluation-profile.md`;
+- `tis-v0.10-runtime-assurance-evaluation-profile.md`;
+- `tsmm-runtime-governance-evaluation-profile.md`;
 - examples under `../conformance/examples/`;
 - release notes under `releases/`.

@@ -1,0 +1,138 @@
+dcas_version: "0.9.0"
+claim_id: "claim-tis-v0-10-runtime-assurance-001"
+issued_at: "2026-06-29T00:00:00Z"
+subject:
+  actor_id: "did:example:agent:enterprise-claims-agent"
+  actor_class: "A2AAgent"
+profile:
+  profile_id: "CP-7"
+  profile_version: "0.9.0"
+assurance_level: "AL3"
+coverage_window:
+  from: "2026-06-01T00:00:00Z"
+  to: "2026-06-29T00:00:00Z"
+scope:
+  requested_effect: "issue-verifiable-relationship-card"
+  trust_boundary: "enterprise-agent-to-community-registry"
+  control_objectives:
+    - "CO3.2"
+    - "CO3.7"
+    - "CO3.8"
+    - "CO4.5"
+    - "CO4.6"
+    - "CO4.7"
+    - "CO6.4"
+    - "CO6.5"
+  limitations: "Illustrative evaluation claim for TIS v0.10.0 runtime assurance artifacts."
+tsmm_alignment:
+  aligned_tsmm_release: "v0.21.0"
+  semantic_surfaces:
+    - "runtime governance projection"
+    - "authority basis"
+    - "delegation scope"
+    - "policy binding"
+    - "evidence binding"
+    - "trust decision"
+    - "effect admission"
+tis_alignment:
+  aligned_tis_release: "v0.10.0"
+  compatibility_matrix_ref: "../trust-infrastructure-schemas/model/cross-repo-compatibility-matrix.json"
+  canonical_profiles:
+    - family: "TSMM runtime governance projection"
+      schema_refs:
+        - "profiles/tsmm/tsmm-runtime-governance-projection.schema.json"
+    - family: "Authority boundary"
+      schema_refs:
+        - "governance/authority-boundary.schema.json"
+    - family: "VTI authorization and status evidence"
+      schema_refs:
+        - "profiles/vti/vta-acl-entry.schema.json"
+        - "profiles/vti/vta-authorization-credential.schema.json"
+        - "profiles/vti/status-list-reference.schema.json"
+    - family: "OpenVTC task evidence"
+      schema_refs:
+        - "profiles/openvtc/openvtc-task-evidence.schema.json"
+        - "profiles/openvtc/openvtc-state-normalization.schema.json"
+    - family: "Trust Task runtime evidence"
+      schema_refs:
+        - "profiles/trust-tasks/trust-task-lifecycle-event.schema.json"
+        - "profiles/trust-tasks/trust-task-execution-receipt.schema.json"
+    - family: "Evidence bundle integrity"
+      schema_refs:
+        - "evidence/evidence-bundle-manifest.schema.json"
+    - family: "Decision receipt"
+      schema_refs:
+        - "decision/decision-receipt.schema.json"
+    - family: "Registry publication profile"
+      schema_refs:
+        - "registry/registry-publication-profile.schema.json"
+evidence_references:
+  - evidence_id: "tis-tsmm-runtime-governance-projection"
+    ref: "evidence://tis/v0.10/runtime-governance-projection/example-001"
+    hash: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    content_type: "application/json"
+  - evidence_id: "tis-authority-boundary"
+    ref: "evidence://tis/v0.10/authority-boundary/example-001"
+    hash: "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    content_type: "application/json"
+  - evidence_id: "tis-status-list-reference"
+    ref: "evidence://tis/v0.10/status-list-reference/example-001"
+    hash: "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    content_type: "application/json"
+  - evidence_id: "tis-trust-task-execution-receipt"
+    ref: "evidence://tis/v0.10/trust-task-execution-receipt/example-001"
+    hash: "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    content_type: "application/json"
+  - evidence_id: "tis-integrity-bound-evidence-bundle"
+    ref: "evidence://tis/v0.10/evidence-bundle-manifest/example-001"
+    hash: "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+    content_type: "application/json"
+  - evidence_id: "tis-decision-receipt"
+    ref: "evidence://tis/v0.10/decision-receipt/example-001"
+    hash: "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    content_type: "application/json"
+  - evidence_id: "tis-registry-publication-profile"
+    ref: "evidence://tis/v0.10/registry-publication-profile/example-001"
+    hash: "9999999999999999999999999999999999999999999999999999999999999999"
+    content_type: "application/json"
+runtime_findings:
+  authority:
+    status: "pass"
+    summary: "Authority boundary identified the issuing authority, delegated actor, allowed context, and lifecycle state."
+  scope:
+    status: "pass"
+    summary: "Requested effect was within the delegated authority scope and stated coverage window."
+  policy_binding:
+    status: "pass"
+    summary: "Decision receipt referenced the policy set used for runtime admission."
+  status_freshness:
+    status: "pass"
+    summary: "Status-list reference was checked within the accepted freshness window and returned active."
+  evidence_integrity:
+    status: "pass-with-limitations"
+    summary: "Evidence bundle carried artifact hashes and bundle digest; detached proof verification was out of scope for this illustrative example."
+  decision_receipt:
+    status: "pass"
+    summary: "Receipt linked authority, policy, evidence, status check, decision outcome, effect admission, and review path."
+test_references:
+  - test_id: "TIS-100-001"
+    ref: "https://example.invalid/tests/tis-v0-10/schema-validation"
+    result: "pass"
+  - test_id: "TIS-100-002"
+    ref: "https://example.invalid/tests/tis-v0-10/status-freshness"
+    result: "pass"
+  - test_id: "TIS-100-003"
+    ref: "https://example.invalid/tests/tis-v0-10/missing-policy-negative-path"
+    result: "pass"
+assessor:
+  assessor_id: "example.assessor"
+  organization: "Example Assurance Partners"
+  independence_model: "contractual"
+  conflict_disclosure: "None disclosed."
+outcome:
+  status: "pass-with-limitations"
+  summary: "TIS v0.10.0 runtime assurance artifacts were sufficient to support an AL3 DCAS evaluation for the requested effect."
+  notes:
+    - "Schema validity was treated as an evidence prerequisite, not as automatic assurance success."
+    - "Registry publication was treated as discoverability evidence, not as runtime authorization."
+    - "Task completion was evaluated separately from decision outcome and effect admission."

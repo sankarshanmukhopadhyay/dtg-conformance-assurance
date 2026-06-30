@@ -49,3 +49,8 @@ SYS2,Feedback-loop polarisation,CO6.3,Network Health Monitoring
 SYS3,Orphan entities,CO3.3,Lifecycle Controls
 SYS4,Network partitioning,CO6.1,Interoperability Controls
 SYS5,Legacy credential persistence,CO3.3,Lifecycle & Expiry Controls
+RT1,Authority projection loss,CO3.8,Authority Boundary Preservation
+RT2,Evidence tampering or bundle substitution,CO4.6,Evidence Bundle Integrity
+RT3,Incomplete runtime decision receipts,CO4.7,Decision Receipt Completeness
+RT4,Stale status reliance,CO6.5,Status Freshness Enforcement
+RT5,Registry publication misread as authorization,CO3.7,Runtime Admission Control

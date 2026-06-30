@@ -1,6 +1,6 @@
 # TIS v0.9 runtime trust artifact evaluation profile
 
-**Status:** Active evaluator guidance for DCAS v0.8.0
+**Status:** Legacy evaluator guidance for DCAS v0.8.0; superseded for new runtime assurance evaluations by `tis-v0.10-runtime-assurance-evaluation-profile.md`
 **Aligned TIS release:** v0.9.0
 **Last reviewed:** 2026-05-06
 

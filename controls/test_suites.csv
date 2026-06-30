@@ -17,3 +17,8 @@ TS-015,UX transparency check,Disclosure clarity,Validate EV-015 is plain-languag
 TS-016,Runtime evidence check,Runtime receipt completeness,Validate EV-016 contains request authority policy evidence verdict and effect fields.,Automatable
 TS-017,Replay check,Runtime decision replay,Verify EV-017 and EV-016 allow an assessor to reconstruct the runtime trust decision path.,Manual
 TS-018,Negative-path check,Fail-safe runtime behavior,Demonstrate deny suspend or degrade behavior when status freshness or policy admission data is unavailable.,Automatable
+TS-019,Authority check,Authority boundary preservation,Validate EV-020 preserves authority source delegation scope lifecycle state revocation obligation and permitted effect context.,Automatable
+TS-020,Integrity check,Evidence bundle digest verification,Verify EV-023 artifact hashes bundle digest canonicalization and proof or signature references are internally consistent.,Automatable
+TS-021,Receipt check,Decision receipt completeness,Validate EV-016 binds actor authority policy evidence status outcome effect admission and review path.,Automatable
+TS-022,Status check,Status freshness enforcement,Demonstrate deny suspend downgrade or review behavior when EV-021 is stale revoked expired unknown or unavailable.,Automatable
+TS-023,Publication boundary check,Registry publication is not authorization,Verify EV-024 is treated as discovery evidence and not accepted as runtime authority without current policy evidence and status checks.,Manual

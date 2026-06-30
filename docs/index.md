@@ -24,8 +24,11 @@ Welcome. This documentation site is generated from the repository’s `/docs` fo
 - **OASF integration:** [OASF integration](oasf-integration.md)
 - **AIS-1 experimental profile:** [AIS-1 experimental assurance profile](ais1-experimental-assurance-profile.md)
 - **Runtime decision receipts:** [Runtime decision receipt pattern](patterns/runtime-decision-receipt.md)
+- **TSMM runtime governance evaluation:** [TSMM runtime governance evaluation profile](tsmm-runtime-governance-evaluation-profile.md)
+- **TIS v0.10 runtime assurance evaluation:** [TIS v0.10 evaluation profile](tis-v0.10-runtime-assurance-evaluation-profile.md)
 - **TIS v0.9 runtime artifact evaluation:** [TIS v0.9 evaluation profile](tis-v0.9-runtime-artifact-evaluation-profile.md)
 - **TIS drift review:** [TIS drift review process](tis-drift-review.md)
+- **Portfolio drift review for v0.9.0:** [TIS v0.10 drift review](portfolio-drift-review-tis-v0.10.md)
 - **Known-good stack:** [Known-good stack](known-good-stack.md)
 - **Experimental runtime controls:** [Agent runtime controls overlay](experimental/agent-runtime-controls.md)
 
@@ -52,4 +55,4 @@ It is not a regulator, a certification body, or a compliance “stamp”. Think 
 - [Architecture snapshot](architecture.md)
 - [Transport alignment (TSP)](tsp-alignment.md)
 - [TIS, DCAS, and ANAB alignment matrix](tis-dcas-anab-alignment-matrix.md)
-
+- [Release impact for v0.9.0](release-impact-v0.9.0.md)

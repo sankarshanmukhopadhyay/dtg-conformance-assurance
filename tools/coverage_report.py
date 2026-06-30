@@ -130,7 +130,11 @@ def generate(bundle_dir: Path, out_dir: Path, registry_path: Path) -> Tuple[Path
     md_lines.append("# Coverage report")
     md_lines.append("")
     md_lines.append(f"- Generated: {now}")
-    md_lines.append(f"- Bundle: `{bundle_dir.as_posix()}`")
+    try:
+        bundle_display = bundle_dir.relative_to(ROOT).as_posix()
+    except ValueError:
+        bundle_display = bundle_dir.as_posix()
+    md_lines.append(f"- Bundle: `{bundle_display}`")
     md_lines.append(f"- Control objectives (registry): `{registry_path.relative_to(ROOT).as_posix()}`")
     md_lines.append("")
     md_lines.append("## Summary")

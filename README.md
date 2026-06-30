@@ -1,7 +1,7 @@
 # DTG Conformance & Assurance (DCAS)
 
-**Release:** v0.8.0  \
-**Last reviewed:** 2026-05-06
+**Release:** v0.9.0  \
+**Last reviewed:** 2026-06-29
 
 This repository publishes **DCAS (Decentralized Conformance and Assurance Standard)** artifacts for DTG ecosystems.
 
@@ -17,21 +17,25 @@ DCAS is an implementation-neutral way to move from implicit trust to **explicit,
 
 DCAS is designed to work with:
 
-- **`trust-infrastructure-schemas` (OTAM implementation):** canonical trust artifact schemas, the normative AL model (`assurance/assurance-levels.md`), and the v0.9 DTG/OpenVTC/VTI runtime trust artifact compatibility profiles.
+- **`trust-systems-meta-model`:** semantic governance model for authority, delegation, evidence, lifecycle state, trust decisions, runtime governance, and operational effects.
+- **`trust-infrastructure-schemas` (OTAM implementation):** canonical trust artifact schemas, the normative AL model (`assurance/assurance-levels.md`), and the v0.10 runtime assurance artifact contracts.
 - **Domain baselines (example: `agent-name-assurance-baseline`):** domain-specific requirements that emit declarations and evidence bundles.
 - **This repo (DCAS):** evaluates those declarations and evidence using a repeatable verifier workflow.
 
-Start with: `docs/ecosystem-overview.md`, `docs/compatibility-matrix.md`, `docs/a2a-assurance-profile.md`, and `docs/anab-a2a-evaluation.md`.
+Start with: `docs/ecosystem-overview.md`, `docs/compatibility-matrix.md`, `docs/tsmm-runtime-governance-evaluation-profile.md`, `docs/tis-v0.10-runtime-assurance-evaluation-profile.md`, `docs/a2a-assurance-profile.md`, and `docs/anab-a2a-evaluation.md`.
 
 
-## TIS v0.9 runtime trust artifact alignment
+## TSMM/TIS v0.10 runtime assurance alignment
 
-DCAS v0.8.0 adds an evaluator-facing alignment layer for TIS v0.9 runtime trust artifacts. The key rule is boundary discipline: TIS owns canonical schema contracts; DCAS evaluates whether those artifacts are sufficient evidence for a specific assurance decision.
+DCAS v0.9.0 adds evaluator-facing alignment for TSMM runtime governance and TIS v0.10 runtime assurance artifacts. The key rule is boundary discipline: TSMM owns semantic governance meaning; TIS owns canonical schema contracts; DCAS evaluates whether the artifacts are sufficient evidence for a specific assurance decision.
 
-- Evaluation profile: `docs/tis-v0.9-runtime-artifact-evaluation-profile.md`
+- TSMM evaluation profile: `docs/tsmm-runtime-governance-evaluation-profile.md`
+- TIS v0.10 evaluation profile: `docs/tis-v0.10-runtime-assurance-evaluation-profile.md`
+- Legacy TIS v0.9 profile: `docs/tis-v0.9-runtime-artifact-evaluation-profile.md`
 - Drift review process: `docs/tis-drift-review.md`
+- Portfolio drift review: `docs/portfolio-drift-review-tis-v0.10.md`
 - Machine-readable compatibility review: `model/tis-compatibility-review.json`
-- Worked example claim: `conformance/examples/tis_v0_9_runtime_artifact_evaluation_claim.example.yaml`
+- Worked example claim: `conformance/examples/tis_v0_10_runtime_assurance_evaluation_claim.example.yaml`
 - Known-good stack: `docs/known-good-stack.md`
 
 

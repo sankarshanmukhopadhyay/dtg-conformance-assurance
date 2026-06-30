@@ -2,6 +2,24 @@
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-06-29
+
+### Added
+- Added a TSMM runtime governance evaluation profile for authority, delegation, policy, evidence, status, decision, effect, and review-path evaluation.
+- Added a TIS v0.10 runtime assurance evaluation profile covering runtime governance projection, authority boundaries, VTI authorization evidence, OpenVTC task evidence, Trust Task receipts, integrity-bound evidence bundles, status-list references, decision receipts, and registry publication profiles.
+- Added a worked TIS v0.10 runtime assurance evaluation claim example.
+- Added portfolio drift review and release impact records for the TIS v0.10 to DCAS v0.9.0 alignment.
+- Added control, evidence, and test catalog entries for runtime authority preservation, evidence integrity, decision receipt completeness, and status freshness enforcement.
+
+### Changed
+- Updated the compatibility posture from TIS v0.9 runtime artifact evaluation to TIS v0.10 runtime assurance evaluation.
+- Updated README, documentation index, start-here guide, repo map, interoperability docs, known-good stack, compatibility matrix, drift process, roadmap, and release documentation.
+- Updated validation tooling to check the TIS v0.10 compatibility manifest and runtime assurance example.
+- Regenerated deterministic coverage outputs after extending runtime assurance control mappings.
+
+### Quality
+- Preserved the v0.9 runtime artifact profile as legacy guidance while making v0.10 the active path for new runtime assurance evaluations.
+- Kept schema ownership in TIS, semantic ownership in TSMM, and assurance interpretation in DCAS.
 
 ## [0.8.0] - 2026-05-06
 

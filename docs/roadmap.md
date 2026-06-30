@@ -71,6 +71,18 @@ This roadmap is organized as capability increments. Dates are intentionally omit
 - Added known-good stack and cross-repo alignment documentation.
 - Updated validation to keep the new artifacts CI-safe.
 
+## v0.9.0 — TSMM/TIS v0.10 runtime assurance alignment (DELIVERED)
+
+**Outcome:** DCAS evaluates TSMM runtime governance semantics and TIS v0.10 runtime assurance artifacts as an assurance chain rather than as isolated runtime evidence objects.
+
+- Added TSMM runtime governance evaluator guidance.
+- Added TIS v0.10 runtime assurance evaluator guidance.
+- Added a worked v0.10 runtime assurance evaluation claim.
+- Added portfolio drift review and release impact records.
+- Added runtime assurance controls for authority boundary preservation, evidence bundle integrity, decision receipt completeness, and status freshness enforcement.
+- Updated validation to check v0.10 compatibility metadata and runtime assurance examples.
+- Regenerated deterministic coverage outputs.
+
 ## Future follow-on — automated cross-repo drift reporting
 
 **Outcome:** DCAS can generate a local drift report from the TIS compatibility matrix and local manifest.
@@ -78,4 +90,3 @@ This roadmap is organized as capability increments. Dates are intentionally omit
 - Compare tracked TIS release and schema references against local review manifest.
 - Emit machine-readable drift status for CI or release readiness checks.
 - Keep this as a release-readiness gate rather than a hard dependency on network access.
-
