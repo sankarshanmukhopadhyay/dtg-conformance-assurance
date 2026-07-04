@@ -23,3 +23,6 @@ EV-021,Status-list reference,Dataset,Status or revocation reference showing acti
 EV-022,Trust Task execution receipt,Record,Runtime task receipt separating lifecycle state decision outcome and effect admission,Operator,JSON
 EV-023,Integrity-bound evidence bundle,Record,Evidence bundle manifest with artifact inventory hashes canonicalization bundle digest proof or signature metadata,Assessor/Operator,JSON
 EV-024,Registry publication profile,Record,Publication evidence showing discoverable artifact chain assurance posture and discovery-versus-authorization boundary,Registry Operator,JSON
+EV-025,AIS-1 v0.2 bond verification package,Record,AIS-1 DID resolution registry status bond hash tier issuer sponsor agentClass parentDid and timestamp service evidence,Issuer/Verifier,JSON
+EV-026,AIS-1 assurance container reference,Record,Versioned append-only attestation container reference including legal compliance audit valuation or government VC attestations where applicable,Issuer/Assessor,JSON
+EV-027,AIS-1 SOA parent-chain and cascade revocation evidence,Dataset,SOA parent ALA status cascade revocation checks and negative-path outcomes for unavailable suspended or revoked parent state,Verifier/Operator,JSON

@@ -8,3 +8,6 @@ CO4.7,EVID-0005,direct,"Shows decision receipt fields needed to replay the runti
 CO4.5,EVID-0005,operational,"Supports runtime decision traceability"
 CO6.5,EVID-0006,direct,"Shows status freshness and negative-path behavior"
 CO6.4,EVID-0006,operational,"Supports fail-safe runtime behavior"
+CO4.8,EVID-0007,direct,"Shows AIS-1 v0.2 DID resolution registry status bond tier issuer sponsor and timestamp evidence"
+CO3.9,EVID-0008,direct,"Shows SOA parent ALA status and cascade revocation handling"
+CO6.6,EVID-0008,direct,"Shows fail-safe reliance behavior for AIS-1 parent revoked stale unknown or unavailable states"

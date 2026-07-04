@@ -52,14 +52,16 @@ This roadmap is organized as capability increments. Dates are intentionally omit
 - Refresh compatibility and composition docs to recognize the ANAB description extension
 
 
-## Unreleased follow-on — AIS-1 experimental evaluation lane
+## v0.10.0 — AIS-1 v0.2 experimental evaluation lane (DELIVERED)
 
 **Outcome:** DCAS can evaluate AIS-1 as a bounded, experimental accountability substrate while preserving the correct maturity signal.
 
-- Add an experimental AIS-1 profile for bonded agent identity and accountability
-- Add a worked evaluation claim example
-- Refresh README and docs navigation so the profile is discoverable
-- Keep delegation, provenance, and production-readiness explicitly out of scope for the profile
+- Added an experimental AIS-1 v0.2 profile for bonded agent identity and accountability.
+- Added evaluator checks for ALA/SOA classification, `parentDid`, DID resolution, registry status, timestamp service references, Assurance Container references, and cascade revocation.
+- Added AIS-1 v0.2 control objectives, evidence catalog entries, test catalog entries, starter-bundle evidence, and risk mappings.
+- Added a worked AIS-1 v0.2 SOA evaluation claim example.
+- Added portfolio drift review and release impact documentation.
+- Kept delegation, provenance, runtime authorization, and production-readiness explicitly out of scope for the profile.
 
 ## v0.8.0 — TIS v0.9 runtime trust artifact evaluation alignment (DELIVERED)
 

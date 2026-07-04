@@ -6,8 +6,8 @@ This matrix is a lightweight coordination tool to prevent cross-repo drift. It d
 | --- | --- | --- | --- | --- | --- |
 | `trust-systems-meta-model` | v0.21.0 | N/A | N/A | Semantic governance model | Runtime governance envelope, authority graph, decision receipt, evidence artifact |
 | `trust-infrastructure-schemas` | v0.10.0 | `AL-Model-Version: 1.0` (canonical OTAM artifact) | N/A | Canonical trust artifact schemas | Evidence bundle manifest, decision receipt, authority boundary, registry publication profile |
-| `dtg-conformance-assurance` (DCAS) | See `DCAS_METHOD_VERSION` | References `trust-infrastructure-schemas` AL model | `DCAS-*` (method-level) | DCAS declaration templates | DCAS evidence bundle structure and runtime assurance evidence checklist |
-| `agent-name-assurance-baseline` (ANAB) | See README / badges | References `trust-infrastructure-schemas` AL model | `ANAGB-*` | ANAB conformance declarations and A2A description extension artifacts | ANAB evidence bundles, evaluable via DCAS |
+| `dtg-conformance-assurance` (DCAS) | v0.10.0 / method v0.5.0 | References `trust-infrastructure-schemas` AL model | `DCAS-*` (method-level) | DCAS declaration templates | DCAS evidence bundle structure and runtime assurance evidence checklist |
+| `agent-name-assurance-baseline` (ANAB) | v0.10.0 | References `trust-infrastructure-schemas` AL model | `ANAGB-*` | ANAB conformance declarations, A2A description extension artifacts, and optional AIS-1 v0.2 profile extension | ANAB evidence bundles, evaluable via DCAS |
 
 ## Notes
 
@@ -27,7 +27,7 @@ This matrix is a lightweight coordination tool to prevent cross-repo drift. It d
 
 | Surface | Current treatment in DCAS | Status |
 |---|---|---|
-| AIS-1 bonded identity/accountability | Evaluated via `CP-8_AIS1Experimental.md` as a bounded identity-and-accountability input | Experimental |
+| AIS-1 v0.2 bonded identity/accountability | Evaluated via `CP-8_AIS1Experimental.md` as a bounded identity-and-accountability input, including ALA/SOA classification, parent DID checks, registry status, timestamp evidence, assurance container references, and SOA cascade revocation | Experimental |
 
 ## TIS v0.9 runtime trust artifact profile alignment
 

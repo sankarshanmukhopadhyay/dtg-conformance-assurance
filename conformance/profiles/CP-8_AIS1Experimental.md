@@ -1,17 +1,22 @@
-# CP-8 AIS-1 Experimental Bonded Agent
+# CP-8 AIS-1 v0.2 Experimental Bonded Agent
 
 **Status:** Experimental
 
-**Purpose:** evaluate an AIS-1-described agent as an experimental bonded identity and accountability substrate without overstating it as a complete delegation, runtime authorization, or provenance layer.
+**Purpose:** evaluate an AIS-1 v0.2-described agent as an experimental bonded identity and accountability substrate without overstating it as a complete delegation, runtime authorization, or provenance layer.
 
 ## What this profile is for
 
 Use this profile when an implementation exposes an AIS-1-style agent identity surface that includes:
 
 - a `did:ais1` identifier
+- `agentClass` set to `ala` or `soa`
+- `parentDid` for subordinate operating agents
 - a sponsor-backed bond or equivalent accountability linkage
 - issuer or trust-anchor metadata
 - lifecycle state such as active, suspended, or revoked
+- DID resolution and registry status evidence
+- optional `timestampServiceRef`
+- optional Assurance Container reference
 - evidence references for bond issuance, verification, and status changes
 
 This profile is designed to help verifiers assess whether the AIS-1 surface is coherent enough to consume as an **identity and accountability input**.
@@ -26,6 +31,8 @@ This profile is intentionally constrained.
 - **Tier is not full assurance.**
 - **Verification is not provenance.**
 - **Identity linkage does not by itself prove runtime authorization.**
+- **SOA status is not sufficient unless the parent ALA is active.**
+- **Parent ALA revocation should cause SOA downgrade or denial.**
 
 Verifiers should therefore treat AIS-1 evidence as a bounded trust signal and require additional delegation, policy, and provenance artifacts for higher-risk use.
 
@@ -42,6 +49,9 @@ Verifiers should therefore treat AIS-1 evidence as a bounded trust signal and re
 - **CO5.2** Change disclosure
 - **CO6.2** Key management
 - **CO6.3** Monitoring & response
+- **CO3.9** AIS-1 SOA parent-chain validation
+- **CO4.8** AIS-1 v0.2 evidence sufficiency
+- **CO6.6** AIS-1 cascade revocation handling
 
 ## Minimum assurance level
 
@@ -59,15 +69,24 @@ A verifier using this profile should confirm at minimum:
 2. **Bond integrity**
    - bond exists and links agent to sponsor
    - bond status is current and verifiable
-3. **Issuer / trust-anchor disclosure**
+   - bond hash or equivalent integrity check is reproducible
+3. **Agent class and parent state**
+   - ALA records have no parent DID
+   - SOA records include parent DID
+   - parent ALA status is current and active before relying on the SOA
+4. **Issuer / trust-anchor disclosure**
    - issuer or trust-anchor basis is disclosed
    - verifier can determine whether the issuer is recognized in policy
-4. **Lifecycle state**
+5. **Lifecycle state**
    - active, suspended, or revoked status can be determined
    - status transitions are logged
-5. **Evidence traceability**
+   - SOA cascade revocation behavior is tested where `agentClass` is `soa`
+6. **Timestamp and assurance evidence**
+   - `timestampServiceRef` is interpreted as supporting evidence only
+   - Assurance Container references are versioned and traceable where claimed
+7. **Evidence traceability**
    - bond issuance, status checks, and verification results are trace-linked to evidence
-6. **Limitations disclosure**
+8. **Limitations disclosure**
    - the implementation discloses that AIS-1 does not by itself provide delegated authority or message provenance
 
 ## Typical evidence
@@ -76,7 +95,12 @@ A verifier using this profile should confirm at minimum:
 - DID method documentation or resolver output
 - Sponsor metadata and accountability disclosure
 - Issuer or trust-anchor registry entry
+- ALA/SOA class evidence and parent DID evidence where applicable
+- Parent ALA status check for SOA evaluations
 - Revocation or suspension evidence
+- Cascade revocation negative-path test evidence
+- Timestamp service evidence where claimed
+- Assurance Container reference where claimed
 - Verification logs showing repeated verifier outcomes
 - Key rotation or key custody evidence where applicable
 - Plain-language relying-party disclosure text

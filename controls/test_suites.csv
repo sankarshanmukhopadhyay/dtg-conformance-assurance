@@ -22,3 +22,6 @@ TS-020,Integrity check,Evidence bundle digest verification,Verify EV-023 artifac
 TS-021,Receipt check,Decision receipt completeness,Validate EV-016 binds actor authority policy evidence status outcome effect admission and review path.,Automatable
 TS-022,Status check,Status freshness enforcement,Demonstrate deny suspend downgrade or review behavior when EV-021 is stale revoked expired unknown or unavailable.,Automatable
 TS-023,Publication boundary check,Registry publication is not authorization,Verify EV-024 is treated as discovery evidence and not accepted as runtime authority without current policy evidence and status checks.,Manual
+TS-024,AIS-1 resolution check,AIS-1 v0.2 bond verification package,Validate DID resolution registry status bond hash tier issuer sponsor agentClass parentDid and timestamp service fields.,Automatable
+TS-025,AIS-1 attestation check,AIS-1 assurance container review,Verify Assurance Container version digest attestation types and issuer references are present where claimed.,Manual
+TS-026,AIS-1 SOA negative-path check,SOA parent-chain and cascade revocation,Demonstrate downgrade denial or review behavior when parent ALA status is revoked suspended unknown stale or unavailable.,Automatable

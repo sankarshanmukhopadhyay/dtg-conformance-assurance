@@ -362,8 +362,8 @@ def _validate_tis_v10_runtime_example() -> None:
         example = yaml.safe_load(f)
     if not isinstance(example, dict):
         fail("TIS v0.10 runtime assurance example must parse as a YAML mapping.")
-    if example.get("dcas_version") != "0.9.0":
-        fail("TIS v0.10 runtime assurance example must declare dcas_version 0.9.0.")
+    if example.get("dcas_version") != "0.10.0":
+        fail("TIS v0.10 runtime assurance example must declare dcas_version 0.10.0.")
     if example.get("assurance_level") not in {"AL1", "AL2", "AL3", "AL4"}:
         fail("TIS v0.10 runtime assurance example has invalid assurance_level.")
     tis_alignment = example.get("tis_alignment") or {}
@@ -413,6 +413,35 @@ def validate_tis_alignment_artifacts() -> None:
     _validate_tis_v10_runtime_example()
     ok("Validated TIS v0.10 alignment manifest and runtime assurance examples.")
 
+
+def validate_ais1_v02_example() -> None:
+    example_path = ROOT / "conformance" / "examples" / "ais1_experimental_evaluation_claim.example.yaml"
+    if not example_path.exists():
+        fail("Missing AIS-1 v0.2 experimental evaluation example.")
+    with example_path.open("r", encoding="utf-8") as f:
+        example = yaml.safe_load(f)
+    if not isinstance(example, dict):
+        fail("AIS-1 v0.2 evaluation example must parse as a YAML mapping.")
+    if example.get("dcas_version") != "0.10.0":
+        fail("AIS-1 v0.2 evaluation example must declare dcas_version 0.10.0.")
+    subject = example.get("subject") or {}
+    if subject.get("ais1_agent_class") not in {"ala", "soa"}:
+        fail("AIS-1 v0.2 evaluation example must declare ais1_agent_class ala or soa.")
+    if subject.get("ais1_agent_class") == "soa" and not subject.get("parent_did"):
+        fail("AIS-1 v0.2 SOA evaluation example must declare parent_did.")
+    findings = example.get("ais1_v0_2_findings") or {}
+    for key in ["did_resolution", "registry_status", "bond_hash_recomputed", "soa_parent_status", "cascade_revocation_negative_path"]:
+        if key not in findings:
+            fail(f"AIS-1 v0.2 evaluation example missing finding: {key}")
+    scope = example.get("scope") or {}
+    objectives = set(scope.get("control_objectives") or [])
+    for expected in ["CO3.9", "CO4.8", "CO6.6"]:
+        if expected not in objectives:
+            fail(f"AIS-1 v0.2 evaluation example missing control objective: {expected}")
+    if not example.get("evidence_references") or not example.get("test_references"):
+        fail("AIS-1 v0.2 evaluation example must include evidence and test references.")
+    ok("Validated AIS-1 v0.2 experimental evaluation example.")
+
 def main() -> None:
     print("DTG DCAS repo validation\n")
     control_ids = load_control_ids()
@@ -420,6 +449,7 @@ def main() -> None:
     validate_oasf_envelope()
     validate_coverage_reports()
     validate_tis_alignment_artifacts()
+    validate_ais1_v02_example()
     validate_markdown_links()
     ok("All checks passed.")
 

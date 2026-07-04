@@ -1,7 +1,7 @@
 # DTG Conformance & Assurance (DCAS)
 
-**Release:** v0.9.0  \
-**Last reviewed:** 2026-06-29
+**Release:** v0.10.0  \
+**Last reviewed:** 2026-07-03
 
 This repository publishes **DCAS (Decentralized Conformance and Assurance Standard)** artifacts for DTG ecosystems.
 
@@ -11,7 +11,7 @@ DCAS is an implementation-neutral way to move from implicit trust to **explicit,
 
 - **Primary goal (this repo):** make DCAS *operational* — templates, schemas, and a repeatable evaluation method.
 - **Spec:** `spec/DCAS_v0.1.md` is a **draft** (contains TODOs). Templates + validation tooling are treated as the stable “adoption surface”.
-- **AIS-1 integration:** present as an **experimental** assurance profile for bounded evaluation, not as a settled production trust profile.
+- **AIS-1 v0.2 integration:** present as an **experimental** assurance profile for bounded evaluation, not as a settled production trust profile.
 
 ## Ecosystem & related repositories
 
@@ -22,7 +22,7 @@ DCAS is designed to work with:
 - **Domain baselines (example: `agent-name-assurance-baseline`):** domain-specific requirements that emit declarations and evidence bundles.
 - **This repo (DCAS):** evaluates those declarations and evidence using a repeatable verifier workflow.
 
-Start with: `docs/ecosystem-overview.md`, `docs/compatibility-matrix.md`, `docs/tsmm-runtime-governance-evaluation-profile.md`, `docs/tis-v0.10-runtime-assurance-evaluation-profile.md`, `docs/a2a-assurance-profile.md`, and `docs/anab-a2a-evaluation.md`.
+Start with: `docs/ecosystem-overview.md`, `docs/compatibility-matrix.md`, `docs/tsmm-runtime-governance-evaluation-profile.md`, `docs/tis-v0.10-runtime-assurance-evaluation-profile.md`, `docs/ais1-experimental-assurance-profile.md`, `docs/a2a-assurance-profile.md`, and `docs/anab-a2a-evaluation.md`.
 
 
 ## TSMM/TIS v0.10 runtime assurance alignment
@@ -76,9 +76,9 @@ ANAB now publishes a detailed **ANAB-over-A2A description extension** plus new A
 
 This impact is documented in `docs/anab-a2a-evaluation.md` and illustrated in `conformance/examples/anab_over_a2a_evaluation_claim.example.yaml`.
 
-## Experimental AIS-1 integration
+## Experimental AIS-1 v0.2 integration
 
-This repo now includes an **experimental AIS-1 assurance profile** so DCAS can evaluate AIS-1 as a bonded identity and accountability substrate without overstating it as a complete trust execution layer.
+This repo includes an **experimental AIS-1 v0.2 assurance profile** so DCAS can evaluate AIS-1 as a bonded identity and accountability substrate without overstating it as a complete trust execution layer.
 
 - **Experimental profile:** `conformance/profiles/CP-8_AIS1Experimental.md`
 - **Guidance note:** `docs/ais1-experimental-assurance-profile.md`
@@ -88,8 +88,10 @@ The evaluation posture is intentionally narrow:
 - bond is not delegation
 - tier is not full assurance
 - verification is not provenance
+- SOA status requires parent ALA status validation
+- parent ALA revocation should cause SOA downgrade or denial
 
-Use this profile when you need a reviewable decision about whether an AIS-1 surface is coherent enough to consume as an accountability input. Do not treat it as a standalone production recommendation.
+Use this profile when you need a reviewable decision about whether an AIS-1 v0.2 surface is coherent enough to consume as an accountability input. Do not treat it as a standalone production recommendation.
 
 ## OASF publication composition
 

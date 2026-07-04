@@ -54,3 +54,6 @@ RT2,Evidence tampering or bundle substitution,CO4.6,Evidence Bundle Integrity
 RT3,Incomplete runtime decision receipts,CO4.7,Decision Receipt Completeness
 RT4,Stale status reliance,CO6.5,Status Freshness Enforcement
 RT5,Registry publication misread as authorization,CO3.7,Runtime Admission Control
+AIS1,AIS-1 SOA parent state omitted,CO3.9,AIS-1 SOA Parent-Chain Validation
+AIS2,AIS-1 bond evidence over-claimed as authority,CO4.8,AIS-1 v0.2 Evidence Sufficiency
+AIS3,AIS-1 cascade revocation ignored,CO6.6,AIS-1 Cascade Revocation Handling

@@ -22,5 +22,16 @@ A minimal coverage report should answer:
 
 ## Automation
 
-This repo currently validates *structure and link integrity* via `make validate`.
-Coverage report generation can be added as a future tooling increment once adopters converge on bundle conventions.
+This repo validates structure, examples, compatibility metadata, and deterministic coverage output via:
+
+```bash
+make validate
+make coverage
+```
+
+The generated report is maintained at:
+
+- `risk/reports/coverage/coverage.csv`
+- `risk/reports/coverage/coverage.md`
+
+The v0.10.0 report includes AIS-1 v0.2 evidence coverage for SOA parent-chain validation, AIS-1 evidence sufficiency, and cascade revocation handling.

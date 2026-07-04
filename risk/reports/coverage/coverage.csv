@@ -13,6 +13,7 @@ CO3.3,Lifecycle governance,uncovered,0,,
 CO3.4,Directory/registry correctness,uncovered,0,,
 CO3.7,Runtime admission control,uncovered,0,,
 CO3.8,Authority boundary preservation,covered,1,EVID-0003,direct
+CO3.9,AIS-1 SOA parent-chain validation,covered,1,EVID-0008,direct
 CO4.1,Evidence completeness,uncovered,0,,
 CO4.2,Traceability,uncovered,0,,
 CO4.3,Testability,uncovered,0,,
@@ -20,6 +21,7 @@ CO4.4,Repeatability,uncovered,0,,
 CO4.5,Runtime decision traceability,covered,1,EVID-0005,operational
 CO4.6,Evidence bundle integrity,covered,1,EVID-0004,direct
 CO4.7,Decision receipt completeness,covered,1,EVID-0005,direct
+CO4.8,AIS-1 v0.2 evidence sufficiency,covered,1,EVID-0007,direct
 CO5.1,Disclosure baseline,uncovered,0,,
 CO5.2,Change disclosure,uncovered,0,,
 CO5.3,Incident disclosure,uncovered,0,,
@@ -28,3 +30,4 @@ CO6.2,Key management,uncovered,0,,
 CO6.3,Monitoring & response,uncovered,0,,
 CO6.4,Fail-safe runtime behavior,covered,1,EVID-0006,operational
 CO6.5,Status freshness enforcement,covered,1,EVID-0006,direct
+CO6.6,AIS-1 cascade revocation handling,covered,1,EVID-0008,direct

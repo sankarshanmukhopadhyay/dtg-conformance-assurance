@@ -2,6 +2,27 @@
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-07-03
+
+### Added
+- Added AIS-1 v0.2 evaluator coverage for ALA/SOA classification, `parentDid`, DID resolution, registry status, bond integrity, timestamp service references, Assurance Container references, and SOA cascade revocation.
+- Added new control objectives for AIS-1 SOA parent-chain validation, AIS-1 v0.2 evidence sufficiency, and AIS-1 cascade revocation handling.
+- Added evidence catalog and test suite entries for AIS-1 v0.2 bond verification packages, Assurance Container references, and SOA cascade revocation checks.
+- Added AIS-1 v0.2 risk mappings and starter-bundle evidence mappings.
+- Added a refreshed AIS-1 v0.2 worked evaluation claim.
+- Added portfolio drift review and release impact records for AIS-1 v0.2.
+
+### Changed
+- Updated DCAS release version to v0.10.0 and method version to v0.5.0.
+- Expanded CP-8 from a generic AIS-1 experimental profile into an AIS-1 v0.2 evaluator profile.
+- Refreshed README, docs index, compatibility matrix, known-good stack, and roadmap.
+- Updated validation tooling to check the AIS-1 v0.2 worked example.
+
+### Quality
+- Preserved the boundary that AIS-1 v0.2 is identity and accountability evidence only.
+- Kept delegation, runtime authorization, and provenance evidence separate from AIS-1 bond state.
+- Regenerated deterministic coverage outputs after adding AIS-1 v0.2 control mappings.
+
 ## [0.9.0] - 2026-06-29
 
 ### Added

@@ -6,10 +6,10 @@
 
 ## Summary
 
-- Total control objectives: **29**
-- Covered: **9**
+- Total control objectives: **32**
+- Covered: **12**
 - Uncovered: **20**
-- Coverage: **31.0%**
+- Coverage: **37.5%**
 
 ## Uncovered control objectives
 
