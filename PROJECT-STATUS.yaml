@@ -1,0 +1,33 @@
+schema_version: "1.0"
+project:
+  name: dtg-conformance-assurance
+  maturity: implementation-draft
+  lifecycle: active
+  operational_status: active-development
+  specification_status: working-draft
+  intended_use:
+    - general-conformance-assurance
+    - deterministic-conformance-analysis
+    - assurance-evidence-generation
+  not_asserted:
+    - production-certification
+    - normative-authority-over-external-specifications
+    - independent-third-party-assurance
+authority:
+  normative_scope:
+    - general-conformance-assurance
+  does_not_own:
+    - upstream-specification-authority
+    - external-release-governance
+    - relying-party-risk-acceptance
+  delegation: "Repository maintainers govern the assurance framework and repository-local evidence contracts; specification owners retain normative authority over the specifications being assessed."
+  revocation_or_supersession: "Assurance rules and evidence contracts are superseded through explicit versioned changes; historical results remain auditable."
+evidence:
+  validation_commands:
+    - make validate
+    - make coverage
+  evidence_outputs:
+    - coverage/
+  known_limitations:
+    - conformance results do not constitute external certification
+    - assessed specifications retain their own governance and release authority
