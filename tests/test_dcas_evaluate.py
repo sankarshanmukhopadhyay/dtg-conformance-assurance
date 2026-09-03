@@ -1,8 +1,10 @@
 import importlib.util
+import json
 import unittest
 from pathlib import Path
 
-MODULE = Path(__file__).resolve().parents[1] / "tools" / "dcas_evaluate.py"
+ROOT = Path(__file__).resolve().parents[1]
+MODULE = ROOT / "tools" / "dcas_evaluate.py"
 spec = importlib.util.spec_from_file_location("dcas_evaluate", MODULE)
 dcas = importlib.util.module_from_spec(spec)
 assert spec.loader is not None
@@ -44,6 +46,11 @@ class DCASEvaluatorTests(unittest.TestCase):
             {"id": "action-authority", "uri": "urn:test:authority", "status": "missing"},
         ]
         self.assertEqual(dcas.evaluate(document)["decision"], "INDETERMINATE")
+
+    def test_published_anab_round_trip_is_exact(self):
+        source = json.loads((ROOT / "conformance/examples/anab_dcas_evaluation_input.example.json").read_text())
+        expected = json.loads((ROOT / "conformance/examples/anab_dcas_evaluation_result.example.json").read_text())
+        self.assertEqual(dcas.evaluate(source), expected)
 
 
 if __name__ == "__main__":
