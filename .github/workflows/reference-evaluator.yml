@@ -1,0 +1,36 @@
+name: DCAS reference evaluator
+
+on:
+  pull_request:
+    paths:
+      - 'tools/dcas_evaluate.py'
+      - 'tests/test_dcas_evaluate.py'
+      - 'conformance/examples/anab_dcas_evaluation_input.example.json'
+      - 'spec/schemas/dcas-evaluation-*.schema.json'
+      - 'docs/reference-evaluator.md'
+      - '.github/workflows/reference-evaluator.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/dcas_evaluate.py'
+      - 'tests/test_dcas_evaluate.py'
+      - 'conformance/examples/anab_dcas_evaluation_input.example.json'
+      - 'spec/schemas/dcas-evaluation-*.schema.json'
+      - 'docs/reference-evaluator.md'
+      - '.github/workflows/reference-evaluator.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - name: Run evaluator unit tests
+        run: python -m unittest tests/test_dcas_evaluate.py
+      - name: Execute ANAB round trip
+        run: python tools/dcas_evaluate.py conformance/examples/anab_dcas_evaluation_input.example.json --expect PASS

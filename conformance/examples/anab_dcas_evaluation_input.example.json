@@ -8,7 +8,8 @@
   },
   "claim": {
     "fixture_id": "ANAB-FX-001",
-    "source": "agent-name-assurance-baseline/conformance/samples/dcas-ready-enterprise-agent.json"
+    "source": "agent-name-assurance-baseline/conformance/samples/dcas-ready-enterprise-agent.json",
+    "requirements": ["ANAGB-RES-01", "ANAGB-RES-02", "ANAGB-A2A-07", "ANAGB-A2A-09", "ANAGB-IR-03"]
   },
   "evidence": [
     {
