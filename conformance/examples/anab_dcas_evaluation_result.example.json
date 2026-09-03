@@ -8,9 +8,33 @@
   },
   "findings": [
     {
-      "requirement": "ANAB-FX-001:binding-current-and-verifiable",
+      "requirement": "ANAGB-RES-01",
       "result": "PASS",
-      "reason": "Current binding/status evidence is available for the fixture.",
+      "reason": "available evidence satisfies this bounded evaluation input",
+      "evidence_ids": ["binding-status", "freshness-status"]
+    },
+    {
+      "requirement": "ANAGB-RES-02",
+      "result": "PASS",
+      "reason": "available evidence satisfies this bounded evaluation input",
+      "evidence_ids": ["binding-status", "freshness-status"]
+    },
+    {
+      "requirement": "ANAGB-A2A-07",
+      "result": "PASS",
+      "reason": "available evidence satisfies this bounded evaluation input",
+      "evidence_ids": ["binding-status", "freshness-status"]
+    },
+    {
+      "requirement": "ANAGB-A2A-09",
+      "result": "PASS",
+      "reason": "available evidence satisfies this bounded evaluation input",
+      "evidence_ids": ["binding-status", "freshness-status"]
+    },
+    {
+      "requirement": "ANAGB-IR-03",
+      "result": "PASS",
+      "reason": "available evidence satisfies this bounded evaluation input",
       "evidence_ids": ["binding-status", "freshness-status"]
     }
   ],
@@ -19,12 +43,8 @@
     "missing": [],
     "rejected": []
   },
-  "assurance": {
-    "claimed": "Enterprise",
-    "supported": "Enterprise"
-  },
   "receipt_material": {
-    "input_digest": "sha256:normalized-input-placeholder-for-fixture",
+    "input_digest": "sha256:e4de4fd9c97d506ad0d84a12e10e6b7ed398e153fd4d2de7fcacc449191da315",
     "result_digest_algorithm": "sha256"
   }
 }
