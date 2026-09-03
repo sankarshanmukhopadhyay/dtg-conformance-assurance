@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/dcas/schemas/dcas-evaluation-result.schema.json",
+  "$id": "https://raw.githubusercontent.com/sankarshanmukhopadhyay/dtg-conformance-assurance/main/spec/schemas/dcas-evaluation-result.schema.json",
   "title": "DCAS Evaluation Result",
   "type": "object",
   "additionalProperties": false,
