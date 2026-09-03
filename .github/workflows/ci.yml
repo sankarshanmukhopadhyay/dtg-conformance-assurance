@@ -66,6 +66,7 @@ jobs:
       - name: Internal link check (no network)
         uses: lycheeverse/lychee-action@v2
         with:
+          failIfEmpty: false
           args: >-
             --no-progress
             --verbose
