@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/sankarshanmukhopadhyay/dtg-conformance-assurance/main/spec/schemas/dcas-evaluation-input.schema.json",
+  "title": "DCAS Evaluation Input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "evaluation_id", "target", "claim", "evidence", "policy", "evaluation_time"],
+  "properties": {
+    "contract_version": {"const": "0.1"},
+    "evaluation_id": {"type": "string", "minLength": 1},
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["baseline", "version", "profile"],
+      "properties": {
+        "baseline": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "profile": {"type": "string", "minLength": 1}
+      }
+    },
+    "claim": {"type": "object"},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "uri", "status"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "uri": {"type": "string", "minLength": 1},
+          "status": {"enum": ["available", "missing", "unverifiable", "stale", "revoked"]},
+          "digest": {"type": "string"}
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["missing_evidence"],
+      "properties": {
+        "missing_evidence": {"const": "INDETERMINATE"}
+      }
+    },
+    "evaluation_time": {"type": "string", "format": "date-time"}
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "contract_version": "0.1",
+  "evaluation_id": "IC-ANAB-DCAS-001-PASS",
+  "target": {
+    "baseline": "ANAB",
+    "version": "0.10.0",
+    "profile": "Enterprise"
+  },
+  "claim": {
+    "fixture_id": "ANAB-FX-001",
+    "source": "agent-name-assurance-baseline/conformance/samples/dcas-ready-enterprise-agent.json"
+  },
+  "evidence": [
+    {
+      "id": "binding-status",
+      "uri": "urn:anab:fixture:ANAB-FX-001:binding-status",
+      "status": "available",
+      "digest": "sha256:fixture-binding-status"
+    },
+    {
+      "id": "freshness-status",
+      "uri": "urn:anab:fixture:ANAB-FX-001:freshness-status",
+      "status": "available",
+      "digest": "sha256:fixture-freshness-status"
+    }
+  ],
+  "policy": {
+    "missing_evidence": "INDETERMINATE",
+    "authority_inference_from_identity": false
+  },
+  "evaluation_time": "2026-09-03T06:00:00Z"
+}
