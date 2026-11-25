@@ -60,6 +60,12 @@ class ImportTests(unittest.TestCase):
         self.manifest["evaluation_time"] = self.manifest["valid_until"]
         self.assertEqual(self.decision(), "INDETERMINATE")
 
+    def test_invalid_assessor_date(self):
+        from jsonschema import ValidationError
+        self.manifest["evaluation_time"] = "2026-11-25"
+        with self.assertRaises(ValidationError):
+            self.imported()
+
     def test_tamper(self):
         (self.path / "results.json").write_text("[]")
         with self.assertRaises(ValueError):

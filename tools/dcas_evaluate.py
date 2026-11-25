@@ -34,7 +34,10 @@ def read_json(path):
 
 def validate_schema(value, filename):
     schema = read_json(ROOT / "spec" / "schemas" / filename)
-    Draft202012Validator(schema, format_checker=FormatChecker()).validate(value)
+    checker = FormatChecker()
+    if "date-time" not in checker.checkers:
+        raise RuntimeError("date-time format validation unavailable; install requirements.txt")
+    Draft202012Validator(schema, format_checker=checker).validate(value)
 
 
 def digest(value):

@@ -1,6 +1,6 @@
 # DCAS reference evaluator
 
-The reference evaluator implements the bounded [evaluator contract](evaluator-contract.md). Install dependencies using `pip install -r requirements.txt`.
+The reference evaluator implements the bounded [evaluator contract](evaluator-contract.md). Install dependencies using `pip install -r requirements.txt`. The JSON Schema format extra is required for RFC 3339 date-time validation; the evaluator refuses to run if that checker is unavailable.
 
 ## Run
 
