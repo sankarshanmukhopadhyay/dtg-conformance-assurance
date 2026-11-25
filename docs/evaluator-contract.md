@@ -1,52 +1,29 @@
 # DCAS evaluator contract
 
-This document defines the smallest portable contract for independently implementing a DCAS evaluator. It is intentionally narrower than the draft DCAS specification.
+The portable reference evaluator consumes assessed evidence, not raw claims of trust. DCAS owns the evaluation method and receipt semantics; source baselines own requirements and the relying party owns acceptance policy.
 
-## Inputs
+## Current contract: 0.2 (unreleased)
 
-A normalized evaluation input identifies:
+The input identifies baseline, version, profile, evaluation ID/time, nonempty requirement IDs, evidence records, policy, and explicit requirement-to-evidence bindings. Every binding lists all evidence necessary for that requirement. Evidence statuses are available, missing, unverifiable, stale, revoked or contradicted. A binding to an absent record is missing evidence. Duplicate evidence or requirement IDs, unknown bindings and unsafe policies are rejected.
 
-- the source assurance baseline, version and profile;
-- the claim under evaluation;
-- evidence references and their observable status;
-- relying-party policy constraints;
-- the evaluation time used for freshness-sensitive decisions.
+Schemas: `spec/schemas/dcas-evaluation-input-v0.2.schema.json` and `spec/schemas/dcas-evaluation-result-v0.2.schema.json`.
 
-Schema: `spec/schemas/dcas-evaluation-input.schema.json`.
+| Decision | Semantics |
+| --- | --- |
+| PASS | Every declared requirement has nonempty bindings and all bound assessed evidence supports it, with no applicable blocking claim condition. |
+| FAIL | A mapped proposition is contradicted or a declared failure policy is triggered. |
+| INDETERMINATE | Evidence is insufficient to decide; missing, unbound or unverifiable evidence cannot yield PASS. |
 
-## Outputs
+FAIL dominates INDETERMINATE, which dominates PASS. Findings are per requirement; unrelated available evidence cannot fill a missing binding. Stale and revoked evidence default to FAIL, and policy may instead choose INDETERMINATE. Policy may not choose PASS for an adverse state. Identity cannot substitute for required action-authority evidence. If action authority is required, it must be explicitly bound and available.
 
-A normalized result identifies:
+The result includes evaluator version, overall decision, per-requirement findings, consumed/missing/rejected evidence and an input digest (SHA-256 over compact JSON with sorted keys, Python JSON escaping and no non-finite numbers). This is a reproducibility identifier, not a signature.
 
-- overall `PASS`, `FAIL` or `INDETERMINATE`;
-- per-requirement findings;
-- consumed, missing and rejected evidence;
-- claimed versus supported assurance where relevant;
-- evaluator identity/version;
-- digest material sufficient to bind a decision receipt to normalized input.
+## Assessor responsibilities
 
-Schema: `spec/schemas/dcas-evaluation-result.schema.json`.
+A PASS is conditional on the trusted normalized input, not proof that the assessor selected all applicable requirements or authenticated the underlying artifacts. The evaluator does not fetch evidence, infer source requirements or choose relying-party policy. Source-specific ingestion must preserve provenance and applicability. See [Trust Tasks integration](tt-conformance-evidence-integration.md).
 
-## Outcome semantics
+Independent implementations using identical assessed input and policy should produce equivalent decisions and requirement findings; differing interpretation is an interoperability finding.
 
-**PASS** means sufficient current evidence demonstrates all requirements needed for the evaluated target under the declared policy.
+## Compatibility and migration
 
-**FAIL** means evidence demonstrates that at least one required proposition is false or unmet.
-
-**INDETERMINATE** means the available evidence is insufficient to decide, including evidence that is missing, stale, inaccessible or unverifiable where policy does not establish a deterministic failure rule.
-
-Missing evidence MUST NOT silently become PASS.
-
-## Authority boundary
-
-DCAS owns evaluation-method and result/receipt semantics. It does not own or rewrite the requirements of the source baseline. For ANAB evaluations, ANAB remains authoritative for named-agent controls, tier/profile meaning and evidence expectations.
-
-An evaluator MUST therefore reference source requirement identifiers rather than replacing them with DCAS-local control semantics merely for convenience.
-
-## Equivalence expectation
-
-Two conforming evaluator implementations receiving identical normalized input and the same declared policy SHOULD produce materially equivalent overall decisions and source-requirement findings. Differences in formatting, ordering or explanatory prose are not material. Different decisions, different treatment of missing evidence, or different interpretation of source requirements are material and MUST be surfaced as an interoperability finding.
-
-## Scope of the first experiment
-
-The first consumer is `IC-ANAB-DCAS-001` in the Trust Protocol Interop Lab. It will test at least PASS, FAIL and INDETERMINATE vectors from the ANAB implementation-validation pack.
+Contract 0.1 input/output schemas and the published ANAB example/result remain historical. The current evaluator accepts legacy input but will not return PASS because 0.1 does not require explicit bindings. Legacy failure conditions remain failures. Consumers must reassess source requirements, add explicit bindings, use contract 0.2 and regenerate results. Do not relabel historical receipts as current results. This is a semantic breaking change for the reference evaluator, not a change to external control identifiers or canonical assurance levels.

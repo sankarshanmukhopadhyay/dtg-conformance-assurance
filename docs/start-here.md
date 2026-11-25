@@ -61,3 +61,7 @@ If you are evaluating an AIS-1-described agent surface, start with:
 3. `conformance/examples/ais1_experimental_evaluation_claim.example.yaml`
 
 Treat this path as experimental and bounded. It helps you assess identity binding, bond integrity, issuer disclosure, lifecycle evidence, and traceability. It does not substitute for separate delegation or provenance checks.
+
+## Executable assessment path (experimental, unreleased)
+
+If you have external Trust Tasks run records, follow [Trust Tasks evidence integration](tt-conformance-evidence-integration.md). For normalized evidence inputs see the [reference evaluator](reference-evaluator.md). This path is separate from the CSV starter bundle and does not confer certification.

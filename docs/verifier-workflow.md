@@ -131,3 +131,7 @@ For v0.9.0 runtime assurance reviews, the verifier SHOULD also request:
 - registry publication profile where discoverability is part of the relying-party context.
 
 Use `docs/tis-v0.10-runtime-assurance-evaluation-profile.md` for the detailed evaluator checklist.
+
+## Alternative executable evidence path
+
+For assessor-reviewed Trust Tasks test results, see [Trust Tasks evidence integration](tt-conformance-evidence-integration.md). The normalized evaluator's PASS/FAIL/INDETERMINATE outcomes are distinct from CSV-based relying-party acceptance decisions. Structural validation or coverage alone does not establish sufficient evidence.

@@ -42,6 +42,9 @@ DCAS v0.9.0 adds evaluator-facing alignment for TSMM runtime governance and TIS 
 
 ## Start here
 
+- **Executable evaluation (unreleased):** [Reference evaluator](docs/reference-evaluator.md) and [Trust Tasks evidence integration](docs/tt-conformance-evidence-integration.md). Contract 0.2 requires explicit requirement-to-evidence bindings; legacy 0.1 PASS results require reassessment. The released CSV adoption surface is unchanged.
+
+
 - **Adoption guide (role-based):** `docs/start-here.md`
 - **Repository map:** `docs/repo-map.md`
 - **FAQ:** `docs/FAQ.md`

@@ -92,3 +92,7 @@ This roadmap is organized as capability increments. Dates are intentionally omit
 - Compare tracked TIS release and schema references against local review manifest.
 - Emit machine-readable drift status for CI or release readiness checks.
 - Keep this as a release-readiness gate rather than a hard dependency on network access.
+
+## Unreleased — Trust Tasks conformance evidence integration
+
+Bounded reference evaluator contract 0.2, pinned run intake, explicit evidence bindings and false-success regression tests. Independent reproduction and real assessed runs remain separate evidence requirements. Specification monitoring and demonstrated interoperability assessment remain deferred.

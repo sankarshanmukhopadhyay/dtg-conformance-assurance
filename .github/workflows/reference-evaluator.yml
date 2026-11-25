@@ -2,22 +2,8 @@ name: DCAS reference evaluator
 
 on:
   pull_request:
-    paths:
-      - 'tools/dcas_evaluate.py'
-      - 'tests/test_dcas_evaluate.py'
-      - 'conformance/examples/anab_dcas_evaluation_input.example.json'
-      - 'spec/schemas/dcas-evaluation-*.schema.json'
-      - 'docs/reference-evaluator.md'
-      - '.github/workflows/reference-evaluator.yml'
   push:
     branches: [main]
-    paths:
-      - 'tools/dcas_evaluate.py'
-      - 'tests/test_dcas_evaluate.py'
-      - 'conformance/examples/anab_dcas_evaluation_input.example.json'
-      - 'spec/schemas/dcas-evaluation-*.schema.json'
-      - 'docs/reference-evaluator.md'
-      - '.github/workflows/reference-evaluator.yml'
 
 permissions:
   contents: read
@@ -30,7 +16,13 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.13'
-      - name: Run evaluator unit tests
-        run: python -m unittest tests/test_dcas_evaluate.py
-      - name: Execute ANAB round trip
-        run: python tools/dcas_evaluate.py conformance/examples/anab_dcas_evaluation_input.example.json --expect PASS
+      - run: pip install -r requirements.txt
+      - name: Run evaluator and evidence integration tests
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: Legacy ANAB example requires reassessment
+        run: python tools/dcas_evaluate.py conformance/examples/anab_dcas_evaluation_input.example.json --expect INDETERMINATE
+      - name: Execute synthetic Trust Tasks round trip
+        run: |
+          python conformance/examples/tt_conformance/generate_fixture.py /tmp/tt-fixture
+          python tools/import_tt_conformance.py /tmp/tt-fixture/run.json /tmp/tt-fixture/results.json /tmp/tt-fixture/manifest.json --output /tmp/tt-fixture/input.json
+          python tools/dcas_evaluate.py /tmp/tt-fixture/input.json --expect PASS
