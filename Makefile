@@ -1,9 +1,12 @@
 PYTHON?=python
 
-.PHONY: validate export-risk coverage
+.PHONY: validate test export-risk coverage
 
-validate:
+validate: test
 	$(PYTHON) tools/validate.py
+
+test:
+	$(PYTHON) -m unittest discover -s tests -p 'test_*.py'
 
 export-risk:
 	$(PYTHON) tools/export_xlsx_to_csv.py

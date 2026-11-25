@@ -22,3 +22,7 @@ Turn DCAS artifacts into automation: validation, reporting, dashboards, and inte
 - Validation entrypoint: `tools/validate.py`
 - Make targets: `Makefile` (`make validate`)
 - Paths contract: `repo-contract/paths.json`
+
+## Executable evaluator path
+
+Implement against the [portable contract](../evaluator-contract.md), not the source runner. Use the [reference evaluator](../reference-evaluator.md) and [Trust Tasks evidence integration](../tt-conformance-evidence-integration.md) to exercise the synthetic CLI path. Preserve evidence bindings, provenance and indeterminate outcomes; structural validity is not evidence authentication.

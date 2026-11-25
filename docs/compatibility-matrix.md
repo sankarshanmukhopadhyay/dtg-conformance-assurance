@@ -58,3 +58,12 @@ DCAS MUST treat this table as an evaluation compatibility map, not as a schema c
 | Registry publication profile | Discoverability and assurance publication evidence, not runtime authorization | publication profile or discovery-versus-authorization boundary changes |
 
 DCAS MUST treat this table as an evaluation compatibility map. Canonical schema ownership remains with TIS, and semantic model ownership remains with TSMM.
+
+## Unreleased evaluator integration
+
+| Surface | Supported contract | Boundary |
+| --- | --- | --- |
+| DCAS reference evaluator | 0.2; 0.1 legacy input accepted without PASS | Explicit requirement evidence bindings; historical results require reassessment |
+| Draft Trust Tasks suite | commit `864687a5bc072b12c952e16539b42e738c4a7dd5`, run format `tt-conformance-run/0.2` | Assessor-reviewed source artifacts only; no automatic assurance level or interoperability claim |
+
+See [integration guide](tt-conformance-evidence-integration.md). Released stack versions above remain unchanged.

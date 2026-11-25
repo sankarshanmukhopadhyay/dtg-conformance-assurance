@@ -21,3 +21,7 @@ AIS-1 v0.2 is evaluated as a bounded identity and accountability input. It does 
 If TSMM changes runtime governance semantics, or TIS changes runtime governance projection, authority boundary, Trust Task, status-list, decision receipt, evidence bundle, or registry publication artifacts, maintainers SHOULD open a drift review before issuing a new DCAS or ANAB minor release.
 
 If AIS-1 changes ALA/SOA classification, `parentDid`, DID resolution, registry status, timestamp service references, Assurance Container semantics, or SOA cascade revocation rules, maintainers SHOULD open a standards drift review before issuing a new DCAS minor release.
+
+## Unreleased evaluator work
+
+The table above describes the released July 2026 alignment baseline, not the new reference evaluator contract. See [compatibility matrix](compatibility-matrix.md) and [migration guidance](reference-evaluator.md) for the unreleased 0.2 contract. No new stack-wide compatibility or interoperability result is asserted.

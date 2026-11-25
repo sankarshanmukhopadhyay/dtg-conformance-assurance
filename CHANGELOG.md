@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+### Added
+- Experimental pinned Trust Tasks conformance evidence importer, assessor manifest and executable synthetic example.
+- Versioned evaluator contract 0.2 with explicit requirement evidence bindings, contradiction handling and regression tests.
+
+### Breaking change (reference evaluator)
+- Legacy 0.1 inputs no longer produce PASS; reassess and migrate explicit bindings to 0.2. Historical ANAB artifacts remain unchanged.
+- Install repository dependencies before using the evaluator. The released CSV method and canonical assurance levels are unchanged.
+
 ## [0.10.0] - 2026-07-03
 
 ### Added

@@ -64,3 +64,7 @@ See also:
 - `tis-v0.9-runtime-artifact-evaluation-profile.md`
 - `tis-drift-review.md`
 - `tis-dcas-anab-alignment-matrix.md`
+
+## Experimental Trust Tasks conformance evidence
+
+The pinned draft suite produces test-run records. DCAS consumes these through an assessor-controlled adapter; the suite remains responsible for test execution and source outcome semantics. See [integration guide](tt-conformance-evidence-integration.md). This is not a normative dependency or demonstrated interoperability claim.

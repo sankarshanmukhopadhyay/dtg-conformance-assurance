@@ -30,3 +30,14 @@ This repo is organized around an end-to-end traceability spine:
 ## Reports
 
 - Control coverage (deterministic): `risk/reports/coverage/` (generated via `make coverage`)
+
+## Executable evaluation (unreleased)
+
+- `tools/dcas_evaluate.py`: strict normalized evaluation.
+- `tools/import_tt_conformance.py`: pinned Trust Tasks run importer.
+- `spec/schemas/dcas-evaluation-*-v0.2.schema.json`: normalized input/output contracts.
+- `spec/schemas/dcas-tt-assessor-manifest.schema.json`: assessor intake contract.
+- `conformance/examples/tt_conformance/generate_fixture.py`: reproducible synthetic example.
+- `tests/`: evaluator and importer regression tests.
+
+See [Trust Tasks evidence integration](tt-conformance-evidence-integration.md).

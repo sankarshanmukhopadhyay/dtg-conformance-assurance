@@ -44,3 +44,7 @@ DCAS can evaluate emerging or incomplete substrates as long as the profile prese
 ## Experimental runtime-governance interpretation
 
 For agentic systems with side-effecting execution paths, assessors MAY require runtime evidence showing what was checked immediately before execution. The experimental runtime overlay introduced in this release uses structured receipts and fail-safe behavior tests to make those decisions reviewable without redefining the stable DCAS method.
+
+## Executable evidence and assurance
+
+The CSV method remains the released adoption path. The experimental [reference evaluator](reference-evaluator.md) evaluates assessed JSON evidence under a separate versioned contract. PASS, FAIL and INDETERMINATE refer to the evaluated requirements, not certification or a relying party's final risk acceptance. The [Trust Tasks integration](tt-conformance-evidence-integration.md) demonstrates a bounded external evidence intake.

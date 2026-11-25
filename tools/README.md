@@ -15,7 +15,7 @@ make validate
 
 - `make coverage` — generate a deterministic control coverage report (CSV + Markdown) from the starter bundle
 
-- `make validate` — run all repo checks (CSV schema validation + referential integrity + deterministic reports + markdown links)
+- `make validate` — run all repo checks (evaluator tests + CSV schema validation + referential integrity + deterministic reports + markdown links)
 - `make export-risk` — optional: export `risk/source/Risk Register.xlsx` (or the consolidated `risk/source/risk-register.csv`) to `risk/exports/risk_assessment.csv`
 
 ## Notes
@@ -26,3 +26,11 @@ make validate
 ## CSV schema descriptors
 
 Machine-readable CSV schemas live under `schemas/csv/` and drive the validation checks.
+
+## Executable evidence assessment (unreleased)
+
+- `make test`: evaluator and importer tests, also run by `make validate`.
+- `tools/dcas_evaluate.py`: normalized requirement-level evaluation.
+- `tools/import_tt_conformance.py`: pinned external test evidence intake.
+
+Follow the [reference evaluator](../docs/reference-evaluator.md) and [Trust Tasks integration](../docs/tt-conformance-evidence-integration.md) for commands, scope and migration.

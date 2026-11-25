@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "evaluation_id",
+    "target",
+    "assessor",
+    "review_ref",
+    "source",
+    "observed_at",
+    "valid_until",
+    "evaluation_time",
+    "requirements"
+  ],
+  "properties": {
+    "format": {
+      "const": "dcas-tt-assessor/0.1"
+    },
+    "evaluation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "baseline",
+        "version",
+        "profile"
+      ],
+      "properties": {
+        "baseline": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profile": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "assessor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "valid_until": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "evaluation_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_sha256",
+        "results_sha256",
+        "vector_digest",
+        "implementation",
+        "implementation_version",
+        "implementation_revision",
+        "specification_revision",
+        "tier",
+        "implementation_revision_ref"
+      ],
+      "properties": {
+        "run_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "results_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "vector_digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "implementation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "implementation_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "implementation_revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "specification_revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tier": {
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "implementation_revision_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "requirements": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "vectors",
+          "positive_anchors"
+        ],
+        "properties": {
+          "vectors": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "positive_anchors": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          }
+        }
+      }
+    }
+  },
+  "$id": "https://raw.githubusercontent.com/sankarshanmukhopadhyay/dtg-conformance-assurance/main/spec/schemas/dcas-tt-assessor-manifest.schema.json",
+  "title": "DCAS Trust Tasks assessor manifest 0.1"
+}
