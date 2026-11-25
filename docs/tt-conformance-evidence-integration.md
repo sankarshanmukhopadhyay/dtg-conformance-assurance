@@ -29,7 +29,7 @@ The generated fixture is synthetic. Its PASS demonstrates the pipeline only. Ins
 ## Evaluate an actual run
 
 1. Obtain original run.json and results.json through a trusted channel. Independently review the run provenance, implementation checkout, exact specification revision, vector files, exceptions, scope, applicable mandatory requirements, and positive anchors. Confirm that the review identifies a complete requirement set for the declared target.
-2. Create a separately controlled assessor manifest using the generated example as a structural guide and `spec/schemas/dcas-tt-assessor-manifest.schema.json` as the contract. Set the actual implementation/version/revision, specification revision, tier, review reference, artifact SHA-256 digests, vector inventory digest, observation time, validity interval and evaluation time. Map each requirement to every required vector and at least one reviewed positive anchor. Never generate an approval manifest solely from the producer's assertions.
+2. Create a separately controlled assessor manifest using the generated example as a structural guide and `spec/schemas/dcas-tt-assessor-manifest.schema.json` as the contract. Set the actual implementation/version/revision, specification revision, tier, implementation revision reference, review reference, artifact SHA-256 digests, vector inventory digest, observation time, validity interval and evaluation time. Map each requirement to every required vector and at least one reviewed positive anchor. Never generate an approval manifest solely from the producer's assertions.
 3. Run the importer and evaluate the normalized input using the commands above with the actual paths. A validation error means no decision was issued; do not substitute PASS.
 4. Review all requirement findings, the source outcome records and remaining scope exclusions before using the assessment. The assessor must separately establish relevance, completeness, authentication, and reliance authority.
 
@@ -46,7 +46,7 @@ The importer compares exact artifact hashes and the vector inventory digest with
 | Advisory, synthetic, authorization-gate-only, non-profile window, drift or governance mismatch | unverifiable (applicable recorded failures remain contradictions) |
 | Expired review interval | stale |
 
-The original source result is retained, even when it does not support reliance. No automatic non-applicability is inferred. Missing and unverifiable evidence yield INDETERMINATE; stale evidence is INDETERMINATE under this import policy. A contradicted mapped proposition yields FAIL. Each requirement needs all mapped evidence and its declared positive anchors. FAIL dominates INDETERMINATE, which dominates PASS.
+The original source result and recorded exclusion reasons are retained, even when they do not support reliance. No automatic non-applicability is inferred. Missing and unverifiable evidence yield INDETERMINATE; stale evidence is INDETERMINATE under this import policy. A contradicted mapped proposition yields FAIL. Each requirement needs all mapped evidence and its declared positive anchors. FAIL dominates INDETERMINATE, which dominates PASS.
 
 ## Boundaries
 

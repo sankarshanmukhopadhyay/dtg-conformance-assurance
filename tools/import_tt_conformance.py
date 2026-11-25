@@ -79,15 +79,23 @@ def normalize(run_path, results_path, manifest_path):
         drifted.update(finding["vectors"])
     probe = selected["essentialProbe"]["result"]
     require(probe in {"consistent", "mismatch", "not-probed", "not-run"}, "unknown governance probe")
-    excluded = set()
+    excluded = {}
     for field in ("excludedFromRun", "retired"):
-        require(isinstance(selected.get(field, {}), dict), "invalid exclusions")
-        excluded.update(selected.get(field, {}))
-    for values in selected.get("excludedByChannel", {}).values():
-        require(isinstance(values, list), "invalid channel exclusions")
-        excluded.update(values)
-    excluded.update(item["id"] for item in selected.get("excludedByTier", []))
-    require(not excluded.intersection(rows), "reported vector also excluded")
+        table = selected.get(field, {})
+        require(isinstance(table, dict) and all(isinstance(reason, str) for reason in table.values()), "invalid exclusions")
+        for vid, reason in table.items():
+            excluded.setdefault(vid, []).append({"kind": field, "reason": reason})
+    for channel, values in selected.get("excludedByChannel", {}).items():
+        require(channel in CHANNELS and isinstance(values, list) and all(isinstance(v, str) for v in values),
+                "invalid channel exclusions")
+        for vid in values:
+            excluded.setdefault(vid, []).append({"kind": "excludedByChannel", "channel": channel})
+    for item in selected.get("excludedByTier", []):
+        require(isinstance(item["id"], str) and isinstance(item["reason"], str) and item["channel"] in CHANNELS,
+                "invalid tier exclusion")
+        excluded.setdefault(item["id"], []).append({"kind": "excludedByTier", "reason": item["reason"],
+                                                   "channel": item["channel"]})
+    require(not set(excluded).intersection(rows), "reported vector also excluded")
     observed, evaluated, expires = (timestamp(manifest[k]) for k in ("observed_at", "evaluation_time", "valid_until"))
     require(observed <= evaluated and observed < expires, "invalid assessor interval")
     require(timestamp(run["today"] + "T00:00:00Z") <= observed, "run date after observation")
@@ -118,7 +126,7 @@ def normalize(run_path, results_path, manifest_path):
                 state, reason = "available", "reviewed mapped registry vector passed"
             evidence.append({"id": eid, "uri": "urn:sha256:" + source["results_sha256"],
                 "digest": "sha256:" + source["results_sha256"], "status": state})
-            detail[eid] = {"vector": vid, "source_result": row, "excluded": vid in excluded,
+            detail[eid] = {"vector": vid, "source_result": row, "exclusions": excluded.get(vid, []),
                 "required_positive": vid in anchors, "reason": reason}
     document = {"contract_version": "0.2", "evaluation_id": manifest["evaluation_id"], "target": manifest["target"],
         "claim": {"requirements": sorted(bindings), "requirement_evidence": bindings,

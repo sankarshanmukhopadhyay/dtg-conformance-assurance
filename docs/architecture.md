@@ -45,3 +45,7 @@ flowchart TB
 - Solid arrows represent a typical dependency direction.
 - Dotted edges represent interoperability touchpoints (mapping, evaluation, integration), not hard dependencies.
 - The transport layer is shown as an adjacency to highlight where secure message exchange is expected to occur.
+
+## Executable evidence intake (experimental)
+
+The draft Trust Tasks suite owns execution and emits run provenance and vector outcomes. An assessor-controlled DCAS adapter consumes these records into the normalized evaluator, which emits per-requirement findings. This is an informative evidence relationship, not a normative dependency or runtime authority grant. See [integration guide](tt-conformance-evidence-integration.md).

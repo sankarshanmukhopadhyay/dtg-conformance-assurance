@@ -41,3 +41,7 @@ CI runs the same checks on every PR/push.
 ## Coverage report (automated)
 
 Use `make coverage` to generate a deterministic control coverage report (CSV + Markdown). This is intended to be a first-pass verifier lens before deeper evidence checks.
+
+## Separate executable contract
+
+This page describes the CSV evaluation method. The unreleased [reference evaluator](../reference-evaluator.md) provides a separate machine-readable JSON assessment contract with explicit requirement-to-evidence bindings. The [Trust Tasks integration](../tt-conformance-evidence-integration.md) is an experimental consumer of that contract.

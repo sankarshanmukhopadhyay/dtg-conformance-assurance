@@ -25,9 +25,12 @@ authority:
 evidence:
   validation_commands:
     - make validate
+    - make test
     - make coverage
   evidence_outputs:
-    - coverage/
+    - risk/reports/coverage/
   known_limitations:
     - conformance results do not constitute external certification
     - assessed specifications retain their own governance and release authority
+    - experimental Trust Tasks intake is pinned to a draft suite revision and requires an independently trusted assessor manifest
+    - synthetic integration tests do not demonstrate actual platform conformance or interoperability

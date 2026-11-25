@@ -26,3 +26,7 @@ ANAB now publishes a richer A2A-facing surface than a plain domain declaration. 
 - identity-status issuer or trust-anchor material
 
 DCAS SHOULD preserve those references as first-class evaluation inputs. The goal is not to ingest A2A semantics into DCAS. The goal is to let DCAS evaluate whether the ANAB trust description attached to an A2A agent is credible enough for reliance.
+
+## Executable composition (unreleased)
+
+Preserve source requirement identifiers and declare explicit evidence bindings under the [evaluator contract](evaluator-contract.md). The original ANAB 0.1 examples remain historical; migration requires assessor review, not blanket evidence reuse. See [reference evaluator](reference-evaluator.md).

@@ -36,7 +36,7 @@ def generate(directory):
         "evaluation_time": "2026-11-25T00:00:00Z",
         "source": {"run_sha256": write(directory / "run.json", run), "results_sha256": write(directory / "results.json", results),
             "vector_digest": vector_digest, "implementation": "fixture", "implementation_version": "1",
-            "implementation_revision": "synthetic", "specification_revision": "synthetic", "tier": 1},
+            "implementation_revision": "synthetic", "implementation_revision_ref": "urn:synthetic:checkout", "specification_revision": "synthetic", "tier": 1},
         "requirements": {"synthetic-R1": {"vectors": ["positive", "negative"], "positive_anchors": ["positive"]}}}
     write(directory / "manifest.json", manifest)
     return run, results, manifest

@@ -76,7 +76,8 @@
         "implementation_version",
         "implementation_revision",
         "specification_revision",
-        "tier"
+        "tier",
+        "implementation_revision_ref"
       ],
       "properties": {
         "run_sha256": {
@@ -112,6 +113,10 @@
             1,
             2
           ]
+        },
+        "implementation_revision_ref": {
+          "type": "string",
+          "minLength": 1
         }
       }
     },
@@ -151,5 +156,7 @@
         }
       }
     }
-  }
+  },
+  "$id": "https://raw.githubusercontent.com/sankarshanmukhopadhyay/dtg-conformance-assurance/main/spec/schemas/dcas-tt-assessor-manifest.schema.json",
+  "title": "DCAS Trust Tasks assessor manifest 0.1"
 }

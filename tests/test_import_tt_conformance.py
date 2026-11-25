@@ -48,6 +48,20 @@ class ImportTests(unittest.TestCase):
         self.results[0]["results"].pop(0)
         self.assertEqual(self.decision(), "INDETERMINATE")
 
+    def test_preserve_exclusion(self):
+        self.results[0]["results"].pop(0)
+        self.results[0]["excludedByTier"] = [{"id": "positive", "reason": "only runs at tier 2", "channel": "registry"}]
+        doc = self.imported()
+        self.assertEqual(evaluate(doc)["decision"], "INDETERMINATE")
+        detail = next(x for x in doc["claim"]["source_context"]["mapped_results"].values() if x["vector"] == "positive")
+        self.assertEqual(detail["exclusions"][0]["kind"], "excludedByTier")
+        self.assertEqual(detail["exclusions"][0]["reason"], "only runs at tier 2")
+
+    def test_reported_and_excluded(self):
+        self.results[0]["retired"] = {"positive": "retired vector"}
+        with self.assertRaises(ValueError):
+            self.imported()
+
     def test_nonvacuity(self):
         del self.results[0]["results"][0]["anchor"]
         self.assertEqual(self.decision(), "INDETERMINATE")

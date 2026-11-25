@@ -1,7 +1,9 @@
 # DTG Conformance & Assurance (DCAS)
 
 **Release:** v0.10.0  \
-**Last reviewed:** 2026-07-03
+**Last reviewed:** 2026-11-25
+
+**Current development:** experimental evaluator contract 0.2 and pinned Trust Tasks evidence intake; unreleased.
 
 This repository publishes **DCAS (Decentralized Conformance and Assurance Standard)** artifacts for DTG ecosystems.
 
@@ -152,7 +154,7 @@ make coverage
 
 ## Contributing
 
-See `CONTRIBUTING.md`. CI enforces mechanical correctness (CSV structure + markdown link integrity).
+See `CONTRIBUTING.md`. CI enforces repository validation, evaluator regression tests, deterministic coverage and Markdown link integrity.
 
 
 ## Standards
